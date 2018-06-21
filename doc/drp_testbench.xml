@@ -1,0 +1,49 @@
+<vi_testbench>
+	<uvm_test name="uvm_test_top" size="-" type="toplevel_test">
+		<uvm_env name="m_toplevel_env" size="-" type="toplevel_env">
+			<uvm_env name="m_mm_env" size="-" type="mm_env">
+				<uvm_agent name="m_mm_agent" size="-" type="mm_agent">
+					<connect_phase requirer="m_driver.seq_item_port" provider="m_sequencer.seq_item_export"/>
+					<custom name="analysis_port" size="-" type="uvm_analysis_port" seq_item="mm_item"/>
+					<uvm_monitor name="m_monitor" size="-" type="mm_monitor">
+				                <main_phase task="mm_item::do_mon(vif,item)"/>
+						<interface name="vif" type="virtual mm_if" size="-"/>
+						<custom name="analysis_port" size="-" type="uvm_analysis_port" seq_item="mm_item"/>
+					</uvm_monitor>
+					<uvm_sequencer name="m_sequencer" size="-" type="mm_sequencer" seq_item="mm_item">
+						<inherit name="num_last_rsps" size="32" type="integral"/>
+						<inherit name="lock_queue" size="0" type="array"/>
+						<inherit name="rsp_export" size="-" type="uvm_analysis_export"/>
+						<inherit name="arbitration_queue" size="0" type="array"/>
+						<inherit name="num_last_reqs" size="32" type="integral"/>
+						<inherit name="seq_item_export" size="-" type="uvm_seq_item_pull_imp"/>
+					</uvm_sequencer>
+					<uvm_driver name="m_driver" size="-" type="mm_driver" seq_item="mm_item">
+				                <reset_phase task="mm_item::do_init(vif)"/>
+				                <configure_phase task="mm_item::do_config(vif,req)"/>
+						<interface name="vif" type="virtual mm_if" size="-"/>
+						<inherit name="seq_item_port" size="-" type="uvm_seq_item_pull_port"/>
+						<inherit name="rsp_port" size="-" type="uvm_analysis_port"/>
+					</uvm_driver>
+				</uvm_agent>
+				<uvm_reg_predictor name="m_drp_predictor" size="-" type="uvm_reg_predictor #(mm_item)">
+					<inherit name="bus_in" size="-" type="uvm_analysis_imp"/>
+					<inherit name="reg_ap" size="-" type="uvm_analysis_port"/>
+				</uvm_reg_predictor>
+				<connect_phase requirer="m_mm_agent.m_monitor.analysis_port" provider="m_drp_predictor.bus_in"/>
+				<connect_phase requirer="m_mm_agent.m_monitor.analysis_port" provider="m_mm_env_coverage.analysis_export"/>
+				<connect_phase requirer="m_mm_agent.m_monitor.analysis_port" provider="m_mm_coverage.analysis_export"/>
+				<uvm_reg_block name="m_drp" size="-" type="drp_reg_block" seq_item="mm_item">
+				</uvm_reg_block>
+				<uvm_reg_adapter name="m_drp_adapter" size="-" type="drp_adapter" seq_item="mm_item">
+				</uvm_reg_adapter>
+				<uvm_subscriber name="m_mm_coverage" size="-" type="mm_coverage" seq_item="mm_item">
+					<inherit name="analysis_imp" size="-" type="uvm_analysis_imp"/>
+				</uvm_subscriber>
+				<uvm_subscriber name="m_mm_env_coverage" size="-" type="mm_env_coverage" seq_item="mm_item">
+					<inherit name="analysis_imp" size="-" type="uvm_analysis_imp"/>
+				</uvm_subscriber>
+			</uvm_env>
+		</uvm_env>
+	</uvm_test>
+</vi_testbench>

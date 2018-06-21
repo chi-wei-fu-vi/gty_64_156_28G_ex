@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+  <register default="0" name="reset_all" offset="10'h0" type="RW">
+    RESET_ALL
+    <field loc="[0:0]" name="reset_all">RESET_ALL</field>
+  </register>
+  <register default="0" name="reset_tx_pll_and_datapath" offset="10'h1" type="RW">
+    RESET_TX_PLL_AND_DATAPATH
+    <field loc="[0:0]" name="reset_tx_pll_and_datapath">RESET_TX_PLL_AND_DATAPATH</field>
+  </register>
+  <register default="0" name="reset_tx_datapath" offset="10'h2" type="RW">
+    RESET_TX_DATAPATH
+    <field loc="[0:0]" name="reset_tx_datapath">RESET_TX_DATAPATH</field>
+  </register>
+  <register default="0" name="reset_rx_pll_and_datapath" offset="10'h3" type="RW">
+    RESET_RX_PLL_AND_DATAPATH
+    <field loc="[0:0]" name="reset_rx_pll_and_datapath">RESET_RX_PLL_AND_DATAPATH</field>
+  </register>
+  <register default="0" name="reset_rx_datapath" offset="10'h4" type="RW">
+    RESET_RX_DATAPATH
+    <field loc="[0:0]" name="reset_rx_datapath">RESET_RX_DATAPATH</field>
+  </register>
+  <register default="0" name="link_down_latched_reset" offset="10'h5" type="RW">
+    LINK_DOWN_LATCHED_RESET
+    <field loc="[0:0]" name="link_down_latched_reset">LINK_DOWN_LATCHED_RESET</field>
+  </register>
+  <register default="0" name="txpmareset" offset="10'h6" type="RW">
+    TXPMARESET
+    <field loc="[0:0]" name="txpmareset">TXPMARESET</field>
+  </register>
+  <register default="0" name="rxpmareset" offset="10'h7" type="RW">
+    RXPMARESET
+    <field loc="[0:0]" name="rxpmareset">RXPMARESET</field>
+  </register>
+  <register default="0" name="txpcsreset" offset="10'h8" type="RW">
+    TXPCSRESET
+    <field loc="[0:0]" name="txpcsreset">TXPCSRESET</field>
+  </register>
+  <register default="0" name="rxpcsreset" offset="10'h9" type="RW">
+    RXPCSRESET
+    <field loc="[0:0]" name="rxpcsreset">RXPCSRESET</field>
+  </register>
+  <register default="0" name="rxdfelpmreset" offset="10'ha" type="RW">
+    RXDFELPMRESET
+    <field loc="[0:0]" name="rxdfelpmreset">RXDFELPMRESET</field>
+  </register>
+  <register default="0" name="txprecursor" offset="10'hb" type="RW">
+    TXPRECURSOR
+    <field loc="[4:0]" name="txprecursor">TXPRECURSOR</field>
+  </register>
+  <register default="0" name="txpostcursor" offset="10'hc" type="RW">
+    TXPOSTCURSOR
+    <field loc="[4:0]" name="txpostcursor">TXPOSTCURSOR</field>
+  </register>
+  <register default="0" name="loopback" offset="10'hd" type="RW">
+    LOOPBACK
+    <field loc="[2:0]" name="loopback">LOOPBACK</field>
+  </register>
+  <register default="0" name="txprbssel" offset="10'he" type="RW">
+    TXPRBSSEL
+    <field loc="[3:0]" name="txprbssel">TXPRBSSEL</field>
+  </register>
+  <register default="0" name="rxprbssel" offset="10'hf" type="RW">
+    RXPRBSSEL
+    <field loc="[3:0]" name="rxprbssel">RXPRBSSEL</field>
+  </register>
+  <register default="0" name="txprbsforceerr" offset="10'h10" type="RW">
+    TXPRBSFORCEERR
+    <field loc="[0:0]" name="txprbsforceerr">TXPRBSFORCEERR</field>
+  </register>
+  <register default="0" name="rxprbscntreset" offset="10'h11" type="RW">
+    RXPRBSCNTRESET
+    <field loc="[0:0]" name="rxprbscntreset">RXPRBSCNTRESET</field>
+  </register>
+  <register default="0" name="link_status_out" offset="10'h12" type="RO">
+    LINK_STATUS_OUT
+    <field loc="[0:0]" name="link_status_out">LINK_STATUS_OUT</field>
+  </register>
+  <register default="0" name="link_down" offset="10'h13" type="RO">
+    LINK_DOWN
+    <field loc="[0:0]" name="link_down">LINK_DOWN</field>
+  </register>
+  <register default="0" name="init_done" offset="10'h14" type="RO">
+    INIT_DONE
+    <field loc="[0:0]" name="init_done">INIT_DONE</field>
+  </register>
+  <register default="0" name="init_retry_ctr" offset="10'h15" type="RO">
+    INIT_RETRY_CTR
+    <field loc="[3:0]" name="init_retry_ctr">INIT_RETRY_CTR</field>
+  </register>
+  <register default="0" name="gtpowergood" offset="10'h16" type="RO">
+    GTPOWERGOOD
+    <field loc="[0:0]" name="gtpowergood">GTPOWERGOOD</field>
+  </register>
+  <register default="0" name="qpll0lock" offset="10'h17" type="RO">
+    QPLL0LOCK
+    <field loc="[0:0]" name="qpll0lock">QPLL0LOCK</field>
+  </register>
+  <register default="0" name="qpll1lock" offset="10'h18" type="RO">
+    QPLL1LOCK
+    <field loc="[0:0]" name="qpll1lock">QPLL1LOCK</field>
+  </register>
+  <register default="0" name="cplllock" offset="10'h19" type="RO">
+    CPLLLOCK
+    <field loc="[0:0]" name="cplllock">CPLLLOCK</field>
+  </register>
+  <register default="0" name="txpmaresetdone" offset="10'h1a" type="RO">
+    TXPMARESETDONE
+    <field loc="[0:0]" name="txpmaresetdone">TXPMARESETDONE</field>
+  </register>
+  <register default="0" name="rxpmaresetdone" offset="10'h1b" type="RO">
+    RXPMARESETDONE
+    <field loc="[0:0]" name="rxpmaresetdone">RXPMARESETDONE</field>
+  </register>
+  <register default="0" name="reset_tx_done" offset="10'h1c" type="RO">
+    RESET_TX_DONE
+    <field loc="[0:0]" name="reset_tx_done">RESET_TX_DONE</field>
+  </register>
+  <register default="0" name="reset_rx_done" offset="10'h1d" type="RO">
+    RESET_RX_DONE
+    <field loc="[0:0]" name="reset_rx_done">RESET_RX_DONE</field>
+  </register>
+  <register default="0" name="rxbufstatus" offset="10'h1e" type="RO">
+    RXBUFSTATUS
+    <field loc="[2:0]" name="rxbufstatus">RXBUFSTATUS</field>
+  </register>
+  <register default="0" name="rxprbserr" offset="10'h1f" type="RO">
+    RXPRBSERR
+    <field loc="[0:0]" name="rxprbserr">RXPRBSERR</field>
+  </register>
+  <register default="2" name="txoutclksel" offset="10'h20" type="RW">
+    TXOUTCLKSEL
+    <field loc="[2:0]" name="txoutclksel">TXOUTCLKSEL</field>
+  </register>
+</decl_reg_list>

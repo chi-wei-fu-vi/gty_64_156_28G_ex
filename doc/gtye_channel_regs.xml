@@ -1,0 +1,2701 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+	<register default="16'h0" name="CDR_SWAP_MODE_EN" offset="10'h002" type="RW" usr="0">
+		CDR_SWAP_MODE_EN
+		<field loc="[0]" name="CDR_SWAP_MODE_EN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXBUFRESET_TIME" offset="10'h003" type="RW" usr="0">
+		RXBUFRESET_TIME
+		<field loc="[15:11]" name="RXBUFRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[10]" name="CFOK_PWRSVE_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="EYE_SCAN_SWAP_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[8:5]" name="RX_DATA_WIDTH">
+key        value
+16         2
+20         3</field>
+		<field loc="[4:0]" name="RXCDRFREQRESET_TIME">
+key        value
+0-31       0-31</field>
+	</register>
+	<register default="16'h0" name="RXCDRPHRESET_TIME" offset="10'h004" type="RW" usr="0">
+		RXCDRPHRESET_TIME
+		<field loc="[15:11]" name="RXCDRPHRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[10:8]" name="PCI3_RX_ELECIDLE_H2L_DISABLE">
+key        value
+0-7        0-7</field>
+		<field loc="[7:1]" name="RXDFELPMRESET_TIME">
+key        value
+0-127      0-127</field>
+		<field loc="[0]" name="RX_FABINT_USRCLK_FLOP">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXPMARESET_TIME" offset="10'h005" type="RW" usr="0">
+		RXPMARESET_TIME
+		<field loc="[15:11]" name="RXPMARESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[10]" name="PCI3_RX_ELECIDLE_LP4_DISABLE">
+key        value
+0-1        0-1</field>
+		<field loc="[8]" name="PCI3_RX_FIFO_DISABLE">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="PCI3_RX_ELECIDLE_EI2_ENABLE">
+key        value
+0-1        0-1</field>
+		<field loc="[7:3]" name="RXPCSRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[2:0]" name="RXELECIDLE_CFG">
+key        value
+SIGCFG_1   0
+SIGCFG_2   1
+SIGCFG_3   2
+SIGCFG_4   3
+SIGCFG_6   4
+SIGCFG_8   5
+SIGCFG_12  6
+SIGCFG_16  7</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HB_CFG1" offset="10'h006" type="RW" usr="0">
+		RXDFE_HB_CFG1
+		<field loc="[15:0]" name="RXDFE_HB_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPMARESET_TIME" offset="10'h009" type="RW" usr="0">
+		TXPMARESET_TIME
+		<field loc="[15:11]" name="TXPMARESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[7:3]" name="TXPCSRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[10]" name="RX_PMA_POWER_SAVE">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="TX_PMA_POWER_SAVE">
+key        value
+0-1        0-1</field>
+		<field loc="[8]" name="SRSTMODE">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TX_FIFO_BYP_EN" offset="10'h00a" type="RW" usr="0">
+		TX_FIFO_BYP_EN
+		<field loc="[3]" name="TX_FIFO_BYP_EN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TX_FABINT_USRCLK_FLOP" offset="10'h00b" type="RW" usr="0">
+		TX_FABINT_USRCLK_FLOP
+		<field loc="[4]" name="TX_FABINT_USRCLK_FLOP">
+key        value
+0-1        0-1</field>
+		<field loc="[9:8]" name="RXPMACLK_SEL">
+key        value
+CROSSING   2
+DATA       0
+EYESCAN    1</field>
+	</register>
+	<register default="16'h0" name="TX_PROGCLK_SEL" offset="10'h00c" type="RW" usr="0">
+		TX_PROGCLK_SEL
+		<field loc="[11:10]" name="TX_PROGCLK_SEL">
+key        value
+POSTPI     0
+PREPI      1
+CPLL       2</field>
+		<field loc="[9:5]" name="RXISCANRESET_TIME">
+key        value
+0-31       0-31</field>
+	</register>
+	<register default="16'h0" name="TXAMONSEL" offset="10'h00d" type="RW" usr="0">
+		TXAMONSEL
+		<field loc="[7:2]" name="TXAMONSEL">
+key        value
+0-63       0-63</field>
+		<field loc="[1:0]" name="BLOCKSEL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG0" offset="10'h00e" type="RW" usr="0">
+		RXCDR_CFG0
+		<field loc="[15:0]" name="RXCDR_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG1" offset="10'h00f" type="RW" usr="0">
+		RXCDR_CFG1
+		<field loc="[15:0]" name="RXCDR_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG2" offset="10'h010" type="RW" usr="0">
+		RXCDR_CFG2
+		<field loc="[15:0]" name="RXCDR_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG3" offset="10'h011" type="RW" usr="0">
+		RXCDR_CFG3
+		<field loc="[15:0]" name="RXCDR_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG4" offset="10'h012" type="RW" usr="0">
+		RXCDR_CFG4
+		<field loc="[15:0]" name="RXCDR_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CPLL_LOCK_CFG" offset="10'h013" type="RW" usr="0">
+		CPLL_LOCK_CFG
+		<field loc="[15:0]" name="CPLL_LOCK_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_MAX_SKEW" offset="10'h014" type="RW" usr="0">
+		CHAN_BOND_MAX_SKEW
+		<field loc="[15:12]" name="CHAN_BOND_MAX_SKEW">
+key        value
+1-14       1-14</field>
+		<field loc="[11:10]" name="CHAN_BOND_SEQ_LEN">
+key        value
+1          0
+2          1
+3          2
+4          3</field>
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_1_1">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="PCI3_RX_ELECIDLE_HI_COUNT" offset="10'h015" type="RW" usr="0">
+		PCI3_RX_ELECIDLE_HI_COUNT
+		<field loc="[15:10]" name="PCI3_RX_ELECIDLE_HI_COUNT">
+key        value
+0-63       0-63</field>
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_1_3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="PCI3_RX_ELECIDLE_H2L_COUNT" offset="10'h016" type="RW" usr="0">
+		PCI3_RX_ELECIDLE_H2L_COUNT
+		<field loc="[15:10]" name="PCI3_RX_ELECIDLE_H2L_COUNT">
+key        value
+0-63       0-63</field>
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_1_4">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RX_BUFFER_CFG" offset="10'h017" type="RW" usr="0">
+		RX_BUFFER_CFG
+		<field loc="[15:10]" name="RX_BUFFER_CFG">
+key        value
+0-63       0-63</field>
+		<field loc="[9]" name="RX_DEFER_RESET_BUF_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[8:7]" name="OOBDIVCTL">
+key        value
+0-3        0-3</field>
+		<field loc="[6:5]" name="PCI3_AUTO_REALIGN">
+key        value
+FRST_SMPL  0
+OVR_8_BLK  1
+OVR_64_BLK 2
+OVR_1K_BLK 3</field>
+		<field loc="[4]" name="PCI3_PIPE_RX_ELECIDLE">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_1_ENABLE" offset="10'h018" type="RW" usr="0">
+		CHAN_BOND_SEQ_1_ENABLE
+		<field loc="[15:12]" name="CHAN_BOND_SEQ_1_ENABLE">
+key        value
+0-15       0-15</field>
+		<field loc="[11:10]" name="PCI3_RX_ASYNC_EBUF_BYPASS">
+key        value
+0-3        0-3</field>
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_2_1">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_2_2" offset="10'h019" type="RW" usr="0">
+		CHAN_BOND_SEQ_2_2
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_2_2">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_2_3" offset="10'h01a" type="RW" usr="0">
+		CHAN_BOND_SEQ_2_3
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_2_3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_2_4" offset="10'h01b" type="RW" usr="0">
+		CHAN_BOND_SEQ_2_4
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_2_4">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_2_ENABLE" offset="10'h01c" type="RW" usr="0">
+		CHAN_BOND_SEQ_2_ENABLE
+		<field loc="[15:12]" name="CHAN_BOND_SEQ_2_ENABLE">
+key        value
+0-15       0-15</field>
+		<field loc="[11]" name="CHAN_BOND_SEQ_2_USE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[6]" name="CLK_COR_KEEP_IDLE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[5:0]" name="CLK_COR_MIN_LAT">
+key        value
+3-63       3-63</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_MAX_LAT" offset="10'h01d" type="RW" usr="0">
+		CLK_COR_MAX_LAT
+		<field loc="[15:10]" name="CLK_COR_MAX_LAT">
+key        value
+3-60       3-60</field>
+		<field loc="[9]" name="CLK_COR_PRECEDENCE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[8:4]" name="CLK_COR_REPEAT_WAIT">
+key        value
+0-31       0-31</field>
+		<field loc="[3:2]" name="CLK_COR_SEQ_LEN">
+key        value
+1          0
+2          1
+3          2
+4          3</field>
+		<field loc="[0]" name="CHAN_BOND_KEEP_ALIGN">
+key        value
+FALSE      0
+TRUE       1</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_1_1" offset="10'h01e" type="RW" usr="0">
+		CLK_COR_SEQ_1_1
+		<field loc="[9:0]" name="CLK_COR_SEQ_1_1">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_1_2" offset="10'h01f" type="RW" usr="0">
+		CLK_COR_SEQ_1_2
+		<field loc="[9:0]" name="CLK_COR_SEQ_1_2">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_1_3" offset="10'h020" type="RW" usr="0">
+		CLK_COR_SEQ_1_3
+		<field loc="[9:0]" name="CLK_COR_SEQ_1_3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_1_4" offset="10'h021" type="RW" usr="0">
+		CLK_COR_SEQ_1_4
+		<field loc="[9:0]" name="CLK_COR_SEQ_1_4">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_1_ENABLE" offset="10'h022" type="RW" usr="0">
+		CLK_COR_SEQ_1_ENABLE
+		<field loc="[15:12]" name="CLK_COR_SEQ_1_ENABLE">
+key        value
+0-15       0-15</field>
+		<field loc="[9:0]" name="CLK_COR_SEQ_2_1">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_2_2" offset="10'h023" type="RW" usr="0">
+		CLK_COR_SEQ_2_2
+		<field loc="[9:0]" name="CLK_COR_SEQ_2_2">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_2_ENABLE" offset="10'h024" type="RW" usr="0">
+		CLK_COR_SEQ_2_ENABLE
+		<field loc="[15:12]" name="CLK_COR_SEQ_2_ENABLE">
+key        value
+0-15       0-15</field>
+		<field loc="[11]" name="CLK_COR_SEQ_2_USE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[10]" name="CLK_CORRECT_USE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[9:0]" name="CLK_COR_SEQ_2_3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CLK_COR_SEQ_2_4" offset="10'h025" type="RW" usr="0">
+		CLK_COR_SEQ_2_4
+		<field loc="[9:0]" name="CLK_COR_SEQ_2_4">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HE_CFG0" offset="10'h026" type="RW" usr="0">
+		RXDFE_HE_CFG0
+		<field loc="[15:0]" name="RXDFE_HE_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ALIGN_COMMA_WORD" offset="10'h027" type="RW" usr="0">
+		ALIGN_COMMA_WORD
+		<field loc="[15:13]" name="ALIGN_COMMA_WORD">
+key        value
+1          1
+2          2
+4          4</field>
+		<field loc="[12]" name="ALIGN_COMMA_DOUBLE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[11]" name="SHOW_REALIGN_COMMA">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[9:0]" name="ALIGN_COMMA_ENABLE">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="CPLL_FBDIV" offset="10'h028" type="RW" usr="0">
+		CPLL_FBDIV
+		<field loc="[15:8]" name="CPLL_FBDIV">
+key        value
+2          0
+3          1
+4          2
+5          3
+1          16</field>
+		<field loc="[7]" name="CPLL_FBDIV_45">
+key        value
+4          0
+5          1</field>
+	</register>
+	<register default="16'h0" name="RXCDR_LOCK_CFG0" offset="10'h029" type="RW" usr="0">
+		RXCDR_LOCK_CFG0
+		<field loc="[15:0]" name="RXCDR_LOCK_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CPLL_REFCLK_DIV" offset="10'h02a" type="RW" usr="0">
+		CPLL_REFCLK_DIV
+		<field loc="[15:11]" name="CPLL_REFCLK_DIV">
+key        value
+2          0
+1          16</field>
+		<field loc="[10]" name="CPLL_IPS_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[9:7]" name="CPLL_IPS_REFCLK_SEL">
+key        value
+0-7        0-7</field>
+		<field loc="[6:5]" name="SATA_CPLL_CFG">
+key        value
+3000MHZ    0
+1500MHZ    1
+750MHZ     2</field>
+		<field loc="[4:0]" name="A_TXDIFFCTRL">
+key        value
+0-31       0-31</field>
+	</register>
+	<register default="16'h0" name="CPLL_INIT_CFG0" offset="10'h02b" type="RW" usr="0">
+		CPLL_INIT_CFG0
+		<field loc="[15:0]" name="CPLL_INIT_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="DEC_PCOMMA_DETECT" offset="10'h02c" type="RW" usr="0">
+		DEC_PCOMMA_DETECT
+		<field loc="[15]" name="DEC_PCOMMA_DETECT">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[11:7]" name="TX_DIVRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[6:2]" name="RX_DIVRESET_TIME">
+key        value
+0-31       0-31</field>
+		<field loc="[1]" name="A_TXPROGDIVRESET">
+key        value
+0-1        0-1</field>
+		<field loc="[0]" name="A_RXPROGDIVRESET">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXCDR_LOCK_CFG1" offset="10'h02d" type="RW" usr="0">
+		RXCDR_LOCK_CFG1
+		<field loc="[15:0]" name="RXCDR_LOCK_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCFOK_CFG1" offset="10'h02e" type="RW" usr="0">
+		RXCFOK_CFG1
+		<field loc="[15:0]" name="RXCFOK_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H2_CFG0" offset="10'h02f" type="RW" usr="0">
+		RXDFE_H2_CFG0
+		<field loc="[15:0]" name="RXDFE_H2_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H2_CFG1" offset="10'h030" type="RW" usr="0">
+		RXDFE_H2_CFG1
+		<field loc="[15:0]" name="RXDFE_H2_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCFOK_CFG2" offset="10'h031" type="RW" usr="0">
+		RXCFOK_CFG2
+		<field loc="[15:0]" name="RXCFOK_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_CFG" offset="10'h032" type="RW" usr="0">
+		RXLPM_CFG
+		<field loc="[15:0]" name="RXLPM_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_KH_CFG0" offset="10'h033" type="RW" usr="0">
+		RXLPM_KH_CFG0
+		<field loc="[15:0]" name="RXLPM_KH_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_KH_CFG1" offset="10'h034" type="RW" usr="0">
+		RXLPM_KH_CFG1
+		<field loc="[15:0]" name="RXLPM_KH_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFELPM_KL_CFG0" offset="10'h035" type="RW" usr="0">
+		RXDFELPM_KL_CFG0
+		<field loc="[15:0]" name="RXDFELPM_KL_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFELPM_KL_CFG1" offset="10'h036" type="RW" usr="0">
+		RXDFELPM_KL_CFG1
+		<field loc="[15:0]" name="RXDFELPM_KL_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_OS_CFG0" offset="10'h037" type="RW" usr="0">
+		RXLPM_OS_CFG0
+		<field loc="[15:0]" name="RXLPM_OS_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_OS_CFG1" offset="10'h038" type="RW" usr="0">
+		RXLPM_OS_CFG1
+		<field loc="[15:0]" name="RXLPM_OS_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXLPM_GC_CFG" offset="10'h039" type="RW" usr="0">
+		RXLPM_GC_CFG
+		<field loc="[15:0]" name="RXLPM_GC_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="DMONITOR_CFG1" offset="10'h03a" type="RW" usr="0">
+		DMONITOR_CFG1
+		<field loc="[15:8]" name="DMONITOR_CFG1">
+key        value
+0-255      0-255</field>
+	</register>
+	<register default="16'h0" name="ES_CONTROL" offset="10'h03c" type="RW" usr="0">
+		ES_CONTROL
+		<field loc="[15:10]" name="ES_CONTROL">
+key        value
+0-63       0-63</field>
+		<field loc="[4:0]" name="ES_PRESCALE">
+key        value
+0-31       0-31</field>
+		<field loc="[8]" name="ES_EYE_SCAN_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[9]" name="ES_ERRDET_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+	</register>
+	<register default="16'h0" name="RXDFE_GC_CFG2" offset="10'h03d" type="RW" usr="0">
+		RXDFE_GC_CFG2
+		<field loc="[15:0]" name="RXDFE_GC_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXDLY_LCFG" offset="10'h03e" type="RW" usr="0">
+		TXDLY_LCFG
+		<field loc="[15:0]" name="TXDLY_LCFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER0" offset="10'h03f" type="RW" usr="0">
+		ES_QUALIFIER0
+		<field loc="[15:0]" name="ES_QUALIFIER0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER1" offset="10'h040" type="RW" usr="0">
+		ES_QUALIFIER1
+		<field loc="[15:0]" name="ES_QUALIFIER1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER2" offset="10'h041" type="RW" usr="0">
+		ES_QUALIFIER2
+		<field loc="[15:0]" name="ES_QUALIFIER2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER3" offset="10'h042" type="RW" usr="0">
+		ES_QUALIFIER3
+		<field loc="[15:0]" name="ES_QUALIFIER3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER4" offset="10'h043" type="RW" usr="0">
+		ES_QUALIFIER4
+		<field loc="[15:0]" name="ES_QUALIFIER4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK0" offset="10'h044" type="RW" usr="0">
+		ES_QUAL_MASK0
+		<field loc="[15:0]" name="ES_QUAL_MASK0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK1" offset="10'h045" type="RW" usr="0">
+		ES_QUAL_MASK1
+		<field loc="[15:0]" name="ES_QUAL_MASK1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK2" offset="10'h046" type="RW" usr="0">
+		ES_QUAL_MASK2
+		<field loc="[15:0]" name="ES_QUAL_MASK2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK3" offset="10'h047" type="RW" usr="0">
+		ES_QUAL_MASK3
+		<field loc="[15:0]" name="ES_QUAL_MASK3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK4" offset="10'h048" type="RW" usr="0">
+		ES_QUAL_MASK4
+		<field loc="[15:0]" name="ES_QUAL_MASK4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK0" offset="10'h049" type="RW" usr="0">
+		ES_SDATA_MASK0
+		<field loc="[15:0]" name="ES_SDATA_MASK0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK1" offset="10'h04a" type="RW" usr="0">
+		ES_SDATA_MASK1
+		<field loc="[15:0]" name="ES_SDATA_MASK1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK2" offset="10'h04b" type="RW" usr="0">
+		ES_SDATA_MASK2
+		<field loc="[15:0]" name="ES_SDATA_MASK2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK3" offset="10'h04c" type="RW" usr="0">
+		ES_SDATA_MASK3
+		<field loc="[15:0]" name="ES_SDATA_MASK3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK4" offset="10'h04d" type="RW" usr="0">
+		ES_SDATA_MASK4
+		<field loc="[15:0]" name="ES_SDATA_MASK4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="FTS_LANE_DESKEW_EN" offset="10'h04e" type="RW" usr="0">
+		FTS_LANE_DESKEW_EN
+		<field loc="[4]" name="FTS_LANE_DESKEW_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[3:0]" name="FTS_DESKEW_SEQ_ENABLE">
+key        value
+0-15       0-15</field>
+	</register>
+	<register default="16'h0" name="ES_HORZ_OFFSET" offset="10'h04f" type="RW" usr="0">
+		ES_HORZ_OFFSET
+		<field loc="[15:4]" name="ES_HORZ_OFFSET">
+key        value
+0-4095     0-4095</field>
+		<field loc="[3:0]" name="FTS_LANE_DESKEW_CFG">
+key        value
+0-15       0-15</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HC_CFG1" offset="10'h050" type="RW" usr="0">
+		RXDFE_HC_CFG1
+		<field loc="[15:0]" name="RXDFE_HC_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_PMA_CFG" offset="10'h051" type="RW" usr="0">
+		ES_PMA_CFG
+		<field loc="[9:0]" name="ES_PMA_CFG">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RX_DFE_AGC_CFG1" offset="10'h052" type="RW" usr="0">
+		RX_DFE_AGC_CFG1
+		<field loc="[4:2]" name="RX_DFE_AGC_CFG1">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="TXFE_CFG2" offset="10'h053" type="RW" usr="0">
+		TXFE_CFG2
+		<field loc="[15:0]" name="TXFE_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXFE_CFG3" offset="10'h054" type="RW" usr="0">
+		TXFE_CFG3
+		<field loc="[15:0]" name="TXFE_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_64B_DYN_CLKSW_DIS" offset="10'h055" type="RW" usr="0">
+		PCIE_64B_DYN_CLKSW_DIS
+		<field loc="[14]" name="PCIE_64B_DYN_CLKSW_DIS">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[13]" name="LOCAL_MASTER">
+key        value
+0-1        0-1</field>
+		<field loc="[12]" name="PCS_PCIE_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[11]" name="PCIE_GEN4_64BIT_INT_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[10]" name="ALIGN_MCOMMA_DET">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[9:0]" name="ALIGN_MCOMMA_VALUE">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="ALIGN_PCOMMA_DET" offset="10'h056" type="RW" usr="0">
+		ALIGN_PCOMMA_DET
+		<field loc="[10]" name="ALIGN_PCOMMA_DET">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[9:0]" name="ALIGN_PCOMMA_VALUE">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="TX_PROGDIV_CFG" offset="10'h057" type="RW" usr="0">
+		TX_PROGDIV_CFG
+		<field loc="[15:0]" name="TX_PROGDIV_CFG">
+key        value
+0          32768
+10         57440
+100        57455
+128        24654
+132        57862
+16         57410
+16.5       57880
+20         57442
+32         57414
+33         57856
+4          57432
+40         57415
+5          57464
+64         57422
+66         57858
+8          57408
+80         57423</field>
+	</register>
+	<register default="16'h0" name="RXDFE_OS_CFG0" offset="10'h058" type="RW" usr="0">
+		RXDFE_OS_CFG0
+		<field loc="[15:0]" name="RXDFE_OS_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXPHDLY_CFG" offset="10'h059" type="RW" usr="0">
+		RXPHDLY_CFG
+		<field loc="[15:0]" name="RXPHDLY_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_OS_CFG1" offset="10'h05a" type="RW" usr="0">
+		RXDFE_OS_CFG1
+		<field loc="[15:0]" name="RXDFE_OS_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDLY_CFG" offset="10'h05b" type="RW" usr="0">
+		RXDLY_CFG
+		<field loc="[15:0]" name="RXDLY_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDLY_LCFG" offset="10'h05c" type="RW" usr="0">
+		RXDLY_LCFG
+		<field loc="[15:0]" name="RXDLY_LCFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HF_CFG0" offset="10'h05d" type="RW" usr="0">
+		RXDFE_HF_CFG0
+		<field loc="[15:0]" name="RXDFE_HF_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HD_CFG0" offset="10'h05e" type="RW" usr="0">
+		RXDFE_HD_CFG0
+		<field loc="[15:0]" name="RXDFE_HD_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_BIAS_CFG0" offset="10'h05f" type="RW" usr="0">
+		RX_BIAS_CFG0
+		<field loc="[15:0]" name="RX_BIAS_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCS_RSVD0" offset="10'h060" type="RW" usr="0">
+		PCS_RSVD0
+		<field loc="[15:9]" name="PCS_RSVD0">
+key        value
+0-65535    0-65535</field>
+		<field loc="[8:4]" name="PCIE_GEN4_NEW_EIEOS_DET_EN">
+key        value
+0-31       0-31</field>
+		<field loc="[1:0]" name="USB3_RXTERMINATION_CTRL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="RXPH_MONITOR_SEL" offset="10'h061" type="RW" usr="0">
+		RXPH_MONITOR_SEL
+		<field loc="[15:11]" name="RXPH_MONITOR_SEL">
+key        value
+0-31       0-31</field>
+		<field loc="[10]" name="RX_CM_BUF_PD">
+key        value
+0-1        0-1</field>
+		<field loc="[9:6]" name="RX_CM_BUF_CFG">
+key        value
+0-15       0-15</field>
+		<field loc="[5:2]" name="RX_CM_TRIM">
+key        value
+0-15       0-15</field>
+		<field loc="[1:0]" name="RX_CM_SEL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="RX_I2V_FILTER_EN" offset="10'h062" type="RW" usr="0">
+		RX_I2V_FILTER_EN
+		<field loc="[15]" name="RX_I2V_FILTER_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="RX_SUM_DFETAPREP_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="RX_SUM_VCM_OVWR">
+key        value
+0-1        0-1</field>
+		<field loc="[12:9]" name="RX_SUM_IREF_TUNE">
+key        value
+0-15       0-15</field>
+		<field loc="[8:7]" name="EYESCAN_VP_RANGE">
+key        value
+0-3        0-3</field>
+		<field loc="[6:3]" name="RX_SUM_VCMTUNE">
+key        value
+0-15       0-15</field>
+		<field loc="[2:0]" name="RX_SUM_VREF_TUNE">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="CBCC_DATA_SOURCE_SEL" offset="10'h063" type="RW" usr="0">
+		CBCC_DATA_SOURCE_SEL
+		<field loc="[15]" name="CBCC_DATA_SOURCE_SEL">
+key        value
+DECODED    1
+ENCODED    0</field>
+		<field loc="[14]" name="OOB_PWRUP">
+key        value
+0-1        0-1</field>
+		<field loc="[13:5]" name="RXOOB_CFG">
+key        value
+0-511      0-511</field>
+		<field loc="[2:0]" name="RXOUT_DIV">
+key        value
+1          0
+2          1
+4          2
+8          3
+16         4
+32         5</field>
+	</register>
+	<register default="16'h0" name="RX_SIG_VALID_DLY" offset="10'h064" type="RW" usr="0">
+		RX_SIG_VALID_DLY
+		<field loc="[15:11]" name="RX_SIG_VALID_DLY">
+key        value
+1          0
+2          1
+3          2
+4          3
+5          4
+6          5
+7          6
+8          7
+9          8
+10         9
+11         10
+12         11
+13         12
+14         13
+15         14
+16         15
+17         16
+18         17
+19         18
+20         19
+21         20
+22         21
+23         22
+24         23
+25         24
+26         25
+27         26
+28         27
+29         28
+30         29
+31         30
+32         31</field>
+		<field loc="[10:9]" name="RXSLIDE_MODE">
+key        value
+OFF        0
+AUTO       1
+PCS        2
+PMA        3</field>
+		<field loc="[8]" name="RXPRBS_ERR_LOOPBACK">
+key        value
+0-1        0-1</field>
+		<field loc="[7:4]" name="RXSLIDE_AUTO_WAIT">
+key        value
+1-15       1-15</field>
+		<field loc="[3]" name="RXBUF_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[2:1]" name="RX_XCLK_SEL">
+key        value
+RXDES      0
+RXUSR      1
+RXPMA      2</field>
+		<field loc="[0]" name="RXGEARBOX_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+	</register>
+	<register default="16'h0" name="RXBUF_THRESH_OVFLW" offset="10'h065" type="RW" usr="0">
+		RXBUF_THRESH_OVFLW
+		<field loc="[15:10]" name="RXBUF_THRESH_OVFLW">
+key        value
+0-63       0-63</field>
+		<field loc="[9:0]" name="DMONITOR_CFG0">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RXBUF_THRESH_OVRD" offset="10'h066" type="RW" usr="0">
+		RXBUF_THRESH_OVRD
+		<field loc="[15]" name="RXBUF_THRESH_OVRD">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[14]" name="RXBUF_RESET_ON_COMMAALIGN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[13]" name="RXBUF_RESET_ON_RATE_CHANGE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[12]" name="RXBUF_RESET_ON_CB_CHANGE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[11:6]" name="RXBUF_THRESH_UNDFLW">
+key        value
+0-63       0-63</field>
+		<field loc="[5]" name="RX_CLKMUX_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[4]" name="RX_DISPERR_SEQ_MATCH">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[3:2]" name="RX_WIDEMODE_CDR">
+key        value
+0-3        0-3</field>
+		<field loc="[1:0]" name="RX_INT_DATAWIDTH">
+key        value
+0-2        0-2</field>
+	</register>
+	<register default="16'h0" name="RXBUF_EIDLE_HI_CNT" offset="10'h067" type="RW" usr="0">
+		RXBUF_EIDLE_HI_CNT
+		<field loc="[15:12]" name="RXBUF_EIDLE_HI_CNT">
+key        value
+0-15       0-15</field>
+		<field loc="[11]" name="RXCDR_HOLD_DURING_EIDLE">
+key        value
+0-1        0-1</field>
+		<field loc="[10]" name="RX_DFE_LPM_HOLD_DURING_EIDLE">
+key        value
+0-1        0-1</field>
+		<field loc="[9:8]" name="RX_WIDEMODE_CDR_GEN3">
+key        value
+0-3        0-3</field>
+		<field loc="[7:4]" name="RXBUF_EIDLE_LO_CNT">
+key        value
+0-15       0-15</field>
+		<field loc="[3]" name="RXBUF_RESET_ON_EIDLE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[2]" name="RXCDR_FR_RESET_ON_EIDLE">
+key        value
+0-1        0-1</field>
+		<field loc="[1]" name="RXCDR_PH_RESET_ON_EIDLE">
+key        value
+0-1        0-1</field>
+		<field loc="[0]" name="RXBUF_ADDR_MODE">
+key        value
+FAST       1
+FULL       0</field>
+	</register>
+	<register default="16'h0" name="SATA_BURST_VAL" offset="10'h068" type="RW" usr="0">
+		SATA_BURST_VAL
+		<field loc="[15:13]" name="SATA_BURST_VAL">
+key        value
+0-7        0-7</field>
+		<field loc="[10]" name="SAS_12G_MODE">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="USB_TXIDLE_TUNE_ENABLE">
+key        value
+0-1        0-1</field>
+		<field loc="[8]" name="USB_RXIDLE_P0_CTRL">
+key        value
+0-1        0-1</field>
+		<field loc="[7:4]" name="SATA_BURST_SEQ_LEN">
+key        value
+0-15       0-15</field>
+		<field loc="[2:0]" name="SATA_EIDLE_VAL">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="USB_POLL_SATA_MIN_BURST" offset="10'h069" type="RW" usr="0">
+		USB_POLL_SATA_MIN_BURST
+		<field loc="[15:9]" name="USB_POLL_SATA_MIN_BURST">
+key        value
+1-61       1-61</field>
+		<field loc="[8:7]" name="RX_WIDEMODE_CDR_GEN4">
+key        value
+0-3        0-3</field>
+		<field loc="[6:0]" name="USB_U2_SAS_MIN_COM">
+key        value
+1-63       1-63</field>
+	</register>
+	<register default="16'h0" name="USB_PING_SATA_MIN_INIT" offset="10'h06a" type="RW" usr="0">
+		USB_PING_SATA_MIN_INIT
+		<field loc="[15:9]" name="USB_PING_SATA_MIN_INIT">
+key        value
+1-63       1-63</field>
+		<field loc="[6:0]" name="USB_U1_SATA_MIN_WAKE">
+key        value
+1-63       1-63</field>
+	</register>
+	<register default="16'h0" name="USB_POLL_SATA_MAX_BURST" offset="10'h06b" type="RW" usr="0">
+		USB_POLL_SATA_MAX_BURST
+		<field loc="[15:9]" name="USB_POLL_SATA_MAX_BURST">
+key        value
+1-63       1-63</field>
+		<field loc="[6:0]" name="USB_U2_SAS_MAX_COM">
+key        value
+1-127      1-127</field>
+	</register>
+	<register default="16'h0" name="USB_PING_SATA_MAX_INIT" offset="10'h06c" type="RW" usr="0">
+		USB_PING_SATA_MAX_INIT
+		<field loc="[15:9]" name="USB_PING_SATA_MAX_INIT">
+key        value
+1-63       1-63</field>
+		<field loc="[6:0]" name="USB_U1_SATA_MAX_WAKE">
+key        value
+1-63       1-63</field>
+	</register>
+	<register default="16'h0" name="RX_CLK25_DIV" offset="10'h06d" type="RW" usr="0">
+		RX_CLK25_DIV
+		<field loc="[7:3]" name="RX_CLK25_DIV">
+key        value
+1          0
+2          1
+3          2
+4          3
+5          4
+6          5
+7          6
+8          7
+9          8
+10         9
+11         10
+12         11
+13         12
+14         13
+15         14
+16         15
+17         16
+18         17
+19         18
+20         19
+21         20
+22         21
+23         22
+24         23
+25         24
+26         25
+27         26
+28         27
+29         28
+30         29
+31         30
+32         31</field>
+	</register>
+	<register default="16'h0" name="RXDFE_UT_CFG1" offset="10'h06e" type="RW" usr="0">
+		RXDFE_UT_CFG1
+		<field loc="[15:0]" name="RXDFE_UT_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPHDLY_CFG1" offset="10'h06f" type="RW" usr="0">
+		TXPHDLY_CFG1
+		<field loc="[15:0]" name="TXPHDLY_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_VP_CFG0" offset="10'h070" type="RW" usr="0">
+		RXDFE_VP_CFG0
+		<field loc="[15:0]" name="RXDFE_VP_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPH_MONITOR_SEL" offset="10'h071" type="RW" usr="0">
+		TXPH_MONITOR_SEL
+		<field loc="[6:2]" name="TXPH_MONITOR_SEL">
+key        value
+0-31       0-31</field>
+		<field loc="[1:0]" name="TAPDLY_SET_TX">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="ADAPT_CFG2" offset="10'h072" type="RW" usr="0">
+		ADAPT_CFG2
+		<field loc="[15:0]" name="ADAPT_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_VP_CFG1" offset="10'h073" type="RW" usr="0">
+		RXDFE_VP_CFG1
+		<field loc="[15:0]" name="RXDFE_VP_CFG1">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TERM_RCAL_CFG" offset="10'h074" type="RW" usr="0">
+		TERM_RCAL_CFG
+		<field loc="[14:0]" name="TERM_RCAL_CFG">
+key        value
+0-32767    0-32767</field>
+	</register>
+	<register default="16'h0" name="RXPI_CFG0" offset="10'h075" type="RW" usr="0">
+		RXPI_CFG0
+		<field loc="[15:0]" name="RXPI_CFG0">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="PD_TRANS_TIME_FROM_P2" offset="10'h076" type="RW" usr="0">
+		PD_TRANS_TIME_FROM_P2
+		<field loc="[15:4]" name="PD_TRANS_TIME_FROM_P2">
+key        value
+0-4095     0-4095</field>
+		<field loc="[3:1]" name="TERM_RCAL_OVRD">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="PD_TRANS_TIME_NONE_P2" offset="10'h077" type="RW" usr="0">
+		PD_TRANS_TIME_NONE_P2
+		<field loc="[15:8]" name="PD_TRANS_TIME_NONE_P2">
+key        value
+0-255      0-255</field>
+		<field loc="[7:0]" name="PD_TRANS_TIME_TO_P2">
+key        value
+0-255      0-255</field>
+	</register>
+	<register default="16'h0" name="TRANS_TIME_RATE" offset="10'h078" type="RW" usr="0">
+		TRANS_TIME_RATE
+		<field loc="[15:8]" name="TRANS_TIME_RATE">
+key        value
+0-255      0-255</field>
+	</register>
+	<register default="16'h0" name="TST_RSV0" offset="10'h079" type="RW" usr="0">
+		TST_RSV0
+		<field loc="[15:8]" name="TST_RSV0">
+key        value
+0-255      0-255</field>
+		<field loc="[7:0]" name="TST_RSV1">
+key        value
+0-255      0-255</field>
+	</register>
+	<register default="16'h0" name="TX_CLK25_DIV" offset="10'h07a" type="RW" usr="0">
+		TX_CLK25_DIV
+		<field loc="[15:11]" name="TX_CLK25_DIV">
+key        value
+1          0
+2          1
+3          2
+4          3
+5          4
+6          5
+7          6
+8          7
+9          8
+10         9
+11         10
+12         11
+13         12
+14         13
+15         14
+16         15
+17         16
+18         17
+19         18
+20         19
+21         20
+22         21
+23         22
+24         23
+25         24
+26         25
+27         26
+28         27
+29         28
+30         29
+31         30
+32         31</field>
+		<field loc="[10]" name="TX_XCLK_SEL">
+key        value
+TXOUT      0
+TXUSR      1</field>
+		<field loc="[3:0]" name="TX_DATA_WIDTH">
+key        value
+16         2
+20         3
+32         4
+40         5
+64         6
+80         7
+128        8
+160        9</field>
+	</register>
+	<register default="16'h0" name="TX_DEEMPH0" offset="10'h07b" type="RW" usr="0">
+		TX_DEEMPH0
+		<field loc="[15:10]" name="TX_DEEMPH0">
+key        value
+0-63       0-63</field>
+		<field loc="[7:2]" name="TX_DEEMPH1">
+key        value
+0-63       0-63</field>
+	</register>
+	<register default="16'h0" name="TX_MAINCURSOR_SEL" offset="10'h07c" type="RW" usr="0">
+		TX_MAINCURSOR_SEL
+		<field loc="[14]" name="TX_MAINCURSOR_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="TXGEARBOX_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[10:8]" name="TXOUT_DIV">
+key        value
+1          0
+2          1
+4          2
+8          3
+16         4
+32         5</field>
+		<field loc="[7]" name="TXBUF_EN">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[6]" name="TXBUF_RESET_ON_RATE_CHANGE">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[5:3]" name="TX_RXDETECT_REF">
+key        value
+0-7        0-7</field>
+		<field loc="[2]" name="TXFIFO_ADDR_CFG">
+key        value
+HIGH       1
+LOW        0</field>
+		<field loc="[1:0]" name="TX_SW_MEAS">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="TX_RXDETECT_CFG" offset="10'h07d" type="RW" usr="0">
+		TX_RXDETECT_CFG
+		<field loc="[15:2]" name="TX_RXDETECT_CFG">
+key        value
+0-16383    0-16383</field>
+	</register>
+	<register default="16'h0" name="TX_CLKMUX_EN" offset="10'h07e" type="RW" usr="0">
+		TX_CLKMUX_EN
+		<field loc="[15]" name="TX_CLKMUX_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="TX_LOOPBACK_DRIVE_HIZ">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[12:8]" name="TX_DRIVE_MODE">
+key        value
+DIRECT     0
+PIPE       1
+PIPEGEN3   2</field>
+		<field loc="[7:5]" name="TX_EIDLE_ASSERT_DELAY">
+key        value
+0-7        0-7</field>
+		<field loc="[4:2]" name="TX_EIDLE_DEASSERT_DELAY">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="TX_MARGIN_FULL_0" offset="10'h07f" type="RW" usr="0">
+		TX_MARGIN_FULL_0
+		<field loc="[15:9]" name="TX_MARGIN_FULL_0">
+key        value
+0-127      0-127</field>
+		<field loc="[7:1]" name="TX_MARGIN_FULL_1">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="TX_MARGIN_FULL_2" offset="10'h080" type="RW" usr="0">
+		TX_MARGIN_FULL_2
+		<field loc="[15:9]" name="TX_MARGIN_FULL_2">
+key        value
+0-127      0-127</field>
+		<field loc="[7:1]" name="TX_MARGIN_FULL_3">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="TX_MARGIN_FULL_4" offset="10'h081" type="RW" usr="0">
+		TX_MARGIN_FULL_4
+		<field loc="[15:9]" name="TX_MARGIN_FULL_4">
+key        value
+0-127      0-127</field>
+		<field loc="[7:1]" name="TX_MARGIN_LOW_0">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="TX_MARGIN_LOW_1" offset="10'h082" type="RW" usr="0">
+		TX_MARGIN_LOW_1
+		<field loc="[15:9]" name="TX_MARGIN_LOW_1">
+key        value
+0-127      0-127</field>
+		<field loc="[7:1]" name="TX_MARGIN_LOW_2">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="TX_MARGIN_LOW_3" offset="10'h083" type="RW" usr="0">
+		TX_MARGIN_LOW_3
+		<field loc="[15:9]" name="TX_MARGIN_LOW_3">
+key        value
+0-127      0-127</field>
+		<field loc="[7:1]" name="TX_MARGIN_LOW_4">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H3_CFG0" offset="10'h084" type="RW" usr="0">
+		RXDFE_H3_CFG0
+		<field loc="[15:0]" name="RXDFE_H3_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TX_INT_DATAWIDTH" offset="10'h085" type="RW" usr="0">
+		TX_INT_DATAWIDTH
+		<field loc="[11:10]" name="TX_INT_DATAWIDTH">
+key        value
+0-2        0-2</field>
+	</register>
+	<register default="16'h0" name="RXPRBS_LINKACQ_CNT" offset="10'h089" type="RW" usr="0">
+		RXPRBS_LINKACQ_CNT
+		<field loc="[7:0]" name="RXPRBS_LINKACQ_CNT">
+key        value
+15-255     15-255</field>
+	</register>
+	<register default="16'h0" name="TX_PMADATA_OPT" offset="10'h08a" type="RW" usr="0">
+		TX_PMADATA_OPT
+		<field loc="[15]" name="TX_PMADATA_OPT">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="RXSYNC_OVRD">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="TXSYNC_OVRD">
+key        value
+0-1        0-1</field>
+		<field loc="[12]" name="TX_IDLE_DATA_ZERO">
+key        value
+0-1        0-1</field>
+		<field loc="[11]" name="A_RXOSCALRESET">
+key        value
+0-1        0-1</field>
+		<field loc="[10]" name="RXOOB_CLK_CFG">
+key        value
+FABRIC     1
+PMA        0</field>
+		<field loc="[9]" name="TXSYNC_SKIP_DA">
+key        value
+0-1        0-1</field>
+		<field loc="[8]" name="RXSYNC_SKIP_DA">
+key        value
+0-1        0-1</field>
+		<field loc="[4:0]" name="RXOSCALRESET_TIME">
+key        value
+0-31       0-31</field>
+	</register>
+	<register default="16'h0" name="TXSYNC_MULTILANE" offset="10'h08b" type="RW" usr="0">
+		TXSYNC_MULTILANE
+		<field loc="[10]" name="TXSYNC_MULTILANE">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="RXSYNC_MULTILANE">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="ACJTAG_MODE" offset="10'h08c" type="RW" usr="0">
+		ACJTAG_MODE
+		<field loc="[15]" name="ACJTAG_MODE">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="ACJTAG_DEBUG_MODE">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="ACJTAG_RESET">
+key        value
+0-1        0-1</field>
+		<field loc="[12]" name="RX_SUM_VCM_BIAS_TUNE_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[11:10]" name="RX_TUNE_AFE_OS">
+key        value
+0-3        0-3</field>
+		<field loc="[9:8]" name="RX_DFE_KL_LPM_KL_CFG0">
+key        value
+0-3        0-3</field>
+		<field loc="[7:5]" name="RX_DFE_KL_LPM_KL_CFG1">
+key        value
+0-7        0-7</field>
+		<field loc="[4]" name="RX_SUM_DEGEN_AVTT_OVERITE">
+key        value
+0-1        0-1</field>
+		<field loc="[3]" name="RX_SUM_PWR_SAVING">
+key        value
+0-1        0-1</field>
+		<field loc="[2]" name="RX_EN_SUM_RCAL_B">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXDFELPM_KL_CFG2" offset="10'h08d" type="RW" usr="0">
+		RXDFELPM_KL_CFG2
+		<field loc="[15:0]" name="RXDFELPM_KL_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXDLY_CFG" offset="10'h08e" type="RW" usr="0">
+		TXDLY_CFG
+		<field loc="[15:0]" name="TXDLY_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPH_CFG" offset="10'h08f" type="RW" usr="0">
+		TXPH_CFG
+		<field loc="[15:0]" name="TXPH_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPHDLY_CFG0" offset="10'h090" type="RW" usr="0">
+		TXPHDLY_CFG0
+		<field loc="[15:0]" name="TXPHDLY_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ADAPT_CFG0" offset="10'h091" type="RW" usr="0">
+		ADAPT_CFG0
+		<field loc="[15:0]" name="ADAPT_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ADAPT_CFG1" offset="10'h092" type="RW" usr="0">
+		ADAPT_CFG1
+		<field loc="[15:0]" name="ADAPT_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCFOK_CFG0" offset="10'h093" type="RW" usr="0">
+		RXCFOK_CFG0
+		<field loc="[15:0]" name="RXCFOK_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_CLK_PHASE_SEL" offset="10'h094" type="RW" usr="0">
+		ES_CLK_PHASE_SEL
+		<field loc="[11]" name="ES_CLK_PHASE_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[10]" name="USE_PCS_CLK_PHASE_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="SAMPLE_CLK_PHASE">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TX_PMA_RSV0" offset="10'h095" type="RW" usr="0">
+		TX_PMA_RSV0
+		<field loc="[15:0]" name="TX_PMA_RSV0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_AFE_CM_EN" offset="10'h097" type="RW" usr="0">
+		RX_AFE_CM_EN
+		<field loc="[12]" name="RX_AFE_CM_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[11]" name="RX_CAPFF_SARC_ENB">
+key        value
+0-1        0-1</field>
+		<field loc="[10]" name="RX_EYESCAN_VS_NEG_DIR">
+key        value
+0-1        0-1</field>
+		<field loc="[9]" name="RX_EYESCAN_VS_UT_SIGN">
+key        value
+0-1        0-1</field>
+		<field loc="[8:2]" name="RX_EYESCAN_VS_CODE">
+key        value
+0-127      0-127</field>
+		<field loc="[1:0]" name="RX_EYESCAN_VS_RANGE">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H5_CFG1" offset="10'h098" type="RW" usr="0">
+		RXDFE_H5_CFG1
+		<field loc="[15:0]" name="RXDFE_H5_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="GEARBOX_MODE" offset="10'h099" type="RW" usr="0">
+		GEARBOX_MODE
+		<field loc="[15:11]" name="GEARBOX_MODE">
+key        value
+0-31       0-31</field>
+		<field loc="[10:8]" name="TXPI_SYNFREQ_PPM">
+key        value
+0-7        0-7</field>
+		<field loc="[6]" name="TXPI_INVSTROBE_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[5]" name="TXPI_GRAY_SEL">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TXPI_PPM_CFG" offset="10'h09a" type="RW" usr="0">
+		TXPI_PPM_CFG
+		<field loc="[7:0]" name="TXPI_PPM_CFG">
+key        value
+0-255      0-255</field>
+	</register>
+	<register default="16'h0" name="RX_DFELPM_KLKH_AGC_STUP_EN" offset="10'h09b" type="RW" usr="0">
+		RX_DFELPM_KLKH_AGC_STUP_EN
+		<field loc="[15]" name="RX_DFELPM_KLKH_AGC_STUP_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[14:11]" name="RX_DFELPM_CFG0">
+key        value
+0-15       0-15</field>
+		<field loc="[10]" name="RX_DFELPM_CFG1">
+key        value
+0-1        0-1</field>
+		<field loc="[9:8]" name="RX_DFE_KL_LPM_KH_CFG0">
+key        value
+0-3        0-3</field>
+		<field loc="[7:5]" name="RX_DFE_KL_LPM_KH_CFG1">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="TXFE_CFG0" offset="10'h09d" type="RW" usr="0">
+		TXFE_CFG0
+		<field loc="[15:0]" name="TXFE_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_UT_CFG0" offset="10'h09e" type="RW" usr="0">
+		RXDFE_UT_CFG0
+		<field loc="[15:0]" name="RXDFE_UT_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CPLL_CFG0" offset="10'h09f" type="RW" usr="0">
+		CPLL_CFG0
+		<field loc="[15:0]" name="CPLL_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CPLL_CFG1" offset="10'h0a0" type="RW" usr="0">
+		CPLL_CFG1
+		<field loc="[15:0]" name="CPLL_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXFE_CFG1" offset="10'h0a1" type="RW" usr="0">
+		TXFE_CFG1
+		<field loc="[15:0]" name="TXFE_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG0_GEN3" offset="10'h0a2" type="RW" usr="0">
+		RXCDR_CFG0_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG0_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG1_GEN3" offset="10'h0a3" type="RW" usr="0">
+		RXCDR_CFG1_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG1_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG2_GEN3" offset="10'h0a4" type="RW" usr="0">
+		RXCDR_CFG2_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG2_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG3_GEN3" offset="10'h0a5" type="RW" usr="0">
+		RXCDR_CFG3_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG3_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG4_GEN3" offset="10'h0a6" type="RW" usr="0">
+		RXCDR_CFG4_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG4_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPI_CFG0" offset="10'h0a7" type="RW" usr="0">
+		TXPI_CFG0
+		<field loc="[15:0]" name="TXPI_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXPI_CFG1" offset="10'h0a8" type="RW" usr="0">
+		TXPI_CFG1
+		<field loc="[15:0]" name="TXPI_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_RXPMA_CFG" offset="10'h0a9" type="RW" usr="0">
+		PCIE_RXPMA_CFG
+		<field loc="[15:0]" name="PCIE_RXPMA_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_TXPCS_CFG_GEN3" offset="10'h0aa" type="RW" usr="0">
+		PCIE_TXPCS_CFG_GEN3
+		<field loc="[15:0]" name="PCIE_TXPCS_CFG_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_TXPMA_CFG" offset="10'h0ab" type="RW" usr="0">
+		PCIE_TXPMA_CFG
+		<field loc="[15:0]" name="PCIE_TXPMA_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_CLK_SLIP_OVRD" offset="10'h0ac" type="RW" usr="0">
+		RX_CLK_SLIP_OVRD
+		<field loc="[7:3]" name="RX_CLK_SLIP_OVRD">
+key        value
+0-31       0-31</field>
+		<field loc="[0]" name="TXPI_PPM">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="PCIE_PLL_SEL_MODE_GEN4" offset="10'h0ad" type="RW" usr="0">
+		PCIE_PLL_SEL_MODE_GEN4
+		<field loc="[14:13]" name="PCIE_PLL_SEL_MODE_GEN4">
+key        value
+0-3        0-3</field>
+		<field loc="[12:11]" name="PCIE_PLL_SEL_MODE_GEN3">
+key        value
+0-3        0-3</field>
+		<field loc="[10:9]" name="PCIE_PLL_SEL_MODE_GEN12">
+key        value
+0-3        0-3</field>
+		<field loc="[8]" name="RATE_SW_USE_DRP">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HD_CFG1" offset="10'h0ae" type="RW" usr="0">
+		RXDFE_HD_CFG1
+		<field loc="[15:0]" name="RXDFE_HD_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG5_GEN3" offset="10'h0af" type="RW" usr="0">
+		RXCDR_CFG5_GEN3
+		<field loc="[15:0]" name="RXCDR_CFG5_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_KH_CFG3" offset="10'h0b0" type="RW" usr="0">
+		RXDFE_KH_CFG3
+		<field loc="[15:0]" name="RXDFE_KH_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_KH_CFG2" offset="10'h0b1" type="RW" usr="0">
+		RXDFE_KH_CFG2
+		<field loc="[15:0]" name="RXDFE_KH_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_KH_CFG1" offset="10'h0b2" type="RW" usr="0">
+		RXDFE_KH_CFG1
+		<field loc="[15:0]" name="RXDFE_KH_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H5_CFG0" offset="10'h0b3" type="RW" usr="0">
+		RXDFE_H5_CFG0
+		<field loc="[15:0]" name="RXDFE_H5_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG5" offset="10'h0b4" type="RW" usr="0">
+		RXCDR_CFG5
+		<field loc="[15:0]" name="RXCDR_CFG5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HE_CFG1" offset="10'h0b5" type="RW" usr="0">
+		RXDFE_HE_CFG1
+		<field loc="[15:0]" name="RXDFE_HE_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CPLL_CFG3" offset="10'h0b6" type="RW" usr="0">
+		CPLL_CFG3
+		<field loc="[15:0]" name="CPLL_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H6_CFG0" offset="10'h0b7" type="RW" usr="0">
+		RXDFE_H6_CFG0
+		<field loc="[15:0]" name="RXDFE_H6_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H6_CFG1" offset="10'h0b8" type="RW" usr="0">
+		RXDFE_H6_CFG1
+		<field loc="[15:0]" name="RXDFE_H6_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H7_CFG0" offset="10'h0b9" type="RW" usr="0">
+		RXDFE_H7_CFG0
+		<field loc="[15:0]" name="RXDFE_H7_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="DDI_REALIGN_WAIT" offset="10'h0ba" type="RW" usr="0">
+		DDI_REALIGN_WAIT
+		<field loc="[6:2]" name="DDI_REALIGN_WAIT">
+key        value
+0-31       0-31</field>
+		<field loc="[1:0]" name="DDI_CTRL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="TXGBOX_FIFO_INIT_RD_ADDR" offset="10'h0bb" type="RW" usr="0">
+		TXGBOX_FIFO_INIT_RD_ADDR
+		<field loc="[11:9]" name="TXGBOX_FIFO_INIT_RD_ADDR">
+key        value
+2-6        2-6</field>
+		<field loc="[8:6]" name="TX_SAMPLE_PERIOD">
+key        value
+0-7        0-7</field>
+		<field loc="[5:3]" name="RXGBOX_FIFO_INIT_RD_ADDR">
+key        value
+2-5        2-5</field>
+		<field loc="[2:0]" name="RX_SAMPLE_PERIOD">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="CPLL_CFG2" offset="10'h0bc" type="RW" usr="0">
+		CPLL_CFG2
+		<field loc="[15:0]" name="CPLL_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXPHSAMP_CFG" offset="10'h0bd" type="RW" usr="0">
+		RXPHSAMP_CFG
+		<field loc="[15:0]" name="RXPHSAMP_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXPHSLIP_CFG" offset="10'h0be" type="RW" usr="0">
+		RXPHSLIP_CFG
+		<field loc="[15:0]" name="RXPHSLIP_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXPHBEACON_CFG" offset="10'h0bf" type="RW" usr="0">
+		RXPHBEACON_CFG
+		<field loc="[15:0]" name="RXPHBEACON_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H7_CFG1" offset="10'h0c0" type="RW" usr="0">
+		RXDFE_H7_CFG1
+		<field loc="[15:0]" name="RXDFE_H7_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H8_CFG0" offset="10'h0c1" type="RW" usr="0">
+		RXDFE_H8_CFG0
+		<field loc="[15:0]" name="RXDFE_H8_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H8_CFG1" offset="10'h0c2" type="RW" usr="0">
+		RXDFE_H8_CFG1
+		<field loc="[15:0]" name="RXDFE_H8_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_BUFG_DIV_CTRL" offset="10'h0c3" type="RW" usr="0">
+		PCIE_BUFG_DIV_CTRL
+		<field loc="[15:0]" name="PCIE_BUFG_DIV_CTRL">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE_RXPCS_CFG_GEN3" offset="10'h0c4" type="RW" usr="0">
+		PCIE_RXPCS_CFG_GEN3
+		<field loc="[15:0]" name="PCIE_RXPCS_CFG_GEN3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H9_CFG0" offset="10'h0c5" type="RW" usr="0">
+		RXDFE_H9_CFG0
+		<field loc="[15:0]" name="RXDFE_H9_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_PROGDIV_CFG" offset="10'h0c6" type="RW" usr="0">
+		RX_PROGDIV_CFG
+		<field loc="[15:0]" name="RX_PROGDIV_CFG">
+key        value
+0          32768
+10         57440
+100        57455
+128        24654
+132        57862
+16         57410
+16.5       57880
+20         57442
+32         57414
+33         57856
+4          57432
+40         57415
+5          57464
+64         57422
+66         57858
+8          57408
+80         57423</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H9_CFG1" offset="10'h0c7" type="RW" usr="0">
+		RXDFE_H9_CFG1
+		<field loc="[15:0]" name="RXDFE_H9_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HA_CFG0" offset="10'h0c8" type="RW" usr="0">
+		RXDFE_HA_CFG0
+		<field loc="[15:0]" name="RXDFE_HA_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CHAN_BOND_SEQ_1_2" offset="10'h0ca" type="RW" usr="0">
+		CHAN_BOND_SEQ_1_2
+		<field loc="[9:0]" name="CHAN_BOND_SEQ_1_2">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RXDFE_GC_CFG0" offset="10'h0cb" type="RW" usr="0">
+		RXDFE_GC_CFG0
+		<field loc="[15:0]" name="RXDFE_GC_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_GC_CFG1" offset="10'h0cc" type="RW" usr="0">
+		RXDFE_GC_CFG1
+		<field loc="[15:0]" name="RXDFE_GC_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_DDI_SEL" offset="10'h0cd" type="RW" usr="0">
+		RX_DDI_SEL
+		<field loc="[7:2]" name="RX_DDI_SEL">
+key        value
+0-63       0-63</field>
+		<field loc="[1]" name="DEC_VALID_COMMA_ONLY">
+key        value
+FALSE      0
+TRUE       1</field>
+		<field loc="[0]" name="DEC_MCOMMA_DETECT">
+key        value
+FALSE      0
+TRUE       1</field>
+	</register>
+	<register default="16'h0" name="RXDFE_CFG0" offset="10'h0ce" type="RW" usr="0">
+		RXDFE_CFG0
+		<field loc="[15:0]" name="RXDFE_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_CFG1" offset="10'h0cf" type="RW" usr="0">
+		RXDFE_CFG1
+		<field loc="[15:0]" name="RXDFE_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_RESLOAD_OVRD" offset="10'h0d0" type="RW" usr="0">
+		RX_RESLOAD_OVRD
+		<field loc="[8]" name="RX_RESLOAD_OVRD">
+key        value
+0-1        0-1</field>
+		<field loc="[7]" name="RX_CTLE_PWR_SAVING">
+key        value
+0-1        0-1</field>
+		<field loc="[6:4]" name="RX_DEGEN_CTRL">
+key        value
+0-7        0-7</field>
+		<field loc="[3:0]" name="RX_RESLOAD_CTRL">
+key        value
+0-15       0-15</field>
+	</register>
+	<register default="16'h0" name="RX_EN_CTLE_RCAL_B" offset="10'h0d1" type="RW" usr="0">
+		RX_EN_CTLE_RCAL_B
+		<field loc="[12]" name="RX_EN_CTLE_RCAL_B">
+key        value
+0-1        0-1</field>
+		<field loc="[11:8]" name="RX_CTLE_RES_CTRL">
+key        value
+0-15       0-15</field>
+		<field loc="[3:0]" name="RX_SUM_RES_CTRL">
+key        value
+0-15       0-15</field>
+	</register>
+	<register default="16'h0" name="RXPI_CFG1" offset="10'h0d2" type="RW" usr="0">
+		RXPI_CFG1
+		<field loc="[15:0]" name="RXPI_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="LPBK_EN_RCAL_B" offset="10'h0d3" type="RW" usr="0">
+		LPBK_EN_RCAL_B
+		<field loc="[13]" name="LPBK_EN_RCAL_B">
+key        value
+0-1        0-1</field>
+		<field loc="[7:5]" name="LPBK_IND_CTRL2">
+key        value
+0-7        0-7</field>
+		<field loc="[4:2]" name="LPBK_BIAS_CTRL">
+key        value
+0-7        0-7</field>
+		<field loc="[1]" name="RX_XMODE_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[0]" name="ISCAN_CK_PH_SEL2">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="LPBK_IND_CTRL1" offset="10'h0d4" type="RW" usr="0">
+		LPBK_IND_CTRL1
+		<field loc="[13:11]" name="LPBK_IND_CTRL1">
+key        value
+0-7        0-7</field>
+		<field loc="[10:7]" name="LPBK_RG_CTRL">
+key        value
+0-3        0-3</field>
+		<field loc="[2:0]" name="LPBK_IND_CTRL0">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="CKCAL1_CFG_3" offset="10'h0d5" type="RW" usr="0">
+		CKCAL1_CFG_3
+		<field loc="[15:3]" name="CKCAL1_CFG_3">
+key        value
+0-65535    0-65535</field>
+		<field loc="[2:1]" name="CKCAL1_DCC_PWRDN">
+key        value
+0-1        0-1</field>
+		<field loc="[0]" name="CKCAL1_IQ_PWRDN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="CKCAL2_CFG_3" offset="10'h0d6" type="RW" usr="0">
+		CKCAL2_CFG_3
+		<field loc="[15:0]" name="CKCAL2_CFG_3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL2_CFG_4" offset="10'h0d7" type="RW" usr="0">
+		CKCAL2_CFG_4
+		<field loc="[15:0]" name="CKCAL2_CFG_4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_PMA_RSV0" offset="10'h0d8" type="RW" usr="0">
+		RX_PMA_RSV0
+		<field loc="[15:0]" name="RX_PMA_RSV0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL2_CFG_2" offset="10'h0d9" type="RW" usr="0">
+		CKCAL2_CFG_2
+		<field loc="[15:0]" name="CKCAL2_CFG_2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_LOCK_CFG2" offset="10'h0da" type="RW" usr="0">
+		RXCDR_LOCK_CFG2
+		<field loc="[15:0]" name="RXCDR_LOCK_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL1_CFG_2" offset="10'h0db" type="RW" usr="0">
+		CKCAL1_CFG_2
+		<field loc="[15:0]" name="CKCAL1_CFG_2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RTX_BUF_TERM_CTRL" offset="10'h0dd" type="RW" usr="0">
+		RTX_BUF_TERM_CTRL
+		<field loc="[4:3]" name="RTX_BUF_TERM_CTRL">
+key        value
+0-3        0-3</field>
+		<field loc="[2:0]" name="RTX_BUF_CML_CTRL">
+key        value
+0-7        0-7</field>
+	</register>
+	<register default="16'h0" name="TXPH_CFG2" offset="10'h0de" type="RW" usr="0">
+		TXPH_CFG2
+		<field loc="[15:0]" name="TXPH_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_LOCK_CFG4" offset="10'h0df" type="RW" usr="0">
+		RXCDR_LOCK_CFG4
+		<field loc="[15:0]" name="RXCDR_LOCK_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CTLE3_OCAP_EXT_CTRL" offset="10'h0e0" type="RW" usr="0">
+		CTLE3_OCAP_EXT_CTRL
+		<field loc="[8:6]" name="CTLE3_OCAP_EXT_CTRL">
+key        value
+0-7        0-7</field>
+		<field loc="[5]" name="CTLE3_OCAP_EXT_EN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="TX_VREG_VREFSEL" offset="10'h0e2" type="RW" usr="0">
+		TX_VREG_VREFSEL
+		<field loc="[13:12]" name="TX_VREG_VREFSEL">
+key        value
+0-3        0-3</field>
+		<field loc="[11:9]" name="TX_VREG_CTRL">
+key        value
+0-7        0-7</field>
+		<field loc="[8]" name="TX_VREG_PDB">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER5" offset="10'h0e7" type="RW" usr="0">
+		ES_QUALIFIER5
+		<field loc="[15:0]" name="ES_QUALIFIER5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER6" offset="10'h0e8" type="RW" usr="0">
+		ES_QUALIFIER6
+		<field loc="[15:0]" name="ES_QUALIFIER6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER7" offset="10'h0e9" type="RW" usr="0">
+		ES_QUALIFIER7
+		<field loc="[15:0]" name="ES_QUALIFIER7">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER8" offset="10'h0ea" type="RW" usr="0">
+		ES_QUALIFIER8
+		<field loc="[15:0]" name="ES_QUALIFIER8">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUALIFIER9" offset="10'h0eb" type="RW" usr="0">
+		ES_QUALIFIER9
+		<field loc="[15:0]" name="ES_QUALIFIER9">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK5" offset="10'h0ec" type="RW" usr="0">
+		ES_QUAL_MASK5
+		<field loc="[15:0]" name="ES_QUAL_MASK5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK6" offset="10'h0ed" type="RW" usr="0">
+		ES_QUAL_MASK6
+		<field loc="[15:0]" name="ES_QUAL_MASK6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK7" offset="10'h0ee" type="RW" usr="0">
+		ES_QUAL_MASK7
+		<field loc="[15:0]" name="ES_QUAL_MASK7">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK8" offset="10'h0ef" type="RW" usr="0">
+		ES_QUAL_MASK8
+		<field loc="[15:0]" name="ES_QUAL_MASK8">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_QUAL_MASK9" offset="10'h0f0" type="RW" usr="0">
+		ES_QUAL_MASK9
+		<field loc="[15:0]" name="ES_QUAL_MASK9">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK5" offset="10'h0f1" type="RW" usr="0">
+		ES_SDATA_MASK5
+		<field loc="[15:0]" name="ES_SDATA_MASK5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK6" offset="10'h0f2" type="RW" usr="0">
+		ES_SDATA_MASK6
+		<field loc="[15:0]" name="ES_SDATA_MASK6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK7" offset="10'h0f3" type="RW" usr="0">
+		ES_SDATA_MASK7
+		<field loc="[15:0]" name="ES_SDATA_MASK7">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK8" offset="10'h0f4" type="RW" usr="0">
+		ES_SDATA_MASK8
+		<field loc="[15:0]" name="ES_SDATA_MASK8">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="ES_SDATA_MASK9" offset="10'h0f5" type="RW" usr="0">
+		ES_SDATA_MASK9
+		<field loc="[15:0]" name="ES_SDATA_MASK9">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TX_PMA_RSV1" offset="10'h0f6" type="RW" usr="0">
+		TX_PMA_RSV1
+		<field loc="[15:0]" name="TX_PMA_RSV1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL1_CFG_0" offset="10'h0f7" type="RW" usr="0">
+		CKCAL1_CFG_0
+		<field loc="[15:0]" name="CKCAL1_CFG_0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL1_CFG_1" offset="10'h0f8" type="RW" usr="0">
+		CKCAL1_CFG_1
+		<field loc="[15:0]" name="CKCAL1_CFG_1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL2_CFG_0" offset="10'h0f9" type="RW" usr="0">
+		CKCAL2_CFG_0
+		<field loc="[15:0]" name="CKCAL2_CFG_0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXSWBST_MAG" offset="10'h0fa" type="RW" usr="0">
+		TXSWBST_MAG
+		<field loc="[15:13]" name="TXSWBST_MAG">
+key        value
+0-7        0-7</field>
+		<field loc="[10:9]" name="TXDRV_FREQBAND">
+key        value
+0-3        0-3</field>
+		<field loc="[8:7]" name="TXSWBST_BST">
+key        value
+0-3        0-3</field>
+		<field loc="[6]" name="TXSWBST_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[3:1]" name="RX_VREG_CTRL">
+key        value
+0-7        0-7</field>
+		<field loc="[0]" name="RX_VREG_PDB">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="LPBK_EXT_RCAL" offset="10'h0fb" type="RW" usr="0">
+		LPBK_EXT_RCAL
+		<field loc="[9:6]" name="LPBK_EXT_RCAL">
+key        value
+0-15       0-15</field>
+		<field loc="[5:4]" name="PREIQ_FREQ_BST">
+key        value
+0-3        0-3</field>
+		<field loc="[2:1]" name="TX_PI_BIASSET">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="TX_PHICAL_CFG0" offset="10'h0fc" type="RW" usr="0">
+		TX_PHICAL_CFG0
+		<field loc="[15:0]" name="TX_PHICAL_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TX_PHICAL_CFG1" offset="10'h0fd" type="RW" usr="0">
+		TX_PHICAL_CFG1
+		<field loc="[15:0]" name="TX_PHICAL_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_LOCK_CFG3" offset="10'h0fe" type="RW" usr="0">
+		RXCDR_LOCK_CFG3
+		<field loc="[15:0]" name="RXCDR_LOCK_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_UT_CFG2" offset="10'h100" type="RW" usr="0">
+		RXDFE_UT_CFG2
+		<field loc="[15:0]" name="RXDFE_UT_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CKCAL2_CFG_1" offset="10'h101" type="RW" usr="0">
+		CKCAL2_CFG_1
+		<field loc="[15:0]" name="CKCAL2_CFG_1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="Y_ALL_MODE" offset="10'h102" type="RW" usr="0">
+		Y_ALL_MODE
+		<field loc="[2]" name="Y_ALL_MODE">
+key        value
+0-1        0-1</field>
+		<field loc="[1]" name="RCLK_SIPO_DLY_ENB">
+key        value
+0-1        0-1</field>
+		<field loc="[0]" name="RCLK_SIPO_INV_EN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RX_PROGDIV_RATE" offset="10'h103" type="RW" usr="0">
+		RX_PROGDIV_RATE
+		<field loc="[15:0]" name="RX_PROGDIV_RATE">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HF_CFG1" offset="10'h104" type="RW" usr="0">
+		RXDFE_HF_CFG1
+		<field loc="[15:0]" name="RXDFE_HF_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TX_PROGDIV_RATE" offset="10'h105" type="RW" usr="0">
+		TX_PROGDIV_RATE
+		<field loc="[15:0]" name="TX_PROGDIV_RATE">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TX_DCC_LOOP_RST_CFG" offset="10'h106" type="RW" usr="0">
+		TX_DCC_LOOP_RST_CFG
+		<field loc="[15:0]" name="TX_DCC_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HC_CFG0" offset="10'h107" type="RW" usr="0">
+		RXDFE_HC_CFG0
+		<field loc="[15:0]" name="RXDFE_HC_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL1_I_LOOP_RST_CFG" offset="10'h108" type="RW" usr="0">
+		RXCKCAL1_I_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL1_I_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL1_Q_LOOP_RST_CFG" offset="10'h109" type="RW" usr="0">
+		RXCKCAL1_Q_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL1_Q_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL1_IQ_LOOP_RST_CFG" offset="10'h10a" type="RW" usr="0">
+		RXCKCAL1_IQ_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL1_IQ_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL2_D_LOOP_RST_CFG" offset="10'h10b" type="RW" usr="0">
+		RXCKCAL2_D_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL2_D_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL2_X_LOOP_RST_CFG" offset="10'h10c" type="RW" usr="0">
+		RXCKCAL2_X_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL2_X_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL2_S_LOOP_RST_CFG" offset="10'h10d" type="RW" usr="0">
+		RXCKCAL2_S_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL2_S_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCKCAL2_DX_LOOP_RST_CFG" offset="10'h10e" type="RW" usr="0">
+		RXCKCAL2_DX_LOOP_RST_CFG
+		<field loc="[15:0]" name="RXCKCAL2_DX_LOOP_RST_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_KH_CFG0" offset="10'h110" type="RW" usr="0">
+		RXDFE_KH_CFG0
+		<field loc="[15:0]" name="RXDFE_KH_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H4_CFG1" offset="10'h111" type="RW" usr="0">
+		RXDFE_H4_CFG1
+		<field loc="[15:0]" name="RXDFE_H4_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H4_CFG0" offset="10'h112" type="RW" usr="0">
+		RXDFE_H4_CFG0
+		<field loc="[15:0]" name="RXDFE_H4_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_H3_CFG1" offset="10'h113" type="RW" usr="0">
+		RXDFE_H3_CFG1
+		<field loc="[15:0]" name="RXDFE_H3_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="CH_HSPMUX" offset="10'h116" type="RW" usr="0">
+		CH_HSPMUX
+		<field loc="[15:0]" name="CH_HSPMUX">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PCIE3_CLK_COR_MIN_LAT" offset="10'h117" type="RW" usr="0">
+		PCIE3_CLK_COR_MIN_LAT
+		<field loc="[15:11]" name="PCIE3_CLK_COR_MIN_LAT">
+key        value
+0-31       0-31</field>
+		<field loc="[10:6]" name="PCIE3_CLK_COR_MAX_LAT">
+key        value
+0-31       0-31</field>
+		<field loc="[5:0]" name="PCIE3_CLK_COR_THRSH_TIMER">
+key        value
+0-63       0-63</field>
+	</register>
+	<register default="16'h0" name="USB_MODE" offset="10'h118" type="RW" usr="0">
+		USB_MODE
+		<field loc="[15]" name="USB_MODE">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="USB_EXT_CNTL">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="USB_CLK_COR_EQ_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[12]" name="USB_PCIE_ERR_REP_DIS">
+key        value
+0-1        0-1</field>
+		<field loc="[11:6]" name="PCIE3_CLK_COR_FULL_THRSH">
+key        value
+0-63       0-63</field>
+		<field loc="[4:0]" name="PCIE3_CLK_COR_EMPTY_THRSH">
+key        value
+0-31       0-31</field>
+	</register>
+	<register default="16'h0" name="USB_RAW_ELEC" offset="10'h119" type="RW" usr="0">
+		USB_RAW_ELEC
+		<field loc="[15]" name="USB_RAW_ELEC">
+key        value
+0-1        0-1</field>
+		<field loc="[14]" name="DELAY_ELEC">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="USB_BOTH_BURST_IDLE">
+key        value
+0-1        0-1</field>
+		<field loc="[12]" name="TXREFCLKDIV2_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[11:6]" name="TX_DEEMPH2">
+key        value
+0-63       0-63</field>
+		<field loc="[5:0]" name="TX_DEEMPH3">
+key        value
+0-63       0-63</field>
+	</register>
+	<register default="16'h0" name="RXREFCLKDIV2_SEL" offset="10'h11a" type="RW" usr="0">
+		RXREFCLKDIV2_SEL
+		<field loc="[6]" name="RXREFCLKDIV2_SEL">
+key        value
+0-1        0-1</field>
+		<field loc="[5]" name="A_RXTERMINATION">
+key        value
+0-1        0-1</field>
+		<field loc="[4:1]" name="USB_LFPS_TPERIOD">
+key        value
+0-15       0-15</field>
+		<field loc="[0]" name="USB_LFPS_TPERIOD_ACCURATE">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG2_GEN4" offset="10'h11b" type="RW" usr="0">
+		RXCDR_CFG2_GEN4
+		<field loc="[15:0]" name="RXCDR_CFG2_GEN4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG3_GEN4" offset="10'h11c" type="RW" usr="0">
+		RXCDR_CFG3_GEN4
+		<field loc="[15:0]" name="RXCDR_CFG3_GEN4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="USB_BURSTMIN_U3WAKE" offset="10'h11d" type="RW" usr="0">
+		USB_BURSTMIN_U3WAKE
+		<field loc="[14:8]" name="USB_BURSTMIN_U3WAKE">
+key        value
+0-127      0-127</field>
+		<field loc="[6:0]" name="USB_BURSTMAX_U3WAKE">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="USB_IDLEMIN_POLLING" offset="10'h11e" type="RW" usr="0">
+		USB_IDLEMIN_POLLING
+		<field loc="[9:0]" name="USB_IDLEMIN_POLLING">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="USB_IDLEMAX_POLLING" offset="10'h11f" type="RW" usr="0">
+		USB_IDLEMAX_POLLING
+		<field loc="[9:0]" name="USB_IDLEMAX_POLLING">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSPOLLING_BURST" offset="10'h120" type="RW" usr="0">
+		USB_LFPSPOLLING_BURST
+		<field loc="[8:0]" name="USB_LFPSPOLLING_BURST">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSPING_BURST" offset="10'h121" type="RW" usr="0">
+		USB_LFPSPING_BURST
+		<field loc="[8:0]" name="USB_LFPSPING_BURST">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSU1EXIT_BURST" offset="10'h122" type="RW" usr="0">
+		USB_LFPSU1EXIT_BURST
+		<field loc="[8:0]" name="USB_LFPSU1EXIT_BURST">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSU2LPEXIT_BURST_MS" offset="10'h123" type="RW" usr="0">
+		USB_LFPSU2LPEXIT_BURST_MS
+		<field loc="[8:0]" name="USB_LFPSU2LPEXIT_BURST_MS">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSU3WAKE_BURST_MS" offset="10'h124" type="RW" usr="0">
+		USB_LFPSU3WAKE_BURST_MS
+		<field loc="[8:0]" name="USB_LFPSU3WAKE_BURST_MS">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="USB_LFPSPOLLING_IDLE_MS" offset="10'h125" type="RW" usr="0">
+		USB_LFPSPOLLING_IDLE_MS
+		<field loc="[8:0]" name="USB_LFPSPOLLING_IDLE_MS">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HA_CFG1" offset="10'h126" type="RW" usr="0">
+		RXDFE_HA_CFG1
+		<field loc="[15:0]" name="RXDFE_HA_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXDFE_HB_CFG0" offset="10'h127" type="RW" usr="0">
+		RXDFE_HB_CFG0
+		<field loc="[15:0]" name="RXDFE_HB_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXCDR_CFG3_GEN2" offset="10'h135" type="RW" usr="0">
+		RXCDR_CFG3_GEN2
+		<field loc="[15:10]" name="RXCDR_CFG3_GEN2">
+key        value
+0-63       0-63</field>
+		<field loc="[9:0]" name="RXCDR_CFG2_GEN2">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="COMMA_ALIGN_LATENCY" offset="10'h250" type="RO" usr="0">
+		COMMA_ALIGN_LATENCY
+		<field loc="[6:0]" name="COMMA_ALIGN_LATENCY">
+key        value
+0-127      0-127</field>
+	</register>
+	<register default="16'h0" name="es_error_count" offset="10'h251" type="RO" usr="0">
+		es_error_count
+		<field loc="[15:0]" name="es_error_count">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sample_count" offset="10'h252" type="RO" usr="0">
+		es_sample_count
+		<field loc="[15:0]" name="es_sample_count">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_control_status" offset="10'h253" type="RO" usr="0">
+		es_control_status
+		<field loc="[3:0]" name="es_control_status">
+key        value
+0-15       0-15</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte4" offset="10'h254" type="RO" usr="0">
+		es_rdata_byte4
+		<field loc="[15:0]" name="es_rdata_byte4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte3" offset="10'h255" type="RO" usr="0">
+		es_rdata_byte3
+		<field loc="[15:0]" name="es_rdata_byte3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte2" offset="10'h256" type="RO" usr="0">
+		es_rdata_byte2
+		<field loc="[15:0]" name="es_rdata_byte2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte1" offset="10'h257" type="RO" usr="0">
+		es_rdata_byte1
+		<field loc="[15:0]" name="es_rdata_byte1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte0" offset="10'h258" type="RO" usr="0">
+		es_rdata_byte0
+		<field loc="[15:0]" name="es_rdata_byte0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte4" offset="10'h259" type="RO" usr="0">
+		es_sdata_byte4
+		<field loc="[15:0]" name="es_sdata_byte4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte3" offset="10'h25a" type="RO" usr="0">
+		es_sdata_byte3
+		<field loc="[15:0]" name="es_sdata_byte3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte2" offset="10'h25b" type="RO" usr="0">
+		es_sdata_byte2
+		<field loc="[15:0]" name="es_sdata_byte2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte1" offset="10'h25c" type="RO" usr="0">
+		es_sdata_byte1
+		<field loc="[15:0]" name="es_sdata_byte1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte0" offset="10'h25d" type="RO" usr="0">
+		es_sdata_byte0
+		<field loc="[15:0]" name="es_sdata_byte0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_PRBS_ERR_15_0_CNT" offset="10'h25e" type="RO" usr="0">
+		RX_PRBS_ERR_15_0_CNT
+		<field loc="[15:0]" name="RX_PRBS_ERR_15_0_CNT">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RX_PRBS_ERR_31_16_CNT" offset="10'h25f" type="RO" usr="0">
+		RX_PRBS_ERR_31_16_CNT
+		<field loc="[15:0]" name="RX_PRBS_ERR_31_16_CNT">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="TXGBOX_FIFO_LATENCY" offset="10'h263" type="RO" usr="0">
+		TXGBOX_FIFO_LATENCY
+		<field loc="[15:0]" name="TXGBOX_FIFO_LATENCY">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RXGBOX_FIFO_LATENCY" offset="10'h269" type="RO" usr="0">
+		RXGBOX_FIFO_LATENCY
+		<field loc="[15:0]" name="RXGBOX_FIFO_LATENCY">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte5" offset="10'h283" type="RO" usr="0">
+		es_sdata_byte5
+		<field loc="[15:0]" name="es_sdata_byte5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte6" offset="10'h284" type="RO" usr="0">
+		es_sdata_byte6
+		<field loc="[15:0]" name="es_sdata_byte6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte7" offset="10'h285" type="RO" usr="0">
+		es_sdata_byte7
+		<field loc="[15:0]" name="es_sdata_byte7">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte8" offset="10'h286" type="RO" usr="0">
+		es_sdata_byte8
+		<field loc="[15:0]" name="es_sdata_byte8">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_sdata_byte9" offset="10'h287" type="RO" usr="0">
+		es_sdata_byte9
+		<field loc="[15:0]" name="es_sdata_byte9">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte5" offset="10'h288" type="RO" usr="0">
+		es_rdata_byte5
+		<field loc="[15:0]" name="es_rdata_byte5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte6" offset="10'h289" type="RO" usr="0">
+		es_rdata_byte6
+		<field loc="[15:0]" name="es_rdata_byte6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte7" offset="10'h28a" type="RO" usr="0">
+		es_rdata_byte7
+		<field loc="[15:0]" name="es_rdata_byte7">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte8" offset="10'h28b" type="RO" usr="0">
+		es_rdata_byte8
+		<field loc="[15:0]" name="es_rdata_byte8">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="es_rdata_byte9" offset="10'h28c" type="RO" usr="0">
+		es_rdata_byte9
+		<field loc="[15:0]" name="es_rdata_byte9">
+key        value
+0-65535    0-65535</field>
+	</register>
+</decl_reg_list>

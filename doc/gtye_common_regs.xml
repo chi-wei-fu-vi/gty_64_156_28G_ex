@@ -1,0 +1,501 @@
+<?xml version="1.0" ?>
+<decl_reg_list>
+	<register default="16'h0" name="QPLL0_CFG0" offset="10'h008" type="RW" usr="0">
+		QPLL0_CFG0
+		<field loc="[15:0]" name="QPLL0_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="COMMON_CFG0" offset="10'h009" type="RW" usr="0">
+		COMMON_CFG0
+		<field loc="[15:0]" name="COMMON_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RSVD_ATTR0" offset="10'h00b" type="RW" usr="0">
+		RSVD_ATTR0
+		<field loc="[15:0]" name="RSVD_ATTR0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PPF0_CFG" offset="10'h00d" type="RW" usr="0">
+		PPF0_CFG
+		<field loc="[15:0]" name="PPF0_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0CLKOUT_RATE" offset="10'h00e" type="RW" usr="0">
+		QPLL0CLKOUT_RATE
+		<field loc="[0]" name="QPLL0CLKOUT_RATE">
+key        value
+HALF       0
+FULL       1</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG1" offset="10'h010" type="RW" usr="0">
+		QPLL0_CFG1
+		<field loc="[15:0]" name="QPLL0_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG2" offset="10'h011" type="RW" usr="0">
+		QPLL0_CFG2
+		<field loc="[15:0]" name="QPLL0_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_LOCK_CFG" offset="10'h012" type="RW" usr="0">
+		QPLL0_LOCK_CFG
+		<field loc="[15:0]" name="QPLL0_LOCK_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_INIT_CFG0" offset="10'h013" type="RW" usr="0">
+		QPLL0_INIT_CFG0
+		<field loc="[15:0]" name="QPLL0_INIT_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_INIT_CFG1" offset="10'h014" type="RW" usr="0">
+		QPLL0_INIT_CFG1
+		<field loc="[15:8]" name="QPLL0_INIT_CFG1">
+key        value
+0-255      0-255</field>
+		<field loc="[7:0]" name="QPLL0_FBDIV">
+key        value
+16         14
+17         15
+18         16
+19         17
+20         18
+21         19
+22         20
+23         21
+24         22</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG3" offset="10'h015" type="RW" usr="0">
+		QPLL0_CFG3
+		<field loc="[15:0]" name="QPLL0_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CP" offset="10'h016" type="RW" usr="0">
+		QPLL0_CP
+		<field loc="[9:0]" name="QPLL0_CP">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="QPLL0_REFCLK_DIV" offset="10'h018" type="RW" usr="0">
+		QPLL0_REFCLK_DIV
+		<field loc="[11:7]" name="QPLL0_REFCLK_DIV">
+key        value
+2          0
+3          1
+4          2
+5          3
+6          5
+8          6
+10         7
+12         13
+16         14
+20         15
+1          16</field>
+		<field loc="[5:3]" name="QPLL0_IPS_REFCLK_SEL">
+key        value
+0-7        0-7</field>
+		<field loc="[0]" name="QPLL0_IPS_EN">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="QPLL0_LPF" offset="10'h019" type="RW" usr="0">
+		QPLL0_LPF
+		<field loc="[9:0]" name="QPLL0_LPF">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG1_G3" offset="10'h01a" type="RW" usr="0">
+		QPLL0_CFG1_G3
+		<field loc="[15:0]" name="QPLL0_CFG1_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG2_G3" offset="10'h01b" type="RW" usr="0">
+		QPLL0_CFG2_G3
+		<field loc="[15:0]" name="QPLL0_CFG2_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_LPF_G3" offset="10'h01c" type="RW" usr="0">
+		QPLL0_LPF_G3
+		<field loc="[9:0]" name="QPLL0_LPF_G3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="QPLL0_LOCK_CFG_G3" offset="10'h01d" type="RW" usr="0">
+		QPLL0_LOCK_CFG_G3
+		<field loc="[15:0]" name="QPLL0_LOCK_CFG_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RSVD_ATTR00" offset="10'h01e" type="RW" usr="0">
+		RSVD_ATTR00
+		<field loc="[15:0]" name="RSVD_ATTR00">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_FBDIV_G3" offset="10'h01f" type="RW" usr="0">
+		QPLL0_FBDIV_G3
+		<field loc="[15:8]" name="QPLL0_FBDIV_G3">
+key        value
+16         14
+17         15
+18         16
+19         17
+20         18
+21         19</field>
+		<field loc="[3]" name="QPLL0_RATE_SW_USE_DRP">
+key        value
+0-1        0-1</field>
+		<field loc="[2]" name="QPLL0_PCIE_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[1:0]" name="RXRECCLKOUT0_SEL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="QPLL0_SDM_CFG0" offset="10'h020" type="RW" usr="0">
+		QPLL0_SDM_CFG0
+		<field loc="[15:0]" name="QPLL0_SDM_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_SDM_CFG1" offset="10'h021" type="RW" usr="0">
+		QPLL0_SDM_CFG1
+		<field loc="[15:0]" name="QPLL0_SDM_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="SDM0INITSEED0_0" offset="10'h022" type="RW" usr="0">
+		SDM0INITSEED0_0
+		<field loc="[15:0]" name="SDM0INITSEED0_0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="SDM0INITSEED0_1" offset="10'h023" type="RW" usr="0">
+		SDM0INITSEED0_1
+		<field loc="[8:0]" name="SDM0INITSEED0_1">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="QPLL0_SDM_CFG2" offset="10'h024" type="RW" usr="0">
+		QPLL0_SDM_CFG2
+		<field loc="[15:0]" name="QPLL0_SDM_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CP_G3" offset="10'h025" type="RW" usr="0">
+		QPLL0_CP_G3
+		<field loc="[9:0]" name="QPLL0_CP_G3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RSVD_ATTR1" offset="10'h02d" type="RW" usr="0">
+		RSVD_ATTR1
+		<field loc="[15:0]" name="RSVD_ATTR1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL0_CFG4" offset="10'h030" type="RW" usr="0">
+		QPLL0_CFG4
+		<field loc="[15:0]" name="QPLL0_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG0" offset="10'h048" type="RW" usr="0">
+		UB_CFG0
+		<field loc="[15:0]" name="UB_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG1" offset="10'h04c" type="RW" usr="0">
+		UB_CFG1
+		<field loc="[15:0]" name="UB_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG2" offset="10'h050" type="RW" usr="0">
+		UB_CFG2
+		<field loc="[15:0]" name="UB_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG3" offset="10'h054" type="RW" usr="0">
+		UB_CFG3
+		<field loc="[15:0]" name="UB_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG4" offset="10'h058" type="RW" usr="0">
+		UB_CFG4
+		<field loc="[15:0]" name="UB_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG5" offset="10'h05c" type="RW" usr="0">
+		UB_CFG5
+		<field loc="[15:0]" name="UB_CFG5">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="UB_CFG6" offset="10'h05f" type="RW" usr="0">
+		UB_CFG6
+		<field loc="[15:0]" name="UB_CFG6">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG0" offset="10'h081" type="RW" usr="0">
+		BIAS_CFG0
+		<field loc="[15:0]" name="BIAS_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG1" offset="10'h082" type="RW" usr="0">
+		BIAS_CFG1
+		<field loc="[15:0]" name="BIAS_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG2" offset="10'h083" type="RW" usr="0">
+		BIAS_CFG2
+		<field loc="[15:0]" name="BIAS_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG3" offset="10'h084" type="RW" usr="0">
+		BIAS_CFG3
+		<field loc="[15:0]" name="BIAS_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG4" offset="10'h086" type="RW" usr="0">
+		BIAS_CFG4
+		<field loc="[15:0]" name="BIAS_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG0" offset="10'h088" type="RW" usr="0">
+		QPLL1_CFG0
+		<field loc="[15:0]" name="QPLL1_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="COMMON_CFG1" offset="10'h089" type="RW" usr="0">
+		COMMON_CFG1
+		<field loc="[15:0]" name="COMMON_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="POR_CFG" offset="10'h08b" type="RW" usr="0">
+		POR_CFG
+		<field loc="[15:0]" name="POR_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="PPF1_CFG" offset="10'h08d" type="RW" usr="0">
+		PPF1_CFG
+		<field loc="[15:0]" name="PPF1_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1CLKOUT_RATE" offset="10'h08e" type="RW" usr="0">
+		QPLL1CLKOUT_RATE
+		<field loc="[0]" name="QPLL1CLKOUT_RATE">
+key        value
+HALF       0
+FULL       1</field>
+	</register>
+	<register default="16'h0" name="BIAS_CFG_RSVD" offset="10'h08f" type="RW" usr="0">
+		BIAS_CFG_RSVD
+		<field loc="[15:0]" name="BIAS_CFG_RSVD">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG1" offset="10'h090" type="RW" usr="0">
+		QPLL1_CFG1
+		<field loc="[15:0]" name="QPLL1_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG2" offset="10'h091" type="RW" usr="0">
+		QPLL1_CFG2
+		<field loc="[15:0]" name="QPLL1_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_LOCK_CFG" offset="10'h092" type="RW" usr="0">
+		QPLL1_LOCK_CFG
+		<field loc="[15:0]" name="QPLL1_LOCK_CFG">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_INIT_CFG0" offset="10'h093" type="RW" usr="0">
+		QPLL1_INIT_CFG0
+		<field loc="[15:0]" name="QPLL1_INIT_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_INIT_CFG1" offset="10'h094" type="RW" usr="0">
+		QPLL1_INIT_CFG1
+		<field loc="[15:8]" name="QPLL1_INIT_CFG1">
+key        value
+0-255      0-255</field>
+		<field loc="[7:0]" name="QPLL1_FBDIV">
+key        value
+16         14
+17         15
+18         16
+19         17
+20         18
+21         19
+22         20</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG3" offset="10'h095" type="RW" usr="0">
+		QPLL1_CFG3
+		<field loc="[15:0]" name="QPLL1_CFG3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CP" offset="10'h096" type="RW" usr="0">
+		QPLL1_CP
+		<field loc="[9:0]" name="QPLL1_CP">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="QPLL1_REFCLK_DIV" offset="10'h098" type="RW" usr="0">
+		QPLL1_REFCLK_DIV
+		<field loc="[11:7]" name="QPLL1_REFCLK_DIV">
+key        value
+2          0
+3          1
+4          2
+5          3
+6          5
+8          6
+10         7
+12         13
+16         14
+20         15
+1          16</field>
+		<field loc="[5:3]" name="QPLL1_IPS_REFCLK_SEL">
+key        value
+0-7        0-7</field>
+		<field loc="[12]" name="SARC_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[6]" name="QPLL1_IPS_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[13]" name="SARC_SEL">
+key        value
+0-1        0-1</field>
+	</register>
+	<register default="16'h0" name="QPLL1_LPF" offset="10'h099" type="RW" usr="0">
+		QPLL1_LPF
+		<field loc="[15:0]" name="QPLL1_LPF">
+key        value
+0-1024     0-1024</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG1_G3" offset="10'h09a" type="RW" usr="0">
+		QPLL1_CFG1_G3
+		<field loc="[15:0]" name="QPLL1_CFG1_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG2_G3" offset="10'h09b" type="RW" usr="0">
+		QPLL1_CFG2_G3
+		<field loc="[15:0]" name="QPLL1_CFG2_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_LPF_G3" offset="10'h09c" type="RW" usr="0">
+		QPLL1_LPF_G3
+		<field loc="[9:0]" name="QPLL1_LPF_G3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="QPLL1_LOCK_CFG_G3" offset="10'h09d" type="RW" usr="0">
+		QPLL1_LOCK_CFG_G3
+		<field loc="[15:0]" name="QPLL1_LOCK_CFG_G3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="RSVD_ATTR2" offset="10'h09e" type="RW" usr="0">
+		RSVD_ATTR2
+		<field loc="[15:0]" name="RSVD_ATTR2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_FBDIV_G3" offset="10'h09f" type="RW" usr="0">
+		QPLL1_FBDIV_G3
+		<field loc="[15:8]" name="QPLL1_FBDIV_G3">
+key        value
+16         14
+17         15</field>
+		<field loc="[3]" name="QPLL1_RATE_SW_USE_DRP">
+key        value
+0-1        0-1</field>
+		<field loc="[2]" name="QPLL1_PCI_EN">
+key        value
+0-1        0-1</field>
+		<field loc="[1:0]" name="RXRECCLKOUT1_SEL">
+key        value
+0-3        0-3</field>
+	</register>
+	<register default="16'h0" name="QPLL1_SDM_CFG0" offset="10'h0a0" type="RW" usr="0">
+		QPLL1_SDM_CFG0
+		<field loc="[15:0]" name="QPLL1_SDM_CFG0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_SDM_CFG1" offset="10'h0a1" type="RW" usr="0">
+		QPLL1_SDM_CFG1
+		<field loc="[15:0]" name="QPLL1_SDM_CFG1">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="SDM1INITSEED0_0" offset="10'h0a2" type="RW" usr="0">
+		SDM1INITSEED0_0
+		<field loc="[15:0]" name="SDM1INITSEED0_0">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="SDM1INITSEED0_1" offset="10'h0a3" type="RW" usr="0">
+		SDM1INITSEED0_1
+		<field loc="[8:0]" name="SDM1INITSEED0_1">
+key        value
+0-511      0-511</field>
+	</register>
+	<register default="16'h0" name="QPLL1_SDM_CFG2" offset="10'h0a4" type="RW" usr="0">
+		QPLL1_SDM_CFG2
+		<field loc="[15:0]" name="QPLL1_SDM_CFG2">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CP_G3" offset="10'h0a5" type="RW" usr="0">
+		QPLL1_CP_G3
+		<field loc="[9:0]" name="QPLL1_CP_G3">
+key        value
+0-1023     0-1023</field>
+	</register>
+	<register default="16'h0" name="RSVD_ATTR3" offset="10'h0ad" type="RW" usr="0">
+		RSVD_ATTR3
+		<field loc="[15:0]" name="RSVD_ATTR3">
+key        value
+0-65535    0-65535</field>
+	</register>
+	<register default="16'h0" name="QPLL1_CFG4" offset="10'h0b0" type="RW" usr="0">
+		QPLL1_CFG4
+		<field loc="[15:0]" name="QPLL1_CFG4">
+key        value
+0-65535    0-65535</field>
+	</register>
+</decl_reg_list>
