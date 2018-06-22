@@ -44,7 +44,7 @@ class seq_mm_item extends uvm_sequence #(mm_item);
 endclass : seq_mm_item 
 
 
-class gty_prbs_seq extends uvm_sequence #(mm_item);
+class gty_prbs_seq extends seq_mm_item;
   mm_item req;
 
   `uvm_object_utils_begin(gty_prbs_seq)    

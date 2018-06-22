@@ -5,6 +5,7 @@ class base_test extends uvm_test;
   `uvm_component_utils(base_test)
 
   toplevel_env m_toplevel_env;
+  seq_mm_item                        m_seq_mm_item;
 
   function new(string name="base_test", uvm_component parent);
     super.new(name, parent);
@@ -13,6 +14,8 @@ class base_test extends uvm_test;
   function void build_phase(uvm_phase phase);
     uvm_reg::include_coverage("*", UVM_CVR_ALL);
     m_toplevel_env = toplevel_env::type_id::create("m_toplevel_env", this);
+    //seq_mm_item::type_id::set_type_override(gty_prbs_seq::get_type());
+    m_seq_mm_item=seq_mm_item::type_id::create("m_seq_mm_item");
     common_env_pkg::utils::cfg_printer(uvm_default_printer);
   endfunction : build_phase
 
@@ -32,25 +35,12 @@ class base_test extends uvm_test;
 
   endtask : reset_phase
   task configure_phase(uvm_phase phase);
-    gty_prbs_seq                        m_gty_prbs_seq;
     phase.raise_objection(this);
     `uvm_info(get_type_name(), "configure_phase", UVM_MEDIUM)
-    m_gty_prbs_seq=gty_prbs_seq::type_id::create("m_gty_prbs_seq");
-    m_gty_prbs_seq.start(m_toplevel_env.m_mm_env.m_mm_agent.m_sequencer);
-    phase.drop_objection(this);
-
-  endtask : configure_phase
-/*
-  task configure_phase(uvm_phase phase);
-    seq_mm_item                        m_seq_mm_item;
-    phase.raise_objection(this);
-    `uvm_info(get_type_name(), "configure_phase", UVM_MEDIUM)
-    m_seq_mm_item=seq_mm_item::type_id::create("m_seq_mm_item");
     m_seq_mm_item.start(m_toplevel_env.m_mm_env.m_mm_agent.m_sequencer);
     phase.drop_objection(this);
 
   endtask : configure_phase
-*/
   task main_phase(uvm_phase phase);
     phase.raise_objection(this);
     #5us;
