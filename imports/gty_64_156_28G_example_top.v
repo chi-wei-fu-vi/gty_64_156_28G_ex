@@ -117,18 +117,18 @@ wire                 rd_data_v;
   assign drp_do         = ({16{drprdy_int}} & drpdo_int) | ({16{drprdy_common_int}} & drpdo_common_int) | ({16{rd_data_v}} & rd_data);
   assign drp_rdy        = drprdy_int || drprdy_common_int || rd_data_v;
 
-assign drpaddr_common_int = drp_addr[15:0];
+assign drpaddr_common_int = {6'b0,drp_addr[9:0]};
 assign drpclk_common_int = hb_gtwiz_reset_clk_freerun_in;
 assign drpdi_common_int = drp_di;
-assign drpen_common_int = drp_addr[31:10]==0 && drp_en;
-assign drpwe_common_int = drp_addr[31:10]==0 && drp_we;
+assign drpen_common_int = drp_addr[31:10]==1 && drp_en;
+assign drpwe_common_int = drp_addr[31:10]==1 && drp_we;
 //assign drpdo_common_int = drpdo;
 //assign drprdy_common_int = drprdy;
 assign drpaddr_int = drp_addr[9:0];
 assign drpclk_int = hb_gtwiz_reset_clk_freerun_in;
 assign drpdi_int = drp_di;
-assign drpen_int = drp_addr[31:10]==1 && drp_en;
-assign drpwe_int = drp_addr[31:10]==1 && drp_we;
+assign drpen_int = drp_addr[31:10]==0 && drp_en;
+assign drpwe_int = drp_addr[31:10]==0 && drp_we;
 
 //  wire [15:0] drpaddr_common_int;
 //  wire [15:0] cm0_drpaddr_common_int = 16'b0000000000000000;

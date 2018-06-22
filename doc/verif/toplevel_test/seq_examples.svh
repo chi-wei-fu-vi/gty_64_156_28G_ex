@@ -43,4 +43,73 @@ class seq_mm_item extends uvm_sequence #(mm_item);
   endtask
 endclass : seq_mm_item 
 
+
+class gty_prbs_seq extends uvm_sequence #(mm_item);
+  mm_item req;
+
+  `uvm_object_utils_begin(gty_prbs_seq)    
+  `uvm_object_utils_end
+  `uvm_declare_p_sequencer (mm_sequencer)
+  
+  function new(string name="gty_prbs_seq");
+    super.new(name);
+  endfunction
+  
+
+  virtual task body();
+    uvm_status_e status;
+    uvm_reg_data_t value;
+    uvm_reg_data_t err_cnt;
+    drp_reg_block m_drp;
+    //m_sequencer.print();
+    
+    m_drp=p_sequencer.m_drp;
+    // Put the PCS into reset by asserting TXPCSRESET.
+    m_drp.top.vio.txpcsreset.write(status,1);
+    // Set the attribute TXGEARBOX_EN = 1'b0 via DRP.  Originally it is 1'b1.
+    m_drp.top.ch.tx_maincursor_sel.txgearbox_en.write(status,0);
+    // Set the port TXOUTCLKSEL to 3'b010 (TXOUTCLKPMA).  Originally it is 3'b101 (TXPROGDIVCLK).
+    m_drp.top.vio.txoutclksel.write(status,2);
+    // Set the attribute TXBUF_EN = 1'b1 (Enable TX Buffer) via DRP.  Originally it is 1'b0
+    m_drp.top.ch.tx_maincursor_sel.txbuf_en.write(status,1);
+    // Set TXPRBSEL and RXPRBSEL to the desired PRBS pattern.  Originally it is 4'b0000 (Pat Gen/Chk off)
+    m_drp.top.vio.txprbssel.write(status,5);
+    m_drp.top.vio.rxprbssel.write(status,5);
+    // Release TXPCSRESET
+    m_drp.top.vio.txpcsreset.write(status,0);
+    m_drp.top.ch.rxprbs_linkacq_cnt.read(status,value);
+    `uvm_info("READ",$sformatf(" m_drp.top.ch.rxprbs_linkacq_cnt: status %s  value %04h",status.name(),value),UVM_HIGH)
+    #5us;
+    //m_drp.top.vio.rxprbscntreset.write(status,1);
+    m_drp.top.ch.rx_prbs_err_15_0_cnt.read(status,err_cnt);
+    m_drp.top.ch.rx_prbs_err_31_16_cnt.read(status,value);
+    err_cnt+=value<<16;
+    `uvm_info("READ",$sformatf("ERROR COUNT: %08h",err_cnt),UVM_HIGH)
+    #5us;
+    m_drp.top.vio.txprbsforceerr.write(status,1);
+    m_drp.top.vio.txprbsforceerr.write(status,0);
+    #5us;
+    m_drp.top.ch.rx_prbs_err_15_0_cnt.read(status,err_cnt);
+    m_drp.top.ch.rx_prbs_err_31_16_cnt.read(status,value);
+    err_cnt+=value<<16;
+    `uvm_info("READ",$sformatf("ERROR COUNT: %08h",err_cnt),UVM_HIGH)
+
+    // Put the PCS into reset by asserting TXPCSRESET.
+    m_drp.top.vio.txpcsreset.write(status,1);
+    // Set the attribute TXGEARBOX_EN = 1'b0 via DRP.  Originally it is 1'b1.
+    m_drp.top.ch.tx_maincursor_sel.txgearbox_en.write(status,0);
+    // Set the port TXOUTCLKSEL to 3'b010 (TXOUTCLKPMA).  Originally it is 3'b101 (TXPROGDIVCLK).
+    m_drp.top.vio.txoutclksel.write(status,2);
+    // Set the attribute TXBUF_EN = 1'b1 (Enable TX Buffer) via DRP.  Originally it is 1'b0
+    m_drp.top.ch.tx_maincursor_sel.txbuf_en.write(status,1);
+    // Set TXPRBSEL and RXPRBSEL to the desired PRBS pattern.  Originally it is 4'b0000 (Pat Gen/Chk off)
+    m_drp.top.vio.txprbssel.write(status,10);
+    m_drp.top.vio.rxprbssel.write(status,10);
+    // Release TXPCSRESET
+    m_drp.top.vio.txpcsreset.write(status,0);
+    #5us;
+
+  endtask
+endclass : gty_prbs_seq 
+
 `endif // SEQ_EXAMPLES__SVH

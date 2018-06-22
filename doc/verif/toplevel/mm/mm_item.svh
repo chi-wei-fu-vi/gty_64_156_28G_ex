@@ -96,6 +96,7 @@ class mm_item extends uvm_reg_item;
     vif.master_cb.drp_en <= 1;
     if (req.kind==UVM_WRITE) begin
       vif.master_cb.drp_we <= 1;
+      vif.master_cb.drp_di <= req.value[0];
     end
     @(vif.master_cb);
     vif.master_cb.drp_en <= 0;

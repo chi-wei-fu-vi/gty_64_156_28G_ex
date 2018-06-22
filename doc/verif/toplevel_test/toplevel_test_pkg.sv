@@ -9,6 +9,6 @@ package toplevel_test_pkg;
   import drp_reg_pkg::*;
   typedef class base_test;
   typedef class seq_mm_item;
-  `include "base_test.svh"
   `include "seq_examples.svh"
+  `include "base_test.svh"
 endpackage : toplevel_test_pkg
