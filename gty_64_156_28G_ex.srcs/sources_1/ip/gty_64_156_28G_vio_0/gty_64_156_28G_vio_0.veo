@@ -70,6 +70,7 @@ gty_64_156_28G_vio_0 your_instance_name (
   .probe_in11(probe_in11),    // input wire [0 : 0] probe_in11
   .probe_in12(probe_in12),    // input wire [2 : 0] probe_in12
   .probe_in13(probe_in13),    // input wire [0 : 0] probe_in13
+  .probe_in14(probe_in14),    // input wire [0 : 0] probe_in14
   .probe_out0(probe_out0),    // output wire [0 : 0] probe_out0
   .probe_out1(probe_out1),    // output wire [0 : 0] probe_out1
   .probe_out2(probe_out2),    // output wire [0 : 0] probe_out2

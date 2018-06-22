@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu Jun 21 10:16:43 2018
+-- Date        : Fri Jun 22 10:00:26 2018
 -- Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
--- Command     : write_vhdl -force -mode funcsim -rename_top gty_64_156_28G -prefix
---               gty_64_156_28G_ gty_64_156_28G_1_sim_netlist.vhdl
--- Design      : gty_64_156_28G_1
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/chiwei/sandbox/vivado/gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G_sim_netlist.vhdl
+-- Design      : gty_64_156_28G
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xcku5p-ffvb676-2-e
@@ -20,6 +20,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer is
     rxresetdone_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_clk_freerun_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_bit_synchronizer";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer is
@@ -1925,6 +1927,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel is
     txdataextendrsvd_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     drpaddr_in : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel : entity is "gtwizard_ultrascale_v1_7_3_gtye4_channel";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel is
@@ -2883,6 +2887,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common is
     qpllrsvd1_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     qpllrsvd4_in : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common : entity is "gtwizard_ultrascale_v1_7_3_gtye4_common";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common is
@@ -3116,6 +3122,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood is
     txpisopd_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     txpmareset_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood : entity is "gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood is
@@ -3383,6 +3391,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer is
     rxusrclk2_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_rx_done_int_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer is
@@ -3581,6 +3591,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer is
     gtwiz_reset_clk_freerun_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_all_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_reset_synchronizer";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer is
@@ -4474,6 +4486,8 @@ entity gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset is
     gtwiz_reset_rx_pll_and_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset : entity is "gtwizard_ultrascale_v1_7_3_gtwiz_reset";
 end gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset;
 
 architecture STRUCTURE of gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset is
@@ -6855,7 +6869,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper is
+entity gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper is
   port (
     bufgtce_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     bufgtreset_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7191,9 +7205,11 @@ entity gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper is
     txdataextendrsvd_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     drpaddr_in : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-end gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper : entity is "gty_64_156_28G_gtye4_channel_wrapper";
+end gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper;
 
-architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper is
+architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper is
 begin
 channel_inst: entity work.gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel
      port map (
@@ -7536,7 +7552,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper is
+entity gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper is
   port (
     drprdy_common_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     qpll0fbclklost_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7644,9 +7660,11 @@ entity gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper is
     qpllrsvd1_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     qpllrsvd4_in : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-end gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper : entity is "gty_64_156_28G_gtye4_common_wrapper";
+end gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper;
 
-architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper is
+architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper is
 begin
 common_inst: entity work.gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common
      port map (
@@ -7761,7 +7779,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4 is
+entity gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4 is
   port (
     gtpowergood_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     qpll0lock_out : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -8201,9 +8219,11 @@ entity gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4 is
     gtwiz_reset_rx_pll_and_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     txpmareset_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4 : entity is "gty_64_156_28G_gtwizard_gtye4";
+end gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4;
 
-architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4 is
+architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4 is
   signal \gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst_n_377\ : STD_LOGIC;
   signal \gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_1\ : STD_LOGIC;
   signal \gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4\ : STD_LOGIC;
@@ -8243,7 +8263,7 @@ begin
   rxresetdone_out(0) <= \^rxresetdone_out\(0);
   txoutclkpcs_out(0) <= \^txoutclkpcs_out\(0);
   txresetdone_out(0) <= \^txresetdone_out\(0);
-\gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst\: entity work.gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper
+\gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst\: entity work.gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper
      port map (
       TXRATE(2 downto 1) => \gen_gtwizard_gtye4.txrate_ch_int\(2 downto 1),
       TXRATE(0) => \gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4\,
@@ -8580,7 +8600,7 @@ begin
       txusrclk2_in(0) => txusrclk2_in(0),
       txusrclk_in(0) => txusrclk_in(0)
     );
-\gen_gtwizard_gtye4.gen_common.gen_common_container[2].gen_enabled_common.gtye4_common_wrapper_inst\: entity work.gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper
+\gen_gtwizard_gtye4.gen_common.gen_common_container[2].gen_enabled_common.gtye4_common_wrapper_inst\: entity work.gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper
      port map (
       bgbypassb_in(0) => bgbypassb_in(0),
       bgmonitorenb_in(0) => bgmonitorenb_in(0),
@@ -8750,7 +8770,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity gty_64_156_28G_gty_64_156_28G_1_gtwizard_top is
+entity gty_64_156_28G_gty_64_156_28G_gtwizard_top is
   port (
     gtwiz_userclk_tx_reset_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_userclk_tx_active_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9288,192 +9308,194 @@ entity gty_64_156_28G_gty_64_156_28G_1_gtwizard_top is
     txsyncout_out : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute C_CHANNEL_ENABLE : string;
-  attribute C_CHANNEL_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000";
+  attribute C_CHANNEL_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000";
   attribute C_COMMON_SCALING_FACTOR : integer;
-  attribute C_COMMON_SCALING_FACTOR of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_COMMON_SCALING_FACTOR of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_CPLL_VCO_FREQUENCY : string;
-  attribute C_CPLL_VCO_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "2578.125000";
+  attribute C_CPLL_VCO_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "2578.125000";
   attribute C_ENABLE_COMMON_USRCLK : integer;
-  attribute C_ENABLE_COMMON_USRCLK of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_ENABLE_COMMON_USRCLK of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_FORCE_COMMONS : integer;
-  attribute C_FORCE_COMMONS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_FORCE_COMMONS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_FREERUN_FREQUENCY : string;
-  attribute C_FREERUN_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "100.000000";
+  attribute C_FREERUN_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "100.000000";
   attribute C_GT_REV : integer;
-  attribute C_GT_REV of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 67;
+  attribute C_GT_REV of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 67;
   attribute C_GT_TYPE : integer;
-  attribute C_GT_TYPE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 3;
+  attribute C_GT_TYPE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 3;
   attribute C_INCLUDE_CPLL_CAL : integer;
-  attribute C_INCLUDE_CPLL_CAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 2;
+  attribute C_INCLUDE_CPLL_CAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 2;
   attribute C_LOCATE_COMMON : integer;
-  attribute C_LOCATE_COMMON of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_LOCATE_COMMON of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_LOCATE_IN_SYSTEM_IBERT_CORE : integer;
-  attribute C_LOCATE_IN_SYSTEM_IBERT_CORE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 2;
+  attribute C_LOCATE_IN_SYSTEM_IBERT_CORE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 2;
   attribute C_LOCATE_RESET_CONTROLLER : integer;
-  attribute C_LOCATE_RESET_CONTROLLER of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_LOCATE_RESET_CONTROLLER of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER : integer;
-  attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_LOCATE_RX_USER_CLOCKING : integer;
-  attribute C_LOCATE_RX_USER_CLOCKING of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_LOCATE_RX_USER_CLOCKING of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER : integer;
-  attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_LOCATE_TX_USER_CLOCKING : integer;
-  attribute C_LOCATE_TX_USER_CLOCKING of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_LOCATE_TX_USER_CLOCKING of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_LOCATE_USER_DATA_WIDTH_SIZING : integer;
-  attribute C_LOCATE_USER_DATA_WIDTH_SIZING of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_LOCATE_USER_DATA_WIDTH_SIZING of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_PCIE_CORECLK_FREQ : integer;
-  attribute C_PCIE_CORECLK_FREQ of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 250;
+  attribute C_PCIE_CORECLK_FREQ of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 250;
   attribute C_PCIE_ENABLE : integer;
-  attribute C_PCIE_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_PCIE_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RESET_CONTROLLER_INSTANCE_CTRL : integer;
-  attribute C_RESET_CONTROLLER_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RESET_CONTROLLER_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RESET_SEQUENCE_INTERVAL : integer;
-  attribute C_RESET_SEQUENCE_INTERVAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RESET_SEQUENCE_INTERVAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_BUFFBYPASS_MODE : integer;
-  attribute C_RX_BUFFBYPASS_MODE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_BUFFBYPASS_MODE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
-  attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_BUFFER_BYPASS_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_BUFFER_MODE : integer;
-  attribute C_RX_BUFFER_MODE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_BUFFER_MODE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_CB_DISP : string;
-  attribute C_RX_CB_DISP of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CB_DISP of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CB_K : string;
-  attribute C_RX_CB_K of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CB_K of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CB_LEN_SEQ : integer;
-  attribute C_RX_CB_LEN_SEQ of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_CB_LEN_SEQ of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_CB_MAX_LEVEL : integer;
-  attribute C_RX_CB_MAX_LEVEL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_CB_MAX_LEVEL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_CB_NUM_SEQ : integer;
-  attribute C_RX_CB_NUM_SEQ of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_CB_NUM_SEQ of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_CB_VAL : string;
-  attribute C_RX_CB_VAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CB_VAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_CC_DISP : string;
-  attribute C_RX_CC_DISP of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CC_DISP of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CC_ENABLE : integer;
-  attribute C_RX_CC_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_CC_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_CC_K : string;
-  attribute C_RX_CC_K of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "8'b00000000";
+  attribute C_RX_CC_K of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "8'b00000000";
   attribute C_RX_CC_LEN_SEQ : integer;
-  attribute C_RX_CC_LEN_SEQ of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_CC_LEN_SEQ of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_CC_NUM_SEQ : integer;
-  attribute C_RX_CC_NUM_SEQ of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_CC_NUM_SEQ of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_CC_PERIODICITY : integer;
-  attribute C_RX_CC_PERIODICITY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 5000;
+  attribute C_RX_CC_PERIODICITY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 5000;
   attribute C_RX_CC_VAL : string;
-  attribute C_RX_CC_VAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_CC_VAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_COMMA_M_ENABLE : integer;
-  attribute C_RX_COMMA_M_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_COMMA_M_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_M_VAL : string;
-  attribute C_RX_COMMA_M_VAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "10'b1010000011";
+  attribute C_RX_COMMA_M_VAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "10'b1010000011";
   attribute C_RX_COMMA_P_ENABLE : integer;
-  attribute C_RX_COMMA_P_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_COMMA_P_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_COMMA_P_VAL : string;
-  attribute C_RX_COMMA_P_VAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "10'b0101111100";
+  attribute C_RX_COMMA_P_VAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "10'b0101111100";
   attribute C_RX_DATA_DECODING : integer;
-  attribute C_RX_DATA_DECODING of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_DATA_DECODING of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_ENABLE : integer;
-  attribute C_RX_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_INT_DATA_WIDTH : integer;
-  attribute C_RX_INT_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 64;
+  attribute C_RX_INT_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 64;
   attribute C_RX_LINE_RATE : string;
-  attribute C_RX_LINE_RATE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "28.125000";
+  attribute C_RX_LINE_RATE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "28.125000";
   attribute C_RX_MASTER_CHANNEL_IDX : integer;
-  attribute C_RX_MASTER_CHANNEL_IDX of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 8;
+  attribute C_RX_MASTER_CHANNEL_IDX of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 8;
   attribute C_RX_OUTCLK_BUFG_GT_DIV : integer;
-  attribute C_RX_OUTCLK_BUFG_GT_DIV of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_OUTCLK_BUFG_GT_DIV of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_OUTCLK_FREQUENCY : string;
-  attribute C_RX_OUTCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_RX_OUTCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_RX_OUTCLK_SOURCE : integer;
-  attribute C_RX_OUTCLK_SOURCE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_OUTCLK_SOURCE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_PLL_TYPE : integer;
-  attribute C_RX_PLL_TYPE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_PLL_TYPE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_RECCLK_OUTPUT : string;
-  attribute C_RX_RECCLK_OUTPUT of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_RX_RECCLK_OUTPUT of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_REFCLK_FREQUENCY : string;
-  attribute C_RX_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "156.250000";
+  attribute C_RX_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "156.250000";
   attribute C_RX_SLIDE_MODE : integer;
-  attribute C_RX_SLIDE_MODE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_SLIDE_MODE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_CONTENTS : integer;
-  attribute C_RX_USER_CLOCKING_CONTENTS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_CONTENTS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_INSTANCE_CTRL : integer;
-  attribute C_RX_USER_CLOCKING_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK : integer;
-  attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 : integer;
-  attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_RX_USER_CLOCKING_SOURCE : integer;
-  attribute C_RX_USER_CLOCKING_SOURCE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_RX_USER_CLOCKING_SOURCE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_RX_USER_DATA_WIDTH : integer;
-  attribute C_RX_USER_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 64;
+  attribute C_RX_USER_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 64;
   attribute C_RX_USRCLK2_FREQUENCY : string;
-  attribute C_RX_USRCLK2_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_RX_USRCLK2_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_RX_USRCLK_FREQUENCY : string;
-  attribute C_RX_USRCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_RX_USRCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_SECONDARY_QPLL_ENABLE : integer;
-  attribute C_SECONDARY_QPLL_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_SECONDARY_QPLL_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY : string;
-  attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "257.812500";
+  attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "257.812500";
   attribute C_SIM_CPLL_CAL_BYPASS : integer;
-  attribute C_SIM_CPLL_CAL_BYPASS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_SIM_CPLL_CAL_BYPASS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TOTAL_NUM_CHANNELS : integer;
-  attribute C_TOTAL_NUM_CHANNELS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TOTAL_NUM_CHANNELS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TOTAL_NUM_COMMONS : integer;
-  attribute C_TOTAL_NUM_COMMONS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TOTAL_NUM_COMMONS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TOTAL_NUM_COMMONS_EXAMPLE : integer;
-  attribute C_TOTAL_NUM_COMMONS_EXAMPLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TOTAL_NUM_COMMONS_EXAMPLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TXPROGDIV_FREQ_ENABLE : integer;
-  attribute C_TXPROGDIV_FREQ_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TXPROGDIV_FREQ_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TXPROGDIV_FREQ_SOURCE : integer;
-  attribute C_TXPROGDIV_FREQ_SOURCE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TXPROGDIV_FREQ_SOURCE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TXPROGDIV_FREQ_VAL : string;
-  attribute C_TXPROGDIV_FREQ_VAL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_TXPROGDIV_FREQ_VAL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_TX_BUFFBYPASS_MODE : integer;
-  attribute C_TX_BUFFBYPASS_MODE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_BUFFBYPASS_MODE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
-  attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_BUFFER_MODE : integer;
-  attribute C_TX_BUFFER_MODE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_BUFFER_MODE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_DATA_ENCODING : integer;
-  attribute C_TX_DATA_ENCODING of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_DATA_ENCODING of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_ENABLE : integer;
-  attribute C_TX_ENABLE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_ENABLE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_INT_DATA_WIDTH : integer;
-  attribute C_TX_INT_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 64;
+  attribute C_TX_INT_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 64;
   attribute C_TX_LINE_RATE : string;
-  attribute C_TX_LINE_RATE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "28.125000";
+  attribute C_TX_LINE_RATE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "28.125000";
   attribute C_TX_MASTER_CHANNEL_IDX : integer;
-  attribute C_TX_MASTER_CHANNEL_IDX of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 8;
+  attribute C_TX_MASTER_CHANNEL_IDX of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 8;
   attribute C_TX_OUTCLK_BUFG_GT_DIV : integer;
-  attribute C_TX_OUTCLK_BUFG_GT_DIV of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_OUTCLK_BUFG_GT_DIV of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_OUTCLK_FREQUENCY : string;
-  attribute C_TX_OUTCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_TX_OUTCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_TX_OUTCLK_SOURCE : integer;
-  attribute C_TX_OUTCLK_SOURCE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_OUTCLK_SOURCE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_PLL_TYPE : integer;
-  attribute C_TX_PLL_TYPE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_PLL_TYPE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_REFCLK_FREQUENCY : string;
-  attribute C_TX_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "156.250000";
+  attribute C_TX_REFCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "156.250000";
   attribute C_TX_USER_CLOCKING_CONTENTS : integer;
-  attribute C_TX_USER_CLOCKING_CONTENTS of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_CONTENTS of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_USER_CLOCKING_INSTANCE_CTRL : integer;
-  attribute C_TX_USER_CLOCKING_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_INSTANCE_CTRL of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK : integer;
-  attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 : integer;
-  attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
+  attribute C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
   attribute C_TX_USER_CLOCKING_SOURCE : integer;
-  attribute C_TX_USER_CLOCKING_SOURCE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 0;
+  attribute C_TX_USER_CLOCKING_SOURCE of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 0;
   attribute C_TX_USER_DATA_WIDTH : integer;
-  attribute C_TX_USER_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 64;
+  attribute C_TX_USER_DATA_WIDTH of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 64;
   attribute C_TX_USRCLK2_FREQUENCY : string;
-  attribute C_TX_USRCLK2_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_TX_USRCLK2_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_TX_USRCLK_FREQUENCY : string;
-  attribute C_TX_USRCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is "439.453125";
+  attribute C_TX_USRCLK_FREQUENCY of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "439.453125";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
-  attribute C_USER_GTPOWERGOOD_DELAY_EN of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top : entity is 1;
-end gty_64_156_28G_gty_64_156_28G_1_gtwizard_top;
+  attribute C_USER_GTPOWERGOOD_DELAY_EN of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of gty_64_156_28G_gty_64_156_28G_gtwizard_top : entity is "gty_64_156_28G_gtwizard_top";
+end gty_64_156_28G_gty_64_156_28G_gtwizard_top;
 
-architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_1_gtwizard_top is
+architecture STRUCTURE of gty_64_156_28G_gty_64_156_28G_gtwizard_top is
   signal \<const0>\ : STD_LOGIC;
   signal \^gtwiz_userclk_rx_active_in\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^gtwiz_userclk_tx_active_in\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -9512,7 +9534,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_gtwizard_gtye4_top.gty_64_156_28G_1_gtwizard_gtye4_inst\: entity work.gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4
+\gen_gtwizard_gtye4_top.gty_64_156_28G_gtwizard_gtye4_inst\: entity work.gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4
      port map (
       bgbypassb_in(0) => bgbypassb_in(0),
       bgmonitorenb_in(0) => bgmonitorenb_in(0),
@@ -10036,6 +10058,7 @@ entity gty_64_156_28G is
     rxphaligndone_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     rxpmaresetdone_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     rxprbserr_out : out STD_LOGIC_VECTOR ( 0 to 0 );
+    rxprbslocked_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     rxresetdone_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     rxsyncdone_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     txbufstatus_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -10049,11 +10072,11 @@ entity gty_64_156_28G is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of gty_64_156_28G : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of gty_64_156_28G : entity is "gty_64_156_28G_1,gty_64_156_28G_1_gtwizard_top,{}";
+  attribute CHECK_LICENSE_TYPE of gty_64_156_28G : entity is "gty_64_156_28G,gty_64_156_28G_gtwizard_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of gty_64_156_28G : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of gty_64_156_28G : entity is "gty_64_156_28G_1_gtwizard_top,Vivado 2018.1";
+  attribute X_CORE_INFO of gty_64_156_28G : entity is "gty_64_156_28G_gtwizard_top,Vivado 2018.1";
 end gty_64_156_28G;
 
 architecture STRUCTURE of gty_64_156_28G is
@@ -10139,7 +10162,6 @@ architecture STRUCTURE of gty_64_156_28G is
   signal NLW_inst_rxoutclkfabric_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_rxoutclkpcs_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_rxphalignerr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_inst_rxprbslocked_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_rxprgdivresetdone_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_rxqpisenn_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_rxqpisenp_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -10365,7 +10387,7 @@ architecture STRUCTURE of gty_64_156_28G is
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of inst : label is 1;
 begin
-inst: entity work.gty_64_156_28G_gty_64_156_28G_1_gtwizard_top
+inst: entity work.gty_64_156_28G_gty_64_156_28G_gtwizard_top
      port map (
       bgbypassb_in(0) => '1',
       bgmonitorenb_in(0) => '1',
@@ -10728,7 +10750,7 @@ inst: entity work.gty_64_156_28G_gty_64_156_28G_1_gtwizard_top
       rxpolarity_in(0) => rxpolarity_in(0),
       rxprbscntreset_in(0) => rxprbscntreset_in(0),
       rxprbserr_out(0) => rxprbserr_out(0),
-      rxprbslocked_out(0) => NLW_inst_rxprbslocked_out_UNCONNECTED(0),
+      rxprbslocked_out(0) => rxprbslocked_out(0),
       rxprbssel_in(3 downto 0) => rxprbssel_in(3 downto 0),
       rxprgdivresetdone_out(0) => NLW_inst_rxprgdivresetdone_out_UNCONNECTED(0),
       rxprogdivreset_in(0) => '0',

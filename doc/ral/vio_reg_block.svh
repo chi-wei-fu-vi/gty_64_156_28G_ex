@@ -790,6 +790,30 @@ class vio_txoutclksel_reg extends uvm_reg;
            .individually_accessible( 0 ) );
   endfunction : build
 endclass: vio_txoutclksel_reg
+
+class vio_rxprbslocked_reg extends uvm_reg;
+  `uvm_object_utils( vio_rxprbslocked_reg )
+  rand uvm_reg_field rxprbslocked;
+
+  //---------------------------------------------------------------------------
+  // Function: new
+  //---------------------------------------------------------------------------
+
+  function new( string name = "vio_rxprbslocked_reg" );
+    super.new( .name( name ), .n_bits( 3 ), .has_coverage( UVM_CVR_ADDR_MAP /*UVM_NO_COVERAGE*/ ) );
+  endfunction : new
+
+  //---------------------------------------------------------------------------
+  // Function: build
+  //---------------------------------------------------------------------------
+
+  virtual function void build();
+    rxprbslocked = uvm_reg_field::type_id::create( "rxprbslocked" );
+    rxprbslocked.configure( .parent( this ), .size( 3 ), .lsb_pos( 0 ), .access( "RO" ),
+           .volatile( 1 ), .reset( 0 ), .has_reset( 0 ), .is_rand( 1 ),
+           .individually_accessible( 0 ) );
+  endfunction : build
+endclass: vio_rxprbslocked_reg
   
 class vio_reg_block extends uvm_reg_block;
   `uvm_object_utils( vio_reg_block )
@@ -826,6 +850,7 @@ class vio_reg_block extends uvm_reg_block;
   rand vio_rxbufstatus_reg rxbufstatus;
   rand vio_rxprbserr_reg rxprbserr;
   rand vio_txoutclksel_reg txoutclksel;
+  rand vio_rxprbslocked_reg rxprbslocked;
    
   uvm_reg_map reg_map;
 
@@ -941,6 +966,9 @@ class vio_reg_block extends uvm_reg_block;
     txoutclksel = vio_txoutclksel_reg::type_id::create( "txoutclksel" );
     txoutclksel.configure( .blk_parent( this ) );
     txoutclksel.build();
+    rxprbslocked = vio_rxprbslocked_reg::type_id::create( "rxprbslocked" );
+    rxprbslocked.configure( .blk_parent( this ) );
+    rxprbslocked.build();
     reg_map = create_map( .name( "reg_map" ), .base_addr( 0 ), .n_bytes( 8 ),
                           .endian( UVM_LITTLE_ENDIAN ), .byte_addressing( 1 ) );
     reg_map.add_reg( .rg( reset_all ), .offset( 0 ), .rights( "RW" ) );
@@ -976,6 +1004,7 @@ class vio_reg_block extends uvm_reg_block;
     reg_map.add_reg( .rg( rxbufstatus ), .offset( 30 ), .rights( "RO" ) );
     reg_map.add_reg( .rg( rxprbserr ), .offset( 31 ), .rights( "RO" ) );
     reg_map.add_reg( .rg( txoutclksel ), .offset( 32 ), .rights( "RW" ) );
+    reg_map.add_reg( .rg( rxprbslocked ), .offset( 33 ), .rights( "RO" ) );
   endfunction : build
 
 endclass: vio_reg_block

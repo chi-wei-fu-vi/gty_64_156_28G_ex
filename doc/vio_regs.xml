@@ -132,4 +132,8 @@
     TXOUTCLKSEL
     <field loc="[2:0]" name="txoutclksel">TXOUTCLKSEL</field>
   </register>
+  <register default="0" name="rxprbslocked" offset="10'h21" type="RO">
+    RXPRBSLOCKED
+    <field loc="[2:0]" name="rxprbslocked">RXPRBSLOCKED</field>
+  </register>
 </decl_reg_list>

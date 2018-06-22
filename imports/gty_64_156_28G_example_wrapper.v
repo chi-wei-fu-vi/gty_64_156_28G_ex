@@ -135,6 +135,7 @@ module gty_64_156_28G_example_wrapper (
  ,output wire [0:0] rxphaligndone_out
  ,output wire [0:0] rxpmaresetdone_out
  ,output wire [0:0] rxprbserr_out
+ ,output wire [0:0] rxprbslocked_out
  ,output wire [0:0] rxresetdone_out
  ,output wire [0:0] rxsyncdone_out
  ,output wire [1:0] txbufstatus_out
@@ -359,6 +360,7 @@ module gty_64_156_28G_example_wrapper (
    ,.rxphaligndone_out                       (rxphaligndone_int)
    ,.rxpmaresetdone_out                      (rxpmaresetdone_out)
    ,.rxprbserr_out                           (rxprbserr_out)
+   ,.rxprbslocked_out                        (rxprbslocked_out)
    ,.rxresetdone_out                         (rxresetdone_int)
    ,.rxsyncdone_out                          (rxsyncdone_int)
    ,.txbufstatus_out                         (txbufstatus_out)

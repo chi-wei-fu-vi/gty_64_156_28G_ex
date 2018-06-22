@@ -137,6 +137,7 @@ module gty_64_156_28G (
   rxphaligndone_out,
   rxpmaresetdone_out,
   rxprbserr_out,
+  rxprbslocked_out,
   rxresetdone_out,
   rxsyncdone_out,
   txbufstatus_out,
@@ -225,6 +226,7 @@ output wire [0 : 0] rxoutclk_out;
 output wire [0 : 0] rxphaligndone_out;
 output wire [0 : 0] rxpmaresetdone_out;
 output wire [0 : 0] rxprbserr_out;
+output wire [0 : 0] rxprbslocked_out;
 output wire [0 : 0] rxresetdone_out;
 output wire [0 : 0] rxsyncdone_out;
 output wire [1 : 0] txbufstatus_out;
@@ -830,7 +832,7 @@ output wire [0 : 0] txresetdone_out;
     .rxphalignerr_out(),
     .rxpmaresetdone_out(rxpmaresetdone_out),
     .rxprbserr_out(rxprbserr_out),
-    .rxprbslocked_out(),
+    .rxprbslocked_out(rxprbslocked_out),
     .rxprgdivresetdone_out(),
     .rxqpisenn_out(),
     .rxqpisenp_out(),

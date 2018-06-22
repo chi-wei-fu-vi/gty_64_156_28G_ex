@@ -474,6 +474,11 @@ module gty_64_156_28G_example_top (
   assign ch0_rxprbserr_int = rxprbserr_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
+  wire [0:0] rxprbslocked_int;
+  wire [0:0] ch0_rxprbslocked_int;
+  assign ch0_rxprbslocked_int = rxprbslocked_int[0:0];
+
+  //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxresetdone_int;
   wire [0:0] ch0_rxresetdone_int;
   assign ch0_rxresetdone_int = rxresetdone_int[0:0];
@@ -851,6 +856,16 @@ module gty_64_156_28G_example_top (
     .o_out  (rxprbserr_vio_sync[0])
   );
 
+  // Synchronize rxprbslocked into the free-running clock domain for VIO usage
+  wire [0:0] rxprbslocked_vio_sync;
+
+  (* DONT_TOUCH = "TRUE" *)
+  gty_64_156_28G_example_bit_synchronizer bit_synchronizer_vio_rxprbslocked_0_inst (
+    .clk_in (hb_gtwiz_reset_clk_freerun_buf_int),
+    .i_in   (rxprbslocked_int[0]),
+    .o_out  (rxprbslocked_vio_sync[0])
+  );
+
   // Synchronize txprbssel into the TXUSRCLK2 clock domain from VIO usage
   wire [3:0] txprbssel_vio_async;
 
@@ -949,6 +964,7 @@ module gty_64_156_28G_example_top (
     ,.probe_in11 (gtwiz_reset_rx_done_vio_sync)
     ,.probe_in12 (rxbufstatus_vio_sync)
     ,.probe_in13 (rxprbserr_vio_sync)
+    ,.probe_in14 (rxprbslocked_vio_sync)
     ,.probe_out0 (hb_gtwiz_reset_all_vio_int)
     ,.probe_out1 (hb0_gtwiz_reset_tx_pll_and_datapath_int)
     ,.probe_out2 (hb0_gtwiz_reset_tx_datapath_int)
@@ -1057,6 +1073,7 @@ module gty_64_156_28G_example_top (
    ,.rxphaligndone_out                       (rxphaligndone_int)
    ,.rxpmaresetdone_out                      (rxpmaresetdone_int)
    ,.rxprbserr_out                           (rxprbserr_int)
+   ,.rxprbslocked_out                        (rxprbslocked_int)
    ,.rxresetdone_out                         (rxresetdone_int)
    ,.rxsyncdone_out                          (rxsyncdone_int)
    ,.txbufstatus_out                         (txbufstatus_int)

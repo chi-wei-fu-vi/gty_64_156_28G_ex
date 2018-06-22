@@ -55,7 +55,8 @@ module vio_regs #(
   input                        iREG_RESET_TX_DONE,
   input                        iREG_RESET_RX_DONE,
   input        [2:0]           iREG_RXBUFSTATUS,
-  input                        iREG_RXPRBSERR
+  input                        iREG_RXPRBSERR,
+  input        [2:0]           iREG_RXPRBSLOCKED
 );
 
 
@@ -125,6 +126,8 @@ module vio_regs #(
   wire                         RXPRBSERR;
   wire                         TXOUTCLKSEL_wr_sel;
   wire                         TXOUTCLKSEL_rd_sel;
+  wire                         RXPRBSLOCKED_rd_sel;
+  wire   [2:0]                 RXPRBSLOCKED;
   logic                        memrd_en_latch;
   logic                        lwr_en;
   logic  [63:0]                lwr_data;
@@ -204,6 +207,7 @@ module vio_regs #(
   assign RXPRBSERR_rd_sel                         = (addr[9:0] == 10'h1f    ) & (rd_en == 1'b1);
   assign TXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h20    ) & (lwr_en == 1'b1);
   assign TXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h20    ) & (rd_en == 1'b1);
+  assign RXPRBSLOCKED_rd_sel                      = (addr[9:0] == 10'h21    ) & (rd_en == 1'b1);
   assign memrd_v = 1'b0;
 
   always_comb begin
@@ -241,6 +245,7 @@ module vio_regs #(
       RXBUFSTATUS_rd_sel                       : ldata = {61'b0,RXBUFSTATUS};
       RXPRBSERR_rd_sel                         : ldata = {63'b0,RXPRBSERR};
       TXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_TXOUTCLKSEL};
+      RXPRBSLOCKED_rd_sel                      : ldata = {61'b0,RXPRBSLOCKED};
       default : ldata = {32'h5555_AAAA,{22{1'b0}},addr[9:0]};
     endcase
   end
@@ -517,4 +522,7 @@ module vio_regs #(
   end
 
   assign oREG_TXOUTCLKSEL                         = WREG_TXOUTCLKSEL[2:0];
+ // ro: RXPRBSLOCKED
+  assign RXPRBSLOCKED                             = iREG_RXPRBSLOCKED[2:0];
+
 endmodule

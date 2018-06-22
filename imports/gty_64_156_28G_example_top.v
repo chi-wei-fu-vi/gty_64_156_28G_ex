@@ -130,6 +130,23 @@ assign drpdi_int = drp_di;
 assign drpen_int = drp_addr[31:10]==0 && drp_en;
 assign drpwe_int = drp_addr[31:10]==0 && drp_we;
 
+  wire [0:0] rxprbslocked_int;
+  wire [0:0] ch0_rxprbslocked_int;
+  assign ch0_rxprbslocked_int = rxprbslocked_int[0:0];
+
+  wire hb_gtwiz_reset_clk_freerun_buf_int;
+  //--------------------------------------------------------------------------------------------------------------------
+  // Synchronize rxprbslocked into the free-running clock domain for VIO usage
+  wire [0:0] rxprbslocked_vio_sync;
+
+  (* DONT_TOUCH = "TRUE" *)
+  gty_64_156_28G_example_bit_synchronizer bit_synchronizer_vio_rxprbslocked_0_inst (
+    .clk_in (hb_gtwiz_reset_clk_freerun_buf_int),
+    .i_in   (rxprbslocked_int[0]),
+    .o_out  (rxprbslocked_vio_sync[0])
+  );
+
+
 //  wire [15:0] drpaddr_common_int;
 //  wire [15:0] cm0_drpaddr_common_int = 16'b0000000000000000;
 //  assign drpaddr_common_int[15:0] = cm0_drpaddr_common_int;
@@ -582,7 +599,6 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   assign hb_gtwiz_reset_all_int = hb_gtwiz_reset_all_buf_int || hb_gtwiz_reset_all_init_int || hb_gtwiz_reset_all_vio_int;
 
   // Globally buffer the free-running input clock
-  wire hb_gtwiz_reset_clk_freerun_buf_int;
 
   BUFG bufg_clk_freerun_inst (
     .I (hb_gtwiz_reset_clk_freerun_in),
@@ -1073,7 +1089,8 @@ vio_regs #(
   . iREG_RESET_TX_DONE                                 ( gtwiz_reset_tx_done_vio_sync                       ), // input
   . iREG_RESET_RX_DONE                                 ( gtwiz_reset_rx_done_vio_sync                       ), // input
   . iREG_RXBUFSTATUS                                   ( rxbufstatus_vio_sync                               ), // input [2:0]
-  . iREG_RXPRBSERR                                     ( rxprbserr_vio_sync                                 )  // input
+  . iREG_RXPRBSERR                                     ( rxprbserr_vio_sync                                 ), // input
+  . iREG_RXPRBSLOCKED                                  ( rxprbslocked_vio_sync                              )  // input
 );
 
   // ===================================================================================================================
@@ -1172,6 +1189,7 @@ vio_regs #(
    ,.txpmaresetdone_out                      (txpmaresetdone_int)
    ,.txresetdone_out                         (txresetdone_int)
    ,.txoutclksel_in                          (txoutclksel_int)
+   ,.rxprbslocked_out                        (rxprbslocked_int)
 );
 
 

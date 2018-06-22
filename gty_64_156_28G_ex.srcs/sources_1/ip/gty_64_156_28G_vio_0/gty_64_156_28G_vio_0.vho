@@ -69,6 +69,7 @@ COMPONENT gty_64_156_28G_vio_0
     probe_in11 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_in12 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     probe_in13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe_in14 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out2 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -112,6 +113,7 @@ your_instance_name : gty_64_156_28G_vio_0
     probe_in11 => probe_in11,
     probe_in12 => probe_in12,
     probe_in13 => probe_in13,
+    probe_in14 => probe_in14,
     probe_out0 => probe_out0,
     probe_out1 => probe_out1,
     probe_out2 => probe_out2,

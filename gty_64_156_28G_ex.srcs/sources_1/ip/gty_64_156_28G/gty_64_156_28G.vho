@@ -131,6 +131,7 @@ COMPONENT gty_64_156_28G
     rxphaligndone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxpmaresetdone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxprbserr_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    rxprbslocked_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxresetdone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxsyncdone_out : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     txbufstatus_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -227,6 +228,7 @@ your_instance_name : gty_64_156_28G
     rxphaligndone_out => rxphaligndone_out,
     rxpmaresetdone_out => rxpmaresetdone_out,
     rxprbserr_out => rxprbserr_out,
+    rxprbslocked_out => rxprbslocked_out,
     rxresetdone_out => rxresetdone_out,
     rxsyncdone_out => rxsyncdone_out,
     txbufstatus_out => txbufstatus_out,

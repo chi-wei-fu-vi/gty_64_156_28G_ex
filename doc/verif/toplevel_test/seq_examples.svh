@@ -80,6 +80,9 @@ class gty_prbs_seq extends uvm_sequence #(mm_item);
     m_drp.top.ch.rxprbs_linkacq_cnt.read(status,value);
     `uvm_info("READ",$sformatf(" m_drp.top.ch.rxprbs_linkacq_cnt: status %s  value %04h",status.name(),value),UVM_HIGH)
     #5us;
+    m_drp.top.vio.rxprbslocked.read(status,value);
+    `uvm_info("READ",$sformatf(" m_drp.top.vio.rxprbslocked: status %s  value %04h",status.name(),value),UVM_HIGH)
+
     //m_drp.top.vio.rxprbscntreset.write(status,1);
     m_drp.top.ch.rx_prbs_err_15_0_cnt.read(status,err_cnt);
     m_drp.top.ch.rx_prbs_err_31_16_cnt.read(status,value);

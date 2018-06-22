@@ -1,17 +1,1035 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu Jun 21 10:16:42 2018
+// Date        : Fri Jun 22 10:00:25 2018
 // Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
-// Command     : write_verilog -force -mode funcsim -rename_top gty_64_156_28G -prefix
-//               gty_64_156_28G_ gty_64_156_28G_1_sim_netlist.v
-// Design      : gty_64_156_28G_1
+// Command     : write_verilog -force -mode funcsim
+//               /home/chiwei/sandbox/vivado/gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G_sim_netlist.v
+// Design      : gty_64_156_28G
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xcku5p-ffvb676-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "gty_64_156_28G,gty_64_156_28G_gtwizard_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "gty_64_156_28G_gtwizard_top,Vivado 2018.1" *) 
+(* NotValidForBitStream *)
+module gty_64_156_28G
+   (gtwiz_userclk_tx_active_in,
+    gtwiz_userclk_rx_active_in,
+    gtwiz_reset_clk_freerun_in,
+    gtwiz_reset_all_in,
+    gtwiz_reset_tx_pll_and_datapath_in,
+    gtwiz_reset_tx_datapath_in,
+    gtwiz_reset_rx_pll_and_datapath_in,
+    gtwiz_reset_rx_datapath_in,
+    gtwiz_reset_rx_cdr_stable_out,
+    gtwiz_reset_tx_done_out,
+    gtwiz_reset_rx_done_out,
+    gtwiz_userdata_tx_in,
+    gtwiz_userdata_rx_out,
+    drpaddr_common_in,
+    drpclk_common_in,
+    drpdi_common_in,
+    drpen_common_in,
+    drpwe_common_in,
+    gtrefclk00_in,
+    drpdo_common_out,
+    drprdy_common_out,
+    qpll0lock_out,
+    qpll0outclk_out,
+    qpll0outrefclk_out,
+    qpll1lock_out,
+    drpaddr_in,
+    drpclk_in,
+    drpdi_in,
+    drpen_in,
+    drpwe_in,
+    eyescanreset_in,
+    eyescantrigger_in,
+    gtyrxn_in,
+    gtyrxp_in,
+    loopback_in,
+    pcsrsvdin_in,
+    rxbufreset_in,
+    rxcdrhold_in,
+    rxdfelpmreset_in,
+    rxlpmen_in,
+    rxpcsreset_in,
+    rxpmareset_in,
+    rxpolarity_in,
+    rxprbscntreset_in,
+    rxprbssel_in,
+    rxrate_in,
+    rxusrclk_in,
+    rxusrclk2_in,
+    txdiffctrl_in,
+    txinhibit_in,
+    txoutclksel_in,
+    txpcsreset_in,
+    txpmareset_in,
+    txpolarity_in,
+    txpostcursor_in,
+    txprbsforceerr_in,
+    txprbssel_in,
+    txprecursor_in,
+    txusrclk_in,
+    txusrclk2_in,
+    cplllock_out,
+    dmonitorout_out,
+    drpdo_out,
+    drprdy_out,
+    eyescandataerror_out,
+    gtpowergood_out,
+    gtytxn_out,
+    gtytxp_out,
+    rxbufstatus_out,
+    rxcommadet_out,
+    rxctrl1_out,
+    rxctrl3_out,
+    rxdlysresetdone_out,
+    rxoutclk_out,
+    rxphaligndone_out,
+    rxpmaresetdone_out,
+    rxprbserr_out,
+    rxprbslocked_out,
+    rxresetdone_out,
+    rxsyncdone_out,
+    txbufstatus_out,
+    txdlysresetdone_out,
+    txoutclk_out,
+    txphaligndone_out,
+    txphinitdone_out,
+    txpmaresetdone_out,
+    txresetdone_out);
+  input [0:0]gtwiz_userclk_tx_active_in;
+  input [0:0]gtwiz_userclk_rx_active_in;
+  input [0:0]gtwiz_reset_clk_freerun_in;
+  input [0:0]gtwiz_reset_all_in;
+  input [0:0]gtwiz_reset_tx_pll_and_datapath_in;
+  input [0:0]gtwiz_reset_tx_datapath_in;
+  input [0:0]gtwiz_reset_rx_pll_and_datapath_in;
+  input [0:0]gtwiz_reset_rx_datapath_in;
+  output [0:0]gtwiz_reset_rx_cdr_stable_out;
+  output [0:0]gtwiz_reset_tx_done_out;
+  output [0:0]gtwiz_reset_rx_done_out;
+  input [63:0]gtwiz_userdata_tx_in;
+  output [63:0]gtwiz_userdata_rx_out;
+  input [15:0]drpaddr_common_in;
+  input [0:0]drpclk_common_in;
+  input [15:0]drpdi_common_in;
+  input [0:0]drpen_common_in;
+  input [0:0]drpwe_common_in;
+  input [0:0]gtrefclk00_in;
+  output [15:0]drpdo_common_out;
+  output [0:0]drprdy_common_out;
+  output [0:0]qpll0lock_out;
+  output [0:0]qpll0outclk_out;
+  output [0:0]qpll0outrefclk_out;
+  output [0:0]qpll1lock_out;
+  input [9:0]drpaddr_in;
+  input [0:0]drpclk_in;
+  input [15:0]drpdi_in;
+  input [0:0]drpen_in;
+  input [0:0]drpwe_in;
+  input [0:0]eyescanreset_in;
+  input [0:0]eyescantrigger_in;
+  input [0:0]gtyrxn_in;
+  input [0:0]gtyrxp_in;
+  input [2:0]loopback_in;
+  input [15:0]pcsrsvdin_in;
+  input [0:0]rxbufreset_in;
+  input [0:0]rxcdrhold_in;
+  input [0:0]rxdfelpmreset_in;
+  input [0:0]rxlpmen_in;
+  input [0:0]rxpcsreset_in;
+  input [0:0]rxpmareset_in;
+  input [0:0]rxpolarity_in;
+  input [0:0]rxprbscntreset_in;
+  input [3:0]rxprbssel_in;
+  input [2:0]rxrate_in;
+  input [0:0]rxusrclk_in;
+  input [0:0]rxusrclk2_in;
+  input [4:0]txdiffctrl_in;
+  input [0:0]txinhibit_in;
+  input [2:0]txoutclksel_in;
+  input [0:0]txpcsreset_in;
+  input [0:0]txpmareset_in;
+  input [0:0]txpolarity_in;
+  input [4:0]txpostcursor_in;
+  input [0:0]txprbsforceerr_in;
+  input [3:0]txprbssel_in;
+  input [4:0]txprecursor_in;
+  input [0:0]txusrclk_in;
+  input [0:0]txusrclk2_in;
+  output [0:0]cplllock_out;
+  output [15:0]dmonitorout_out;
+  output [15:0]drpdo_out;
+  output [0:0]drprdy_out;
+  output [0:0]eyescandataerror_out;
+  output [0:0]gtpowergood_out;
+  output [0:0]gtytxn_out;
+  output [0:0]gtytxp_out;
+  output [2:0]rxbufstatus_out;
+  output [0:0]rxcommadet_out;
+  output [15:0]rxctrl1_out;
+  output [7:0]rxctrl3_out;
+  output [0:0]rxdlysresetdone_out;
+  output [0:0]rxoutclk_out;
+  output [0:0]rxphaligndone_out;
+  output [0:0]rxpmaresetdone_out;
+  output [0:0]rxprbserr_out;
+  output [0:0]rxprbslocked_out;
+  output [0:0]rxresetdone_out;
+  output [0:0]rxsyncdone_out;
+  output [1:0]txbufstatus_out;
+  output [0:0]txdlysresetdone_out;
+  output [0:0]txoutclk_out;
+  output [0:0]txphaligndone_out;
+  output [0:0]txphinitdone_out;
+  output [0:0]txpmaresetdone_out;
+  output [0:0]txresetdone_out;
+
+  wire [0:0]cplllock_out;
+  wire [15:0]dmonitorout_out;
+  wire [15:0]drpaddr_common_in;
+  wire [9:0]drpaddr_in;
+  wire [0:0]drpclk_common_in;
+  wire [0:0]drpclk_in;
+  wire [15:0]drpdi_common_in;
+  wire [15:0]drpdi_in;
+  wire [15:0]drpdo_common_out;
+  wire [15:0]drpdo_out;
+  wire [0:0]drpen_common_in;
+  wire [0:0]drpen_in;
+  wire [0:0]drprdy_common_out;
+  wire [0:0]drprdy_out;
+  wire [0:0]drpwe_common_in;
+  wire [0:0]drpwe_in;
+  wire [0:0]eyescandataerror_out;
+  wire [0:0]eyescanreset_in;
+  wire [0:0]eyescantrigger_in;
+  wire [0:0]gtpowergood_out;
+  wire [0:0]gtrefclk00_in;
+  wire [0:0]gtwiz_reset_all_in;
+  wire [0:0]gtwiz_reset_clk_freerun_in;
+  wire [0:0]gtwiz_reset_rx_cdr_stable_out;
+  wire [0:0]gtwiz_reset_rx_datapath_in;
+  wire [0:0]gtwiz_reset_rx_done_out;
+  wire [0:0]gtwiz_reset_rx_pll_and_datapath_in;
+  wire [0:0]gtwiz_reset_tx_datapath_in;
+  wire [0:0]gtwiz_reset_tx_done_out;
+  wire [0:0]gtwiz_reset_tx_pll_and_datapath_in;
+  wire [0:0]gtwiz_userclk_rx_active_in;
+  wire [0:0]gtwiz_userclk_tx_active_in;
+  wire [63:0]gtwiz_userdata_rx_out;
+  wire [63:0]gtwiz_userdata_tx_in;
+  wire [0:0]gtyrxn_in;
+  wire [0:0]gtyrxp_in;
+  wire [0:0]gtytxn_out;
+  wire [0:0]gtytxp_out;
+  wire [2:0]loopback_in;
+  wire [15:0]pcsrsvdin_in;
+  wire [0:0]qpll0lock_out;
+  wire [0:0]qpll0outclk_out;
+  wire [0:0]qpll0outrefclk_out;
+  wire [0:0]qpll1lock_out;
+  wire [0:0]rxbufreset_in;
+  wire [2:0]rxbufstatus_out;
+  wire [0:0]rxcdrhold_in;
+  wire [0:0]rxcommadet_out;
+  wire [15:0]rxctrl1_out;
+  wire [7:0]rxctrl3_out;
+  wire [0:0]rxdfelpmreset_in;
+  wire [0:0]rxdlysresetdone_out;
+  wire [0:0]rxlpmen_in;
+  wire [0:0]rxoutclk_out;
+  wire [0:0]rxpcsreset_in;
+  wire [0:0]rxphaligndone_out;
+  wire [0:0]rxpmareset_in;
+  wire [0:0]rxpmaresetdone_out;
+  wire [0:0]rxpolarity_in;
+  wire [0:0]rxprbscntreset_in;
+  wire [0:0]rxprbserr_out;
+  wire [0:0]rxprbslocked_out;
+  wire [3:0]rxprbssel_in;
+  wire [2:0]rxrate_in;
+  wire [0:0]rxresetdone_out;
+  wire [0:0]rxsyncdone_out;
+  wire [0:0]rxusrclk2_in;
+  wire [0:0]rxusrclk_in;
+  wire [1:0]txbufstatus_out;
+  wire [4:0]txdiffctrl_in;
+  wire [0:0]txdlysresetdone_out;
+  wire [0:0]txinhibit_in;
+  wire [0:0]txoutclk_out;
+  wire [2:0]txoutclksel_in;
+  wire [0:0]txpcsreset_in;
+  wire [0:0]txphaligndone_out;
+  wire [0:0]txphinitdone_out;
+  wire [0:0]txpmareset_in;
+  wire [0:0]txpmaresetdone_out;
+  wire [0:0]txpolarity_in;
+  wire [4:0]txpostcursor_in;
+  wire [0:0]txprbsforceerr_in;
+  wire [3:0]txprbssel_in;
+  wire [4:0]txprecursor_in;
+  wire [0:0]txresetdone_out;
+  wire [0:0]txusrclk2_in;
+  wire [0:0]txusrclk_in;
+  wire [0:0]NLW_inst_bufgtce_out_UNCONNECTED;
+  wire [2:0]NLW_inst_bufgtcemask_out_UNCONNECTED;
+  wire [8:0]NLW_inst_bufgtdiv_out_UNCONNECTED;
+  wire [0:0]NLW_inst_bufgtreset_out_UNCONNECTED;
+  wire [2:0]NLW_inst_bufgtrstmask_out_UNCONNECTED;
+  wire [0:0]NLW_inst_cpllfbclklost_out_UNCONNECTED;
+  wire [0:0]NLW_inst_cpllrefclklost_out_UNCONNECTED;
+  wire [0:0]NLW_inst_dmonitoroutclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gthtxn_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gthtxp_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtrefclkmonitor_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_buffbypass_rx_done_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_buffbypass_rx_error_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_buffbypass_tx_done_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_buffbypass_tx_error_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_reset_qpll0reset_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_reset_qpll1reset_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_rx_active_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_rx_srcclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_rx_usrclk2_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_rx_usrclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_tx_active_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_tx_srcclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_tx_usrclk2_out_UNCONNECTED;
+  wire [0:0]NLW_inst_gtwiz_userclk_tx_usrclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pcierategen3_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pcierateidle_out_UNCONNECTED;
+  wire [1:0]NLW_inst_pcierateqpllpd_out_UNCONNECTED;
+  wire [1:0]NLW_inst_pcierateqpllreset_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pciesynctxsyncdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pcieusergen3rdy_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pcieuserphystatusrst_out_UNCONNECTED;
+  wire [0:0]NLW_inst_pcieuserratestart_out_UNCONNECTED;
+  wire [15:0]NLW_inst_pcsrsvdout_out_UNCONNECTED;
+  wire [0:0]NLW_inst_phystatus_out_UNCONNECTED;
+  wire [15:0]NLW_inst_pinrsrvdas_out_UNCONNECTED;
+  wire [7:0]NLW_inst_pmarsvdout0_out_UNCONNECTED;
+  wire [7:0]NLW_inst_pmarsvdout1_out_UNCONNECTED;
+  wire [0:0]NLW_inst_powerpresent_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll0fbclklost_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll0refclklost_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll1fbclklost_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll1outclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll1outrefclk_out_UNCONNECTED;
+  wire [0:0]NLW_inst_qpll1refclklost_out_UNCONNECTED;
+  wire [7:0]NLW_inst_qplldmonitor0_out_UNCONNECTED;
+  wire [7:0]NLW_inst_qplldmonitor1_out_UNCONNECTED;
+  wire [0:0]NLW_inst_refclkoutmonitor0_out_UNCONNECTED;
+  wire [0:0]NLW_inst_refclkoutmonitor1_out_UNCONNECTED;
+  wire [0:0]NLW_inst_resetexception_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxbyteisaligned_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxbyterealign_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxcdrlock_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxcdrphdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxchanbondseq_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxchanisaligned_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxchanrealign_out_UNCONNECTED;
+  wire [4:0]NLW_inst_rxchbondo_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxckcaldone_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxclkcorcnt_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxcominitdet_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxcomsasdet_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxcomwakedet_out_UNCONNECTED;
+  wire [15:0]NLW_inst_rxctrl0_out_UNCONNECTED;
+  wire [7:0]NLW_inst_rxctrl2_out_UNCONNECTED;
+  wire [127:0]NLW_inst_rxdata_out_UNCONNECTED;
+  wire [7:0]NLW_inst_rxdataextendrsvd_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxdatavalid_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxelecidle_out_UNCONNECTED;
+  wire [5:0]NLW_inst_rxheader_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxheadervalid_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxlfpstresetdet_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxlfpsu2lpexitdet_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxlfpsu3wakedet_out_UNCONNECTED;
+  wire [7:0]NLW_inst_rxmonitorout_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxosintdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxosintstarted_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxosintstrobedone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxosintstrobestarted_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxoutclkfabric_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxoutclkpcs_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxphalignerr_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxprgdivresetdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxqpisenn_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxqpisenp_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxratedone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxrecclk0_sel_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxrecclk0sel_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxrecclk1_sel_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxrecclk1sel_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxrecclkout_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxsliderdy_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxslipdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxslipoutclkrdy_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxslippmardy_out_UNCONNECTED;
+  wire [1:0]NLW_inst_rxstartofseq_out_UNCONNECTED;
+  wire [2:0]NLW_inst_rxstatus_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxsyncout_out_UNCONNECTED;
+  wire [0:0]NLW_inst_rxvalid_out_UNCONNECTED;
+  wire [3:0]NLW_inst_sdm0finalout_out_UNCONNECTED;
+  wire [14:0]NLW_inst_sdm0testdata_out_UNCONNECTED;
+  wire [3:0]NLW_inst_sdm1finalout_out_UNCONNECTED;
+  wire [14:0]NLW_inst_sdm1testdata_out_UNCONNECTED;
+  wire [0:0]NLW_inst_tcongpo_out_UNCONNECTED;
+  wire [0:0]NLW_inst_tconrsvdout0_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txcomfinish_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txdccdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txoutclkfabric_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txoutclkpcs_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txprgdivresetdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txqpisenn_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txqpisenp_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txratedone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txsyncdone_out_UNCONNECTED;
+  wire [0:0]NLW_inst_txsyncout_out_UNCONNECTED;
+  wire [15:0]NLW_inst_ubdaddr_out_UNCONNECTED;
+  wire [0:0]NLW_inst_ubden_out_UNCONNECTED;
+  wire [15:0]NLW_inst_ubdi_out_UNCONNECTED;
+  wire [0:0]NLW_inst_ubdwe_out_UNCONNECTED;
+  wire [0:0]NLW_inst_ubmdmtdo_out_UNCONNECTED;
+  wire [0:0]NLW_inst_ubrsvdout_out_UNCONNECTED;
+  wire [0:0]NLW_inst_ubtxuart_out_UNCONNECTED;
+
+  (* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000" *) 
+  (* C_COMMON_SCALING_FACTOR = "1" *) 
+  (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
+  (* C_ENABLE_COMMON_USRCLK = "0" *) 
+  (* C_FORCE_COMMONS = "0" *) 
+  (* C_FREERUN_FREQUENCY = "100.000000" *) 
+  (* C_GT_REV = "67" *) 
+  (* C_GT_TYPE = "3" *) 
+  (* C_INCLUDE_CPLL_CAL = "2" *) 
+  (* C_LOCATE_COMMON = "0" *) 
+  (* C_LOCATE_IN_SYSTEM_IBERT_CORE = "2" *) 
+  (* C_LOCATE_RESET_CONTROLLER = "0" *) 
+  (* C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER = "0" *) 
+  (* C_LOCATE_RX_USER_CLOCKING = "1" *) 
+  (* C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER = "0" *) 
+  (* C_LOCATE_TX_USER_CLOCKING = "1" *) 
+  (* C_LOCATE_USER_DATA_WIDTH_SIZING = "0" *) 
+  (* C_PCIE_CORECLK_FREQ = "250" *) 
+  (* C_PCIE_ENABLE = "0" *) 
+  (* C_RESET_CONTROLLER_INSTANCE_CTRL = "0" *) 
+  (* C_RESET_SEQUENCE_INTERVAL = "0" *) 
+  (* C_RX_BUFFBYPASS_MODE = "0" *) 
+  (* C_RX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
+  (* C_RX_BUFFER_MODE = "1" *) 
+  (* C_RX_CB_DISP = "8'b00000000" *) 
+  (* C_RX_CB_K = "8'b00000000" *) 
+  (* C_RX_CB_LEN_SEQ = "1" *) 
+  (* C_RX_CB_MAX_LEVEL = "1" *) 
+  (* C_RX_CB_NUM_SEQ = "0" *) 
+  (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* C_RX_CC_DISP = "8'b00000000" *) 
+  (* C_RX_CC_ENABLE = "0" *) 
+  (* C_RX_CC_K = "8'b00000000" *) 
+  (* C_RX_CC_LEN_SEQ = "1" *) 
+  (* C_RX_CC_NUM_SEQ = "0" *) 
+  (* C_RX_CC_PERIODICITY = "5000" *) 
+  (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* C_RX_COMMA_M_ENABLE = "0" *) 
+  (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
+  (* C_RX_COMMA_P_ENABLE = "0" *) 
+  (* C_RX_COMMA_P_VAL = "10'b0101111100" *) 
+  (* C_RX_DATA_DECODING = "0" *) 
+  (* C_RX_ENABLE = "1" *) 
+  (* C_RX_INT_DATA_WIDTH = "64" *) 
+  (* C_RX_LINE_RATE = "28.125000" *) 
+  (* C_RX_MASTER_CHANNEL_IDX = "8" *) 
+  (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) 
+  (* C_RX_OUTCLK_FREQUENCY = "439.453125" *) 
+  (* C_RX_OUTCLK_SOURCE = "1" *) 
+  (* C_RX_PLL_TYPE = "0" *) 
+  (* C_RX_RECCLK_OUTPUT = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+  (* C_RX_REFCLK_FREQUENCY = "156.250000" *) 
+  (* C_RX_SLIDE_MODE = "0" *) 
+  (* C_RX_USER_CLOCKING_CONTENTS = "0" *) 
+  (* C_RX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
+  (* C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) 
+  (* C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
+  (* C_RX_USER_CLOCKING_SOURCE = "0" *) 
+  (* C_RX_USER_DATA_WIDTH = "64" *) 
+  (* C_RX_USRCLK2_FREQUENCY = "439.453125" *) 
+  (* C_RX_USRCLK_FREQUENCY = "439.453125" *) 
+  (* C_SECONDARY_QPLL_ENABLE = "0" *) 
+  (* C_SECONDARY_QPLL_REFCLK_FREQUENCY = "257.812500" *) 
+  (* C_SIM_CPLL_CAL_BYPASS = "1" *) 
+  (* C_TOTAL_NUM_CHANNELS = "1" *) 
+  (* C_TOTAL_NUM_COMMONS = "1" *) 
+  (* C_TOTAL_NUM_COMMONS_EXAMPLE = "0" *) 
+  (* C_TXPROGDIV_FREQ_ENABLE = "0" *) 
+  (* C_TXPROGDIV_FREQ_SOURCE = "0" *) 
+  (* C_TXPROGDIV_FREQ_VAL = "439.453125" *) 
+  (* C_TX_BUFFBYPASS_MODE = "0" *) 
+  (* C_TX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
+  (* C_TX_BUFFER_MODE = "1" *) 
+  (* C_TX_DATA_ENCODING = "0" *) 
+  (* C_TX_ENABLE = "1" *) 
+  (* C_TX_INT_DATA_WIDTH = "64" *) 
+  (* C_TX_LINE_RATE = "28.125000" *) 
+  (* C_TX_MASTER_CHANNEL_IDX = "8" *) 
+  (* C_TX_OUTCLK_BUFG_GT_DIV = "1" *) 
+  (* C_TX_OUTCLK_FREQUENCY = "439.453125" *) 
+  (* C_TX_OUTCLK_SOURCE = "1" *) 
+  (* C_TX_PLL_TYPE = "0" *) 
+  (* C_TX_REFCLK_FREQUENCY = "156.250000" *) 
+  (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
+  (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
+  (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) 
+  (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
+  (* C_TX_USER_CLOCKING_SOURCE = "0" *) 
+  (* C_TX_USER_DATA_WIDTH = "64" *) 
+  (* C_TX_USRCLK2_FREQUENCY = "439.453125" *) 
+  (* C_TX_USRCLK_FREQUENCY = "439.453125" *) 
+  (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) 
+  gty_64_156_28G_gty_64_156_28G_gtwizard_top inst
+       (.bgbypassb_in(1'b1),
+        .bgmonitorenb_in(1'b1),
+        .bgpdb_in(1'b1),
+        .bgrcalovrd_in({1'b1,1'b0,1'b0,1'b0,1'b0}),
+        .bgrcalovrdenb_in(1'b1),
+        .bufgtce_out(NLW_inst_bufgtce_out_UNCONNECTED[0]),
+        .bufgtcemask_out(NLW_inst_bufgtcemask_out_UNCONNECTED[2:0]),
+        .bufgtdiv_out(NLW_inst_bufgtdiv_out_UNCONNECTED[8:0]),
+        .bufgtreset_out(NLW_inst_bufgtreset_out_UNCONNECTED[0]),
+        .bufgtrstmask_out(NLW_inst_bufgtrstmask_out_UNCONNECTED[2:0]),
+        .cdrstepdir_in(1'b0),
+        .cdrstepsq_in(1'b0),
+        .cdrstepsx_in(1'b0),
+        .cfgreset_in(1'b0),
+        .clkrsvd0_in(1'b0),
+        .clkrsvd1_in(1'b0),
+        .cpllfbclklost_out(NLW_inst_cpllfbclklost_out_UNCONNECTED[0]),
+        .cpllfreqlock_in(1'b0),
+        .cplllock_out(cplllock_out),
+        .cplllockdetclk_in(1'b0),
+        .cplllocken_in(1'b0),
+        .cpllpd_in(1'b1),
+        .cpllrefclklost_out(NLW_inst_cpllrefclklost_out_UNCONNECTED[0]),
+        .cpllrefclksel_in({1'b0,1'b0,1'b1}),
+        .cpllreset_in(1'b1),
+        .dmonfiforeset_in(1'b0),
+        .dmonitorclk_in(1'b0),
+        .dmonitorout_out(dmonitorout_out),
+        .dmonitoroutclk_out(NLW_inst_dmonitoroutclk_out_UNCONNECTED[0]),
+        .drpaddr_common_in(drpaddr_common_in),
+        .drpaddr_in(drpaddr_in),
+        .drpclk_common_in(drpclk_common_in),
+        .drpclk_in(drpclk_in),
+        .drpdi_common_in(drpdi_common_in),
+        .drpdi_in(drpdi_in),
+        .drpdo_common_out(drpdo_common_out),
+        .drpdo_out(drpdo_out),
+        .drpen_common_in(drpen_common_in),
+        .drpen_in(drpen_in),
+        .drprdy_common_out(drprdy_common_out),
+        .drprdy_out(drprdy_out),
+        .drprst_in(1'b0),
+        .drpwe_common_in(drpwe_common_in),
+        .drpwe_in(drpwe_in),
+        .elpcaldvorwren_in(1'b0),
+        .elpcalpaorwren_in(1'b0),
+        .evoddphicaldone_in(1'b0),
+        .evoddphicalstart_in(1'b0),
+        .evoddphidrden_in(1'b0),
+        .evoddphidwren_in(1'b0),
+        .evoddphixrden_in(1'b0),
+        .evoddphixwren_in(1'b0),
+        .eyescandataerror_out(eyescandataerror_out),
+        .eyescanmode_in(1'b0),
+        .eyescanreset_in(eyescanreset_in),
+        .eyescantrigger_in(eyescantrigger_in),
+        .freqos_in(1'b0),
+        .gtgrefclk0_in(1'b0),
+        .gtgrefclk1_in(1'b0),
+        .gtgrefclk_in(1'b0),
+        .gthrxn_in(1'b0),
+        .gthrxp_in(1'b0),
+        .gthtxn_out(NLW_inst_gthtxn_out_UNCONNECTED[0]),
+        .gthtxp_out(NLW_inst_gthtxp_out_UNCONNECTED[0]),
+        .gtnorthrefclk00_in(1'b0),
+        .gtnorthrefclk01_in(1'b0),
+        .gtnorthrefclk0_in(1'b0),
+        .gtnorthrefclk10_in(1'b0),
+        .gtnorthrefclk11_in(1'b0),
+        .gtnorthrefclk1_in(1'b0),
+        .gtpowergood_out(gtpowergood_out),
+        .gtrefclk00_in(gtrefclk00_in),
+        .gtrefclk01_in(1'b0),
+        .gtrefclk0_in(1'b0),
+        .gtrefclk10_in(1'b0),
+        .gtrefclk11_in(1'b0),
+        .gtrefclk1_in(1'b0),
+        .gtrefclkmonitor_out(NLW_inst_gtrefclkmonitor_out_UNCONNECTED[0]),
+        .gtresetsel_in(1'b0),
+        .gtrsvd_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtrxreset_in(1'b0),
+        .gtrxresetsel_in(1'b0),
+        .gtsouthrefclk00_in(1'b0),
+        .gtsouthrefclk01_in(1'b0),
+        .gtsouthrefclk0_in(1'b0),
+        .gtsouthrefclk10_in(1'b0),
+        .gtsouthrefclk11_in(1'b0),
+        .gtsouthrefclk1_in(1'b0),
+        .gttxreset_in(1'b0),
+        .gttxresetsel_in(1'b0),
+        .gtwiz_buffbypass_rx_done_out(NLW_inst_gtwiz_buffbypass_rx_done_out_UNCONNECTED[0]),
+        .gtwiz_buffbypass_rx_error_out(NLW_inst_gtwiz_buffbypass_rx_error_out_UNCONNECTED[0]),
+        .gtwiz_buffbypass_rx_reset_in(1'b0),
+        .gtwiz_buffbypass_rx_start_user_in(1'b0),
+        .gtwiz_buffbypass_tx_done_out(NLW_inst_gtwiz_buffbypass_tx_done_out_UNCONNECTED[0]),
+        .gtwiz_buffbypass_tx_error_out(NLW_inst_gtwiz_buffbypass_tx_error_out_UNCONNECTED[0]),
+        .gtwiz_buffbypass_tx_reset_in(1'b0),
+        .gtwiz_buffbypass_tx_start_user_in(1'b0),
+        .gtwiz_gthe3_cpll_cal_bufg_ce_in(1'b0),
+        .gtwiz_gthe3_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_gthe3_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_gthe4_cpll_cal_bufg_ce_in(1'b0),
+        .gtwiz_gthe4_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_gthe4_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_gtye4_cpll_cal_bufg_ce_in(1'b0),
+        .gtwiz_gtye4_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_gtye4_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .gtwiz_reset_all_in(gtwiz_reset_all_in),
+        .gtwiz_reset_clk_freerun_in(gtwiz_reset_clk_freerun_in),
+        .gtwiz_reset_qpll0lock_in(1'b0),
+        .gtwiz_reset_qpll0reset_out(NLW_inst_gtwiz_reset_qpll0reset_out_UNCONNECTED[0]),
+        .gtwiz_reset_qpll1lock_in(1'b0),
+        .gtwiz_reset_qpll1reset_out(NLW_inst_gtwiz_reset_qpll1reset_out_UNCONNECTED[0]),
+        .gtwiz_reset_rx_cdr_stable_out(gtwiz_reset_rx_cdr_stable_out),
+        .gtwiz_reset_rx_datapath_in(gtwiz_reset_rx_datapath_in),
+        .gtwiz_reset_rx_done_in(1'b0),
+        .gtwiz_reset_rx_done_out(gtwiz_reset_rx_done_out),
+        .gtwiz_reset_rx_pll_and_datapath_in(gtwiz_reset_rx_pll_and_datapath_in),
+        .gtwiz_reset_tx_datapath_in(gtwiz_reset_tx_datapath_in),
+        .gtwiz_reset_tx_done_in(1'b0),
+        .gtwiz_reset_tx_done_out(gtwiz_reset_tx_done_out),
+        .gtwiz_reset_tx_pll_and_datapath_in(gtwiz_reset_tx_pll_and_datapath_in),
+        .gtwiz_userclk_rx_active_in(gtwiz_userclk_rx_active_in),
+        .gtwiz_userclk_rx_active_out(NLW_inst_gtwiz_userclk_rx_active_out_UNCONNECTED[0]),
+        .gtwiz_userclk_rx_reset_in(1'b0),
+        .gtwiz_userclk_rx_srcclk_out(NLW_inst_gtwiz_userclk_rx_srcclk_out_UNCONNECTED[0]),
+        .gtwiz_userclk_rx_usrclk2_out(NLW_inst_gtwiz_userclk_rx_usrclk2_out_UNCONNECTED[0]),
+        .gtwiz_userclk_rx_usrclk_out(NLW_inst_gtwiz_userclk_rx_usrclk_out_UNCONNECTED[0]),
+        .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),
+        .gtwiz_userclk_tx_active_out(NLW_inst_gtwiz_userclk_tx_active_out_UNCONNECTED[0]),
+        .gtwiz_userclk_tx_reset_in(1'b0),
+        .gtwiz_userclk_tx_srcclk_out(NLW_inst_gtwiz_userclk_tx_srcclk_out_UNCONNECTED[0]),
+        .gtwiz_userclk_tx_usrclk2_out(NLW_inst_gtwiz_userclk_tx_usrclk2_out_UNCONNECTED[0]),
+        .gtwiz_userclk_tx_usrclk_out(NLW_inst_gtwiz_userclk_tx_usrclk_out_UNCONNECTED[0]),
+        .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),
+        .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),
+        .gtyrxn_in(gtyrxn_in),
+        .gtyrxp_in(gtyrxp_in),
+        .gtytxn_out(gtytxn_out),
+        .gtytxp_out(gtytxp_out),
+        .incpctrl_in(1'b0),
+        .loopback_in(loopback_in),
+        .looprsvd_in(1'b0),
+        .lpbkrxtxseren_in(1'b0),
+        .lpbktxrxseren_in(1'b0),
+        .pcieeqrxeqadaptdone_in(1'b0),
+        .pcierategen3_out(NLW_inst_pcierategen3_out_UNCONNECTED[0]),
+        .pcierateidle_out(NLW_inst_pcierateidle_out_UNCONNECTED[0]),
+        .pcierateqpll0_in({1'b0,1'b0,1'b0}),
+        .pcierateqpll1_in({1'b0,1'b0,1'b0}),
+        .pcierateqpllpd_out(NLW_inst_pcierateqpllpd_out_UNCONNECTED[1:0]),
+        .pcierateqpllreset_out(NLW_inst_pcierateqpllreset_out_UNCONNECTED[1:0]),
+        .pcierstidle_in(1'b0),
+        .pciersttxsyncstart_in(1'b0),
+        .pciesynctxsyncdone_out(NLW_inst_pciesynctxsyncdone_out_UNCONNECTED[0]),
+        .pcieusergen3rdy_out(NLW_inst_pcieusergen3rdy_out_UNCONNECTED[0]),
+        .pcieuserphystatusrst_out(NLW_inst_pcieuserphystatusrst_out_UNCONNECTED[0]),
+        .pcieuserratedone_in(1'b0),
+        .pcieuserratestart_out(NLW_inst_pcieuserratestart_out_UNCONNECTED[0]),
+        .pcsrsvdin2_in(1'b0),
+        .pcsrsvdin_in(pcsrsvdin_in),
+        .pcsrsvdout_out(NLW_inst_pcsrsvdout_out_UNCONNECTED[15:0]),
+        .phystatus_out(NLW_inst_phystatus_out_UNCONNECTED[0]),
+        .pinrsrvdas_out(NLW_inst_pinrsrvdas_out_UNCONNECTED[15:0]),
+        .pmarsvd0_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .pmarsvd1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .pmarsvdin_in(1'b0),
+        .pmarsvdout0_out(NLW_inst_pmarsvdout0_out_UNCONNECTED[7:0]),
+        .pmarsvdout1_out(NLW_inst_pmarsvdout1_out_UNCONNECTED[7:0]),
+        .powerpresent_out(NLW_inst_powerpresent_out_UNCONNECTED[0]),
+        .qpll0clk_in(1'b0),
+        .qpll0clkrsvd0_in(1'b0),
+        .qpll0clkrsvd1_in(1'b0),
+        .qpll0fbclklost_out(NLW_inst_qpll0fbclklost_out_UNCONNECTED[0]),
+        .qpll0fbdiv_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .qpll0freqlock_in(1'b0),
+        .qpll0lock_out(qpll0lock_out),
+        .qpll0lockdetclk_in(1'b0),
+        .qpll0locken_in(1'b1),
+        .qpll0outclk_out(qpll0outclk_out),
+        .qpll0outrefclk_out(qpll0outrefclk_out),
+        .qpll0pd_in(1'b0),
+        .qpll0refclk_in(1'b0),
+        .qpll0refclklost_out(NLW_inst_qpll0refclklost_out_UNCONNECTED[0]),
+        .qpll0refclksel_in({1'b0,1'b0,1'b1}),
+        .qpll0reset_in(1'b0),
+        .qpll1clk_in(1'b0),
+        .qpll1clkrsvd0_in(1'b0),
+        .qpll1clkrsvd1_in(1'b0),
+        .qpll1fbclklost_out(NLW_inst_qpll1fbclklost_out_UNCONNECTED[0]),
+        .qpll1fbdiv_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .qpll1freqlock_in(1'b0),
+        .qpll1lock_out(qpll1lock_out),
+        .qpll1lockdetclk_in(1'b0),
+        .qpll1locken_in(1'b0),
+        .qpll1outclk_out(NLW_inst_qpll1outclk_out_UNCONNECTED[0]),
+        .qpll1outrefclk_out(NLW_inst_qpll1outrefclk_out_UNCONNECTED[0]),
+        .qpll1pd_in(1'b1),
+        .qpll1refclk_in(1'b0),
+        .qpll1refclklost_out(NLW_inst_qpll1refclklost_out_UNCONNECTED[0]),
+        .qpll1refclksel_in({1'b0,1'b0,1'b1}),
+        .qpll1reset_in(1'b1),
+        .qplldmonitor0_out(NLW_inst_qplldmonitor0_out_UNCONNECTED[7:0]),
+        .qplldmonitor1_out(NLW_inst_qplldmonitor1_out_UNCONNECTED[7:0]),
+        .qpllrsvd1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .qpllrsvd2_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .qpllrsvd3_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .qpllrsvd4_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .rcalenb_in(1'b1),
+        .refclkoutmonitor0_out(NLW_inst_refclkoutmonitor0_out_UNCONNECTED[0]),
+        .refclkoutmonitor1_out(NLW_inst_refclkoutmonitor1_out_UNCONNECTED[0]),
+        .resetexception_out(NLW_inst_resetexception_out_UNCONNECTED[0]),
+        .resetovrd_in(1'b0),
+        .rstclkentx_in(1'b0),
+        .rx8b10ben_in(1'b0),
+        .rxafecfoken_in(1'b1),
+        .rxbufreset_in(rxbufreset_in),
+        .rxbufstatus_out(rxbufstatus_out),
+        .rxbyteisaligned_out(NLW_inst_rxbyteisaligned_out_UNCONNECTED[0]),
+        .rxbyterealign_out(NLW_inst_rxbyterealign_out_UNCONNECTED[0]),
+        .rxcdrfreqreset_in(1'b0),
+        .rxcdrhold_in(rxcdrhold_in),
+        .rxcdrlock_out(NLW_inst_rxcdrlock_out_UNCONNECTED[0]),
+        .rxcdrovrden_in(1'b0),
+        .rxcdrphdone_out(NLW_inst_rxcdrphdone_out_UNCONNECTED[0]),
+        .rxcdrreset_in(1'b0),
+        .rxcdrresetrsv_in(1'b0),
+        .rxchanbondseq_out(NLW_inst_rxchanbondseq_out_UNCONNECTED[0]),
+        .rxchanisaligned_out(NLW_inst_rxchanisaligned_out_UNCONNECTED[0]),
+        .rxchanrealign_out(NLW_inst_rxchanrealign_out_UNCONNECTED[0]),
+        .rxchbonden_in(1'b0),
+        .rxchbondi_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .rxchbondlevel_in({1'b0,1'b0,1'b0}),
+        .rxchbondmaster_in(1'b0),
+        .rxchbondo_out(NLW_inst_rxchbondo_out_UNCONNECTED[4:0]),
+        .rxchbondslave_in(1'b0),
+        .rxckcaldone_out(NLW_inst_rxckcaldone_out_UNCONNECTED[0]),
+        .rxckcalreset_in(1'b0),
+        .rxckcalstart_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .rxclkcorcnt_out(NLW_inst_rxclkcorcnt_out_UNCONNECTED[1:0]),
+        .rxcominitdet_out(NLW_inst_rxcominitdet_out_UNCONNECTED[0]),
+        .rxcommadet_out(rxcommadet_out),
+        .rxcommadeten_in(1'b0),
+        .rxcomsasdet_out(NLW_inst_rxcomsasdet_out_UNCONNECTED[0]),
+        .rxcomwakedet_out(NLW_inst_rxcomwakedet_out_UNCONNECTED[0]),
+        .rxctrl0_out(NLW_inst_rxctrl0_out_UNCONNECTED[15:0]),
+        .rxctrl1_out(rxctrl1_out),
+        .rxctrl2_out(NLW_inst_rxctrl2_out_UNCONNECTED[7:0]),
+        .rxctrl3_out(rxctrl3_out),
+        .rxdata_out(NLW_inst_rxdata_out_UNCONNECTED[127:0]),
+        .rxdataextendrsvd_out(NLW_inst_rxdataextendrsvd_out_UNCONNECTED[7:0]),
+        .rxdatavalid_out(NLW_inst_rxdatavalid_out_UNCONNECTED[1:0]),
+        .rxdccforcestart_in(1'b0),
+        .rxdfeagcctrl_in(1'b0),
+        .rxdfeagchold_in(1'b0),
+        .rxdfeagcovrden_in(1'b0),
+        .rxdfecfokfcnum_in({1'b1,1'b1,1'b0,1'b1}),
+        .rxdfecfokfen_in(1'b0),
+        .rxdfecfokfpulse_in(1'b0),
+        .rxdfecfokhold_in(1'b0),
+        .rxdfecfokovren_in(1'b0),
+        .rxdfekhhold_in(1'b0),
+        .rxdfekhovrden_in(1'b0),
+        .rxdfelfhold_in(1'b0),
+        .rxdfelfovrden_in(1'b0),
+        .rxdfelpmreset_in(rxdfelpmreset_in),
+        .rxdfetap10hold_in(1'b0),
+        .rxdfetap10ovrden_in(1'b0),
+        .rxdfetap11hold_in(1'b0),
+        .rxdfetap11ovrden_in(1'b0),
+        .rxdfetap12hold_in(1'b0),
+        .rxdfetap12ovrden_in(1'b0),
+        .rxdfetap13hold_in(1'b0),
+        .rxdfetap13ovrden_in(1'b0),
+        .rxdfetap14hold_in(1'b0),
+        .rxdfetap14ovrden_in(1'b0),
+        .rxdfetap15hold_in(1'b0),
+        .rxdfetap15ovrden_in(1'b0),
+        .rxdfetap2hold_in(1'b0),
+        .rxdfetap2ovrden_in(1'b0),
+        .rxdfetap3hold_in(1'b0),
+        .rxdfetap3ovrden_in(1'b0),
+        .rxdfetap4hold_in(1'b0),
+        .rxdfetap4ovrden_in(1'b0),
+        .rxdfetap5hold_in(1'b0),
+        .rxdfetap5ovrden_in(1'b0),
+        .rxdfetap6hold_in(1'b0),
+        .rxdfetap6ovrden_in(1'b0),
+        .rxdfetap7hold_in(1'b0),
+        .rxdfetap7ovrden_in(1'b0),
+        .rxdfetap8hold_in(1'b0),
+        .rxdfetap8ovrden_in(1'b0),
+        .rxdfetap9hold_in(1'b0),
+        .rxdfetap9ovrden_in(1'b0),
+        .rxdfeuthold_in(1'b0),
+        .rxdfeutovrden_in(1'b0),
+        .rxdfevphold_in(1'b0),
+        .rxdfevpovrden_in(1'b0),
+        .rxdfevsen_in(1'b0),
+        .rxdfexyden_in(1'b1),
+        .rxdlybypass_in(1'b1),
+        .rxdlyen_in(1'b0),
+        .rxdlyovrden_in(1'b0),
+        .rxdlysreset_in(1'b0),
+        .rxdlysresetdone_out(rxdlysresetdone_out),
+        .rxelecidle_out(NLW_inst_rxelecidle_out_UNCONNECTED[0]),
+        .rxelecidlemode_in({1'b1,1'b1}),
+        .rxeqtraining_in(1'b0),
+        .rxgearboxslip_in(1'b0),
+        .rxheader_out(NLW_inst_rxheader_out_UNCONNECTED[5:0]),
+        .rxheadervalid_out(NLW_inst_rxheadervalid_out_UNCONNECTED[1:0]),
+        .rxlatclk_in(1'b0),
+        .rxlfpstresetdet_out(NLW_inst_rxlfpstresetdet_out_UNCONNECTED[0]),
+        .rxlfpsu2lpexitdet_out(NLW_inst_rxlfpsu2lpexitdet_out_UNCONNECTED[0]),
+        .rxlfpsu3wakedet_out(NLW_inst_rxlfpsu3wakedet_out_UNCONNECTED[0]),
+        .rxlpmen_in(rxlpmen_in),
+        .rxlpmgchold_in(1'b0),
+        .rxlpmgcovrden_in(1'b0),
+        .rxlpmhfhold_in(1'b0),
+        .rxlpmhfovrden_in(1'b0),
+        .rxlpmlfhold_in(1'b0),
+        .rxlpmlfklovrden_in(1'b0),
+        .rxlpmoshold_in(1'b0),
+        .rxlpmosovrden_in(1'b0),
+        .rxmcommaalignen_in(1'b0),
+        .rxmonitorout_out(NLW_inst_rxmonitorout_out_UNCONNECTED[7:0]),
+        .rxmonitorsel_in({1'b0,1'b0}),
+        .rxoobreset_in(1'b0),
+        .rxoscalreset_in(1'b0),
+        .rxoshold_in(1'b0),
+        .rxosintcfg_in(1'b0),
+        .rxosintdone_out(NLW_inst_rxosintdone_out_UNCONNECTED[0]),
+        .rxosinten_in(1'b0),
+        .rxosinthold_in(1'b0),
+        .rxosintovrden_in(1'b0),
+        .rxosintstarted_out(NLW_inst_rxosintstarted_out_UNCONNECTED[0]),
+        .rxosintstrobe_in(1'b0),
+        .rxosintstrobedone_out(NLW_inst_rxosintstrobedone_out_UNCONNECTED[0]),
+        .rxosintstrobestarted_out(NLW_inst_rxosintstrobestarted_out_UNCONNECTED[0]),
+        .rxosinttestovrden_in(1'b0),
+        .rxosovrden_in(1'b0),
+        .rxoutclk_out(rxoutclk_out),
+        .rxoutclkfabric_out(NLW_inst_rxoutclkfabric_out_UNCONNECTED[0]),
+        .rxoutclkpcs_out(NLW_inst_rxoutclkpcs_out_UNCONNECTED[0]),
+        .rxoutclksel_in({1'b0,1'b1,1'b0}),
+        .rxpcommaalignen_in(1'b0),
+        .rxpcsreset_in(rxpcsreset_in),
+        .rxpd_in({1'b0,1'b0}),
+        .rxphalign_in(1'b0),
+        .rxphaligndone_out(rxphaligndone_out),
+        .rxphalignen_in(1'b0),
+        .rxphalignerr_out(NLW_inst_rxphalignerr_out_UNCONNECTED[0]),
+        .rxphdlypd_in(1'b1),
+        .rxphdlyreset_in(1'b0),
+        .rxphovrden_in(1'b0),
+        .rxpllclksel_in({1'b1,1'b1}),
+        .rxpmareset_in(rxpmareset_in),
+        .rxpmaresetdone_out(rxpmaresetdone_out),
+        .rxpolarity_in(rxpolarity_in),
+        .rxprbscntreset_in(rxprbscntreset_in),
+        .rxprbserr_out(rxprbserr_out),
+        .rxprbslocked_out(rxprbslocked_out),
+        .rxprbssel_in(rxprbssel_in),
+        .rxprgdivresetdone_out(NLW_inst_rxprgdivresetdone_out_UNCONNECTED[0]),
+        .rxprogdivreset_in(1'b0),
+        .rxqpien_in(1'b0),
+        .rxqpisenn_out(NLW_inst_rxqpisenn_out_UNCONNECTED[0]),
+        .rxqpisenp_out(NLW_inst_rxqpisenp_out_UNCONNECTED[0]),
+        .rxrate_in(rxrate_in),
+        .rxratedone_out(NLW_inst_rxratedone_out_UNCONNECTED[0]),
+        .rxratemode_in(1'b0),
+        .rxrecclk0_sel_out(NLW_inst_rxrecclk0_sel_out_UNCONNECTED[0]),
+        .rxrecclk0sel_out(NLW_inst_rxrecclk0sel_out_UNCONNECTED[1:0]),
+        .rxrecclk1_sel_out(NLW_inst_rxrecclk1_sel_out_UNCONNECTED[0]),
+        .rxrecclk1sel_out(NLW_inst_rxrecclk1sel_out_UNCONNECTED[1:0]),
+        .rxrecclkout_out(NLW_inst_rxrecclkout_out_UNCONNECTED[0]),
+        .rxresetdone_out(rxresetdone_out),
+        .rxslide_in(1'b0),
+        .rxsliderdy_out(NLW_inst_rxsliderdy_out_UNCONNECTED[0]),
+        .rxslipdone_out(NLW_inst_rxslipdone_out_UNCONNECTED[0]),
+        .rxslipoutclk_in(1'b0),
+        .rxslipoutclkrdy_out(NLW_inst_rxslipoutclkrdy_out_UNCONNECTED[0]),
+        .rxslippma_in(1'b0),
+        .rxslippmardy_out(NLW_inst_rxslippmardy_out_UNCONNECTED[0]),
+        .rxstartofseq_out(NLW_inst_rxstartofseq_out_UNCONNECTED[1:0]),
+        .rxstatus_out(NLW_inst_rxstatus_out_UNCONNECTED[2:0]),
+        .rxsyncallin_in(1'b0),
+        .rxsyncdone_out(rxsyncdone_out),
+        .rxsyncin_in(1'b0),
+        .rxsyncmode_in(1'b0),
+        .rxsyncout_out(NLW_inst_rxsyncout_out_UNCONNECTED[0]),
+        .rxsysclksel_in({1'b1,1'b0}),
+        .rxtermination_in(1'b0),
+        .rxuserrdy_in(1'b1),
+        .rxusrclk2_in(rxusrclk2_in),
+        .rxusrclk_in(rxusrclk_in),
+        .rxvalid_out(NLW_inst_rxvalid_out_UNCONNECTED[0]),
+        .sdm0data_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .sdm0finalout_out(NLW_inst_sdm0finalout_out_UNCONNECTED[3:0]),
+        .sdm0reset_in(1'b0),
+        .sdm0testdata_out(NLW_inst_sdm0testdata_out_UNCONNECTED[14:0]),
+        .sdm0toggle_in(1'b0),
+        .sdm0width_in({1'b0,1'b0}),
+        .sdm1data_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .sdm1finalout_out(NLW_inst_sdm1finalout_out_UNCONNECTED[3:0]),
+        .sdm1reset_in(1'b0),
+        .sdm1testdata_out(NLW_inst_sdm1testdata_out_UNCONNECTED[14:0]),
+        .sdm1toggle_in(1'b0),
+        .sdm1width_in({1'b0,1'b0}),
+        .sigvalidclk_in(1'b0),
+        .tcongpi_in(1'b0),
+        .tcongpo_out(NLW_inst_tcongpo_out_UNCONNECTED[0]),
+        .tconpowerup_in(1'b0),
+        .tconreset_in(1'b0),
+        .tconrsvdin1_in(1'b0),
+        .tconrsvdout0_out(NLW_inst_tconrsvdout0_out_UNCONNECTED[0]),
+        .tstin_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .tx8b10bbypass_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .tx8b10ben_in(1'b0),
+        .txbufdiffctrl_in(1'b0),
+        .txbufstatus_out(txbufstatus_out),
+        .txcomfinish_out(NLW_inst_txcomfinish_out_UNCONNECTED[0]),
+        .txcominit_in(1'b0),
+        .txcomsas_in(1'b0),
+        .txcomwake_in(1'b0),
+        .txctrl0_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txctrl1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txctrl2_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txdata_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txdataextendrsvd_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txdccdone_out(NLW_inst_txdccdone_out_UNCONNECTED[0]),
+        .txdccforcestart_in(1'b0),
+        .txdccreset_in(1'b0),
+        .txdeemph_in({1'b0,1'b0}),
+        .txdetectrx_in(1'b0),
+        .txdiffctrl_in(txdiffctrl_in),
+        .txdiffpd_in(1'b0),
+        .txdlybypass_in(1'b1),
+        .txdlyen_in(1'b0),
+        .txdlyhold_in(1'b0),
+        .txdlyovrden_in(1'b0),
+        .txdlysreset_in(1'b0),
+        .txdlysresetdone_out(txdlysresetdone_out),
+        .txdlyupdown_in(1'b0),
+        .txelecidle_in(1'b0),
+        .txelforcestart_in(1'b0),
+        .txheader_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txinhibit_in(txinhibit_in),
+        .txlatclk_in(1'b0),
+        .txlfpstreset_in(1'b0),
+        .txlfpsu2lpexit_in(1'b0),
+        .txlfpsu3wake_in(1'b0),
+        .txmaincursor_in({1'b1,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0}),
+        .txmargin_in({1'b0,1'b0,1'b0}),
+        .txmuxdcdexhold_in(1'b0),
+        .txmuxdcdorwren_in(1'b0),
+        .txoneszeros_in(1'b0),
+        .txoutclk_out(txoutclk_out),
+        .txoutclkfabric_out(NLW_inst_txoutclkfabric_out_UNCONNECTED[0]),
+        .txoutclkpcs_out(NLW_inst_txoutclkpcs_out_UNCONNECTED[0]),
+        .txoutclksel_in(txoutclksel_in),
+        .txpcsreset_in(txpcsreset_in),
+        .txpd_in({1'b0,1'b0}),
+        .txpdelecidlemode_in(1'b0),
+        .txphalign_in(1'b0),
+        .txphaligndone_out(txphaligndone_out),
+        .txphalignen_in(1'b0),
+        .txphdlypd_in(1'b1),
+        .txphdlyreset_in(1'b0),
+        .txphdlytstclk_in(1'b0),
+        .txphinit_in(1'b0),
+        .txphinitdone_out(txphinitdone_out),
+        .txphovrden_in(1'b0),
+        .txpippmen_in(1'b0),
+        .txpippmovrden_in(1'b0),
+        .txpippmpd_in(1'b0),
+        .txpippmsel_in(1'b1),
+        .txpippmstepsize_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txpisopd_in(1'b0),
+        .txpllclksel_in({1'b1,1'b1}),
+        .txpmareset_in(txpmareset_in),
+        .txpmaresetdone_out(txpmaresetdone_out),
+        .txpolarity_in(txpolarity_in),
+        .txpostcursor_in(txpostcursor_in),
+        .txpostcursorinv_in(1'b0),
+        .txprbsforceerr_in(txprbsforceerr_in),
+        .txprbssel_in(txprbssel_in),
+        .txprecursor_in(txprecursor_in),
+        .txprecursorinv_in(1'b0),
+        .txprgdivresetdone_out(NLW_inst_txprgdivresetdone_out_UNCONNECTED[0]),
+        .txprogdivreset_in(1'b0),
+        .txqpibiasen_in(1'b0),
+        .txqpisenn_out(NLW_inst_txqpisenn_out_UNCONNECTED[0]),
+        .txqpisenp_out(NLW_inst_txqpisenp_out_UNCONNECTED[0]),
+        .txqpistrongpdown_in(1'b0),
+        .txqpiweakpup_in(1'b0),
+        .txrate_in({1'b0,1'b0,1'b0}),
+        .txratedone_out(NLW_inst_txratedone_out_UNCONNECTED[0]),
+        .txratemode_in(1'b0),
+        .txresetdone_out(txresetdone_out),
+        .txsequence_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .txswing_in(1'b0),
+        .txsyncallin_in(1'b0),
+        .txsyncdone_out(NLW_inst_txsyncdone_out_UNCONNECTED[0]),
+        .txsyncin_in(1'b0),
+        .txsyncmode_in(1'b0),
+        .txsyncout_out(NLW_inst_txsyncout_out_UNCONNECTED[0]),
+        .txsysclksel_in({1'b1,1'b0}),
+        .txuserrdy_in(1'b1),
+        .txusrclk2_in(txusrclk2_in),
+        .txusrclk_in(txusrclk_in),
+        .ubcfgstreamen_in(1'b0),
+        .ubdaddr_out(NLW_inst_ubdaddr_out_UNCONNECTED[15:0]),
+        .ubden_out(NLW_inst_ubden_out_UNCONNECTED[0]),
+        .ubdi_out(NLW_inst_ubdi_out_UNCONNECTED[15:0]),
+        .ubdo_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .ubdrdy_in(1'b0),
+        .ubdwe_out(NLW_inst_ubdwe_out_UNCONNECTED[0]),
+        .ubenable_in(1'b0),
+        .ubgpi_in({1'b0,1'b0}),
+        .ubintr_in({1'b0,1'b0}),
+        .ubiolmbrst_in(1'b0),
+        .ubmbrst_in(1'b0),
+        .ubmdmcapture_in(1'b0),
+        .ubmdmdbgrst_in(1'b0),
+        .ubmdmdbgupdate_in(1'b0),
+        .ubmdmregen_in({1'b0,1'b0,1'b0,1'b0}),
+        .ubmdmshift_in(1'b0),
+        .ubmdmsysrst_in(1'b0),
+        .ubmdmtck_in(1'b0),
+        .ubmdmtdi_in(1'b0),
+        .ubmdmtdo_out(NLW_inst_ubmdmtdo_out_UNCONNECTED[0]),
+        .ubrsvdout_out(NLW_inst_ubrsvdout_out_UNCONNECTED[0]),
+        .ubtxuart_out(NLW_inst_ubtxuart_out_UNCONNECTED[0]));
+endmodule
+
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_bit_synchronizer" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer
    (\gen_gtwizard_gtye4.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync ,
     rxresetdone_out,
@@ -1336,6 +2354,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_bit_synchronizer_9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gtwiz_reset" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset
    (\gen_gtwizard_gtye4.txprogdivreset_int ,
     gtwiz_reset_tx_done_out,
@@ -3184,6 +4203,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtwiz_reset
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gtye4_channel" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel
    (bufgtce_out,
     bufgtreset_out,
@@ -5019,6 +6039,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_channel
         .TXUSRCLK2(txusrclk2_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gtye4_common" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common
    (drprdy_common_out,
     qpll0fbclklost_out,
@@ -5540,6 +6561,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_common
         .O(rst_in0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood
    (out,
     i_in_meta_reg,
@@ -5757,6 +6779,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_gtye4_delay_powergood
         .O(TXRATE[0]));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer
    (gtwiz_reset_rx_done_out,
     rxusrclk2_in,
@@ -5902,6 +6925,7 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer_17
         .Q(rst_in_sync3));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_reset_synchronizer" *) 
 module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer
    (gtwiz_reset_all_sync,
     gtwiz_reset_clk_freerun_in,
@@ -6592,1022 +7616,8 @@ module gty_64_156_28G_gtwizard_ultrascale_v1_7_3_reset_synchronizer_18
         .Q(rst_in_sync3));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "gty_64_156_28G_1,gty_64_156_28G_1_gtwizard_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "gty_64_156_28G_1_gtwizard_top,Vivado 2018.1" *) 
-(* NotValidForBitStream *)
-module gty_64_156_28G
-   (gtwiz_userclk_tx_active_in,
-    gtwiz_userclk_rx_active_in,
-    gtwiz_reset_clk_freerun_in,
-    gtwiz_reset_all_in,
-    gtwiz_reset_tx_pll_and_datapath_in,
-    gtwiz_reset_tx_datapath_in,
-    gtwiz_reset_rx_pll_and_datapath_in,
-    gtwiz_reset_rx_datapath_in,
-    gtwiz_reset_rx_cdr_stable_out,
-    gtwiz_reset_tx_done_out,
-    gtwiz_reset_rx_done_out,
-    gtwiz_userdata_tx_in,
-    gtwiz_userdata_rx_out,
-    drpaddr_common_in,
-    drpclk_common_in,
-    drpdi_common_in,
-    drpen_common_in,
-    drpwe_common_in,
-    gtrefclk00_in,
-    drpdo_common_out,
-    drprdy_common_out,
-    qpll0lock_out,
-    qpll0outclk_out,
-    qpll0outrefclk_out,
-    qpll1lock_out,
-    drpaddr_in,
-    drpclk_in,
-    drpdi_in,
-    drpen_in,
-    drpwe_in,
-    eyescanreset_in,
-    eyescantrigger_in,
-    gtyrxn_in,
-    gtyrxp_in,
-    loopback_in,
-    pcsrsvdin_in,
-    rxbufreset_in,
-    rxcdrhold_in,
-    rxdfelpmreset_in,
-    rxlpmen_in,
-    rxpcsreset_in,
-    rxpmareset_in,
-    rxpolarity_in,
-    rxprbscntreset_in,
-    rxprbssel_in,
-    rxrate_in,
-    rxusrclk_in,
-    rxusrclk2_in,
-    txdiffctrl_in,
-    txinhibit_in,
-    txoutclksel_in,
-    txpcsreset_in,
-    txpmareset_in,
-    txpolarity_in,
-    txpostcursor_in,
-    txprbsforceerr_in,
-    txprbssel_in,
-    txprecursor_in,
-    txusrclk_in,
-    txusrclk2_in,
-    cplllock_out,
-    dmonitorout_out,
-    drpdo_out,
-    drprdy_out,
-    eyescandataerror_out,
-    gtpowergood_out,
-    gtytxn_out,
-    gtytxp_out,
-    rxbufstatus_out,
-    rxcommadet_out,
-    rxctrl1_out,
-    rxctrl3_out,
-    rxdlysresetdone_out,
-    rxoutclk_out,
-    rxphaligndone_out,
-    rxpmaresetdone_out,
-    rxprbserr_out,
-    rxresetdone_out,
-    rxsyncdone_out,
-    txbufstatus_out,
-    txdlysresetdone_out,
-    txoutclk_out,
-    txphaligndone_out,
-    txphinitdone_out,
-    txpmaresetdone_out,
-    txresetdone_out);
-  input [0:0]gtwiz_userclk_tx_active_in;
-  input [0:0]gtwiz_userclk_rx_active_in;
-  input [0:0]gtwiz_reset_clk_freerun_in;
-  input [0:0]gtwiz_reset_all_in;
-  input [0:0]gtwiz_reset_tx_pll_and_datapath_in;
-  input [0:0]gtwiz_reset_tx_datapath_in;
-  input [0:0]gtwiz_reset_rx_pll_and_datapath_in;
-  input [0:0]gtwiz_reset_rx_datapath_in;
-  output [0:0]gtwiz_reset_rx_cdr_stable_out;
-  output [0:0]gtwiz_reset_tx_done_out;
-  output [0:0]gtwiz_reset_rx_done_out;
-  input [63:0]gtwiz_userdata_tx_in;
-  output [63:0]gtwiz_userdata_rx_out;
-  input [15:0]drpaddr_common_in;
-  input [0:0]drpclk_common_in;
-  input [15:0]drpdi_common_in;
-  input [0:0]drpen_common_in;
-  input [0:0]drpwe_common_in;
-  input [0:0]gtrefclk00_in;
-  output [15:0]drpdo_common_out;
-  output [0:0]drprdy_common_out;
-  output [0:0]qpll0lock_out;
-  output [0:0]qpll0outclk_out;
-  output [0:0]qpll0outrefclk_out;
-  output [0:0]qpll1lock_out;
-  input [9:0]drpaddr_in;
-  input [0:0]drpclk_in;
-  input [15:0]drpdi_in;
-  input [0:0]drpen_in;
-  input [0:0]drpwe_in;
-  input [0:0]eyescanreset_in;
-  input [0:0]eyescantrigger_in;
-  input [0:0]gtyrxn_in;
-  input [0:0]gtyrxp_in;
-  input [2:0]loopback_in;
-  input [15:0]pcsrsvdin_in;
-  input [0:0]rxbufreset_in;
-  input [0:0]rxcdrhold_in;
-  input [0:0]rxdfelpmreset_in;
-  input [0:0]rxlpmen_in;
-  input [0:0]rxpcsreset_in;
-  input [0:0]rxpmareset_in;
-  input [0:0]rxpolarity_in;
-  input [0:0]rxprbscntreset_in;
-  input [3:0]rxprbssel_in;
-  input [2:0]rxrate_in;
-  input [0:0]rxusrclk_in;
-  input [0:0]rxusrclk2_in;
-  input [4:0]txdiffctrl_in;
-  input [0:0]txinhibit_in;
-  input [2:0]txoutclksel_in;
-  input [0:0]txpcsreset_in;
-  input [0:0]txpmareset_in;
-  input [0:0]txpolarity_in;
-  input [4:0]txpostcursor_in;
-  input [0:0]txprbsforceerr_in;
-  input [3:0]txprbssel_in;
-  input [4:0]txprecursor_in;
-  input [0:0]txusrclk_in;
-  input [0:0]txusrclk2_in;
-  output [0:0]cplllock_out;
-  output [15:0]dmonitorout_out;
-  output [15:0]drpdo_out;
-  output [0:0]drprdy_out;
-  output [0:0]eyescandataerror_out;
-  output [0:0]gtpowergood_out;
-  output [0:0]gtytxn_out;
-  output [0:0]gtytxp_out;
-  output [2:0]rxbufstatus_out;
-  output [0:0]rxcommadet_out;
-  output [15:0]rxctrl1_out;
-  output [7:0]rxctrl3_out;
-  output [0:0]rxdlysresetdone_out;
-  output [0:0]rxoutclk_out;
-  output [0:0]rxphaligndone_out;
-  output [0:0]rxpmaresetdone_out;
-  output [0:0]rxprbserr_out;
-  output [0:0]rxresetdone_out;
-  output [0:0]rxsyncdone_out;
-  output [1:0]txbufstatus_out;
-  output [0:0]txdlysresetdone_out;
-  output [0:0]txoutclk_out;
-  output [0:0]txphaligndone_out;
-  output [0:0]txphinitdone_out;
-  output [0:0]txpmaresetdone_out;
-  output [0:0]txresetdone_out;
-
-  wire [0:0]cplllock_out;
-  wire [15:0]dmonitorout_out;
-  wire [15:0]drpaddr_common_in;
-  wire [9:0]drpaddr_in;
-  wire [0:0]drpclk_common_in;
-  wire [0:0]drpclk_in;
-  wire [15:0]drpdi_common_in;
-  wire [15:0]drpdi_in;
-  wire [15:0]drpdo_common_out;
-  wire [15:0]drpdo_out;
-  wire [0:0]drpen_common_in;
-  wire [0:0]drpen_in;
-  wire [0:0]drprdy_common_out;
-  wire [0:0]drprdy_out;
-  wire [0:0]drpwe_common_in;
-  wire [0:0]drpwe_in;
-  wire [0:0]eyescandataerror_out;
-  wire [0:0]eyescanreset_in;
-  wire [0:0]eyescantrigger_in;
-  wire [0:0]gtpowergood_out;
-  wire [0:0]gtrefclk00_in;
-  wire [0:0]gtwiz_reset_all_in;
-  wire [0:0]gtwiz_reset_clk_freerun_in;
-  wire [0:0]gtwiz_reset_rx_cdr_stable_out;
-  wire [0:0]gtwiz_reset_rx_datapath_in;
-  wire [0:0]gtwiz_reset_rx_done_out;
-  wire [0:0]gtwiz_reset_rx_pll_and_datapath_in;
-  wire [0:0]gtwiz_reset_tx_datapath_in;
-  wire [0:0]gtwiz_reset_tx_done_out;
-  wire [0:0]gtwiz_reset_tx_pll_and_datapath_in;
-  wire [0:0]gtwiz_userclk_rx_active_in;
-  wire [0:0]gtwiz_userclk_tx_active_in;
-  wire [63:0]gtwiz_userdata_rx_out;
-  wire [63:0]gtwiz_userdata_tx_in;
-  wire [0:0]gtyrxn_in;
-  wire [0:0]gtyrxp_in;
-  wire [0:0]gtytxn_out;
-  wire [0:0]gtytxp_out;
-  wire [2:0]loopback_in;
-  wire [15:0]pcsrsvdin_in;
-  wire [0:0]qpll0lock_out;
-  wire [0:0]qpll0outclk_out;
-  wire [0:0]qpll0outrefclk_out;
-  wire [0:0]qpll1lock_out;
-  wire [0:0]rxbufreset_in;
-  wire [2:0]rxbufstatus_out;
-  wire [0:0]rxcdrhold_in;
-  wire [0:0]rxcommadet_out;
-  wire [15:0]rxctrl1_out;
-  wire [7:0]rxctrl3_out;
-  wire [0:0]rxdfelpmreset_in;
-  wire [0:0]rxdlysresetdone_out;
-  wire [0:0]rxlpmen_in;
-  wire [0:0]rxoutclk_out;
-  wire [0:0]rxpcsreset_in;
-  wire [0:0]rxphaligndone_out;
-  wire [0:0]rxpmareset_in;
-  wire [0:0]rxpmaresetdone_out;
-  wire [0:0]rxpolarity_in;
-  wire [0:0]rxprbscntreset_in;
-  wire [0:0]rxprbserr_out;
-  wire [3:0]rxprbssel_in;
-  wire [2:0]rxrate_in;
-  wire [0:0]rxresetdone_out;
-  wire [0:0]rxsyncdone_out;
-  wire [0:0]rxusrclk2_in;
-  wire [0:0]rxusrclk_in;
-  wire [1:0]txbufstatus_out;
-  wire [4:0]txdiffctrl_in;
-  wire [0:0]txdlysresetdone_out;
-  wire [0:0]txinhibit_in;
-  wire [0:0]txoutclk_out;
-  wire [2:0]txoutclksel_in;
-  wire [0:0]txpcsreset_in;
-  wire [0:0]txphaligndone_out;
-  wire [0:0]txphinitdone_out;
-  wire [0:0]txpmareset_in;
-  wire [0:0]txpmaresetdone_out;
-  wire [0:0]txpolarity_in;
-  wire [4:0]txpostcursor_in;
-  wire [0:0]txprbsforceerr_in;
-  wire [3:0]txprbssel_in;
-  wire [4:0]txprecursor_in;
-  wire [0:0]txresetdone_out;
-  wire [0:0]txusrclk2_in;
-  wire [0:0]txusrclk_in;
-  wire [0:0]NLW_inst_bufgtce_out_UNCONNECTED;
-  wire [2:0]NLW_inst_bufgtcemask_out_UNCONNECTED;
-  wire [8:0]NLW_inst_bufgtdiv_out_UNCONNECTED;
-  wire [0:0]NLW_inst_bufgtreset_out_UNCONNECTED;
-  wire [2:0]NLW_inst_bufgtrstmask_out_UNCONNECTED;
-  wire [0:0]NLW_inst_cpllfbclklost_out_UNCONNECTED;
-  wire [0:0]NLW_inst_cpllrefclklost_out_UNCONNECTED;
-  wire [0:0]NLW_inst_dmonitoroutclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gthtxn_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gthtxp_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtrefclkmonitor_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_buffbypass_rx_done_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_buffbypass_rx_error_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_buffbypass_tx_done_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_buffbypass_tx_error_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_reset_qpll0reset_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_reset_qpll1reset_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_rx_active_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_rx_srcclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_rx_usrclk2_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_rx_usrclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_tx_active_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_tx_srcclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_tx_usrclk2_out_UNCONNECTED;
-  wire [0:0]NLW_inst_gtwiz_userclk_tx_usrclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pcierategen3_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pcierateidle_out_UNCONNECTED;
-  wire [1:0]NLW_inst_pcierateqpllpd_out_UNCONNECTED;
-  wire [1:0]NLW_inst_pcierateqpllreset_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pciesynctxsyncdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pcieusergen3rdy_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pcieuserphystatusrst_out_UNCONNECTED;
-  wire [0:0]NLW_inst_pcieuserratestart_out_UNCONNECTED;
-  wire [15:0]NLW_inst_pcsrsvdout_out_UNCONNECTED;
-  wire [0:0]NLW_inst_phystatus_out_UNCONNECTED;
-  wire [15:0]NLW_inst_pinrsrvdas_out_UNCONNECTED;
-  wire [7:0]NLW_inst_pmarsvdout0_out_UNCONNECTED;
-  wire [7:0]NLW_inst_pmarsvdout1_out_UNCONNECTED;
-  wire [0:0]NLW_inst_powerpresent_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll0fbclklost_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll0refclklost_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll1fbclklost_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll1outclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll1outrefclk_out_UNCONNECTED;
-  wire [0:0]NLW_inst_qpll1refclklost_out_UNCONNECTED;
-  wire [7:0]NLW_inst_qplldmonitor0_out_UNCONNECTED;
-  wire [7:0]NLW_inst_qplldmonitor1_out_UNCONNECTED;
-  wire [0:0]NLW_inst_refclkoutmonitor0_out_UNCONNECTED;
-  wire [0:0]NLW_inst_refclkoutmonitor1_out_UNCONNECTED;
-  wire [0:0]NLW_inst_resetexception_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxbyteisaligned_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxbyterealign_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxcdrlock_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxcdrphdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxchanbondseq_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxchanisaligned_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxchanrealign_out_UNCONNECTED;
-  wire [4:0]NLW_inst_rxchbondo_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxckcaldone_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxclkcorcnt_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxcominitdet_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxcomsasdet_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxcomwakedet_out_UNCONNECTED;
-  wire [15:0]NLW_inst_rxctrl0_out_UNCONNECTED;
-  wire [7:0]NLW_inst_rxctrl2_out_UNCONNECTED;
-  wire [127:0]NLW_inst_rxdata_out_UNCONNECTED;
-  wire [7:0]NLW_inst_rxdataextendrsvd_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxdatavalid_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxelecidle_out_UNCONNECTED;
-  wire [5:0]NLW_inst_rxheader_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxheadervalid_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxlfpstresetdet_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxlfpsu2lpexitdet_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxlfpsu3wakedet_out_UNCONNECTED;
-  wire [7:0]NLW_inst_rxmonitorout_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxosintdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxosintstarted_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxosintstrobedone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxosintstrobestarted_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxoutclkfabric_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxoutclkpcs_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxphalignerr_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxprbslocked_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxprgdivresetdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxqpisenn_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxqpisenp_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxratedone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxrecclk0_sel_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxrecclk0sel_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxrecclk1_sel_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxrecclk1sel_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxrecclkout_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxsliderdy_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxslipdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxslipoutclkrdy_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxslippmardy_out_UNCONNECTED;
-  wire [1:0]NLW_inst_rxstartofseq_out_UNCONNECTED;
-  wire [2:0]NLW_inst_rxstatus_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxsyncout_out_UNCONNECTED;
-  wire [0:0]NLW_inst_rxvalid_out_UNCONNECTED;
-  wire [3:0]NLW_inst_sdm0finalout_out_UNCONNECTED;
-  wire [14:0]NLW_inst_sdm0testdata_out_UNCONNECTED;
-  wire [3:0]NLW_inst_sdm1finalout_out_UNCONNECTED;
-  wire [14:0]NLW_inst_sdm1testdata_out_UNCONNECTED;
-  wire [0:0]NLW_inst_tcongpo_out_UNCONNECTED;
-  wire [0:0]NLW_inst_tconrsvdout0_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txcomfinish_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txdccdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txoutclkfabric_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txoutclkpcs_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txprgdivresetdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txqpisenn_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txqpisenp_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txratedone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txsyncdone_out_UNCONNECTED;
-  wire [0:0]NLW_inst_txsyncout_out_UNCONNECTED;
-  wire [15:0]NLW_inst_ubdaddr_out_UNCONNECTED;
-  wire [0:0]NLW_inst_ubden_out_UNCONNECTED;
-  wire [15:0]NLW_inst_ubdi_out_UNCONNECTED;
-  wire [0:0]NLW_inst_ubdwe_out_UNCONNECTED;
-  wire [0:0]NLW_inst_ubmdmtdo_out_UNCONNECTED;
-  wire [0:0]NLW_inst_ubrsvdout_out_UNCONNECTED;
-  wire [0:0]NLW_inst_ubtxuart_out_UNCONNECTED;
-
-  (* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000" *) 
-  (* C_COMMON_SCALING_FACTOR = "1" *) 
-  (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
-  (* C_ENABLE_COMMON_USRCLK = "0" *) 
-  (* C_FORCE_COMMONS = "0" *) 
-  (* C_FREERUN_FREQUENCY = "100.000000" *) 
-  (* C_GT_REV = "67" *) 
-  (* C_GT_TYPE = "3" *) 
-  (* C_INCLUDE_CPLL_CAL = "2" *) 
-  (* C_LOCATE_COMMON = "0" *) 
-  (* C_LOCATE_IN_SYSTEM_IBERT_CORE = "2" *) 
-  (* C_LOCATE_RESET_CONTROLLER = "0" *) 
-  (* C_LOCATE_RX_BUFFER_BYPASS_CONTROLLER = "0" *) 
-  (* C_LOCATE_RX_USER_CLOCKING = "1" *) 
-  (* C_LOCATE_TX_BUFFER_BYPASS_CONTROLLER = "0" *) 
-  (* C_LOCATE_TX_USER_CLOCKING = "1" *) 
-  (* C_LOCATE_USER_DATA_WIDTH_SIZING = "0" *) 
-  (* C_PCIE_CORECLK_FREQ = "250" *) 
-  (* C_PCIE_ENABLE = "0" *) 
-  (* C_RESET_CONTROLLER_INSTANCE_CTRL = "0" *) 
-  (* C_RESET_SEQUENCE_INTERVAL = "0" *) 
-  (* C_RX_BUFFBYPASS_MODE = "0" *) 
-  (* C_RX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
-  (* C_RX_BUFFER_MODE = "1" *) 
-  (* C_RX_CB_DISP = "8'b00000000" *) 
-  (* C_RX_CB_K = "8'b00000000" *) 
-  (* C_RX_CB_LEN_SEQ = "1" *) 
-  (* C_RX_CB_MAX_LEVEL = "1" *) 
-  (* C_RX_CB_NUM_SEQ = "0" *) 
-  (* C_RX_CB_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-  (* C_RX_CC_DISP = "8'b00000000" *) 
-  (* C_RX_CC_ENABLE = "0" *) 
-  (* C_RX_CC_K = "8'b00000000" *) 
-  (* C_RX_CC_LEN_SEQ = "1" *) 
-  (* C_RX_CC_NUM_SEQ = "0" *) 
-  (* C_RX_CC_PERIODICITY = "5000" *) 
-  (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-  (* C_RX_COMMA_M_ENABLE = "0" *) 
-  (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
-  (* C_RX_COMMA_P_ENABLE = "0" *) 
-  (* C_RX_COMMA_P_VAL = "10'b0101111100" *) 
-  (* C_RX_DATA_DECODING = "0" *) 
-  (* C_RX_ENABLE = "1" *) 
-  (* C_RX_INT_DATA_WIDTH = "64" *) 
-  (* C_RX_LINE_RATE = "28.125000" *) 
-  (* C_RX_MASTER_CHANNEL_IDX = "8" *) 
-  (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) 
-  (* C_RX_OUTCLK_FREQUENCY = "439.453125" *) 
-  (* C_RX_OUTCLK_SOURCE = "1" *) 
-  (* C_RX_PLL_TYPE = "0" *) 
-  (* C_RX_RECCLK_OUTPUT = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-  (* C_RX_REFCLK_FREQUENCY = "156.250000" *) 
-  (* C_RX_SLIDE_MODE = "0" *) 
-  (* C_RX_USER_CLOCKING_CONTENTS = "0" *) 
-  (* C_RX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
-  (* C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) 
-  (* C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
-  (* C_RX_USER_CLOCKING_SOURCE = "0" *) 
-  (* C_RX_USER_DATA_WIDTH = "64" *) 
-  (* C_RX_USRCLK2_FREQUENCY = "439.453125" *) 
-  (* C_RX_USRCLK_FREQUENCY = "439.453125" *) 
-  (* C_SECONDARY_QPLL_ENABLE = "0" *) 
-  (* C_SECONDARY_QPLL_REFCLK_FREQUENCY = "257.812500" *) 
-  (* C_SIM_CPLL_CAL_BYPASS = "1" *) 
-  (* C_TOTAL_NUM_CHANNELS = "1" *) 
-  (* C_TOTAL_NUM_COMMONS = "1" *) 
-  (* C_TOTAL_NUM_COMMONS_EXAMPLE = "0" *) 
-  (* C_TXPROGDIV_FREQ_ENABLE = "0" *) 
-  (* C_TXPROGDIV_FREQ_SOURCE = "0" *) 
-  (* C_TXPROGDIV_FREQ_VAL = "439.453125" *) 
-  (* C_TX_BUFFBYPASS_MODE = "0" *) 
-  (* C_TX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
-  (* C_TX_BUFFER_MODE = "1" *) 
-  (* C_TX_DATA_ENCODING = "0" *) 
-  (* C_TX_ENABLE = "1" *) 
-  (* C_TX_INT_DATA_WIDTH = "64" *) 
-  (* C_TX_LINE_RATE = "28.125000" *) 
-  (* C_TX_MASTER_CHANNEL_IDX = "8" *) 
-  (* C_TX_OUTCLK_BUFG_GT_DIV = "1" *) 
-  (* C_TX_OUTCLK_FREQUENCY = "439.453125" *) 
-  (* C_TX_OUTCLK_SOURCE = "1" *) 
-  (* C_TX_PLL_TYPE = "0" *) 
-  (* C_TX_REFCLK_FREQUENCY = "156.250000" *) 
-  (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
-  (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
-  (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) 
-  (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
-  (* C_TX_USER_CLOCKING_SOURCE = "0" *) 
-  (* C_TX_USER_DATA_WIDTH = "64" *) 
-  (* C_TX_USRCLK2_FREQUENCY = "439.453125" *) 
-  (* C_TX_USRCLK_FREQUENCY = "439.453125" *) 
-  (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) 
-  gty_64_156_28G_gty_64_156_28G_1_gtwizard_top inst
-       (.bgbypassb_in(1'b1),
-        .bgmonitorenb_in(1'b1),
-        .bgpdb_in(1'b1),
-        .bgrcalovrd_in({1'b1,1'b0,1'b0,1'b0,1'b0}),
-        .bgrcalovrdenb_in(1'b1),
-        .bufgtce_out(NLW_inst_bufgtce_out_UNCONNECTED[0]),
-        .bufgtcemask_out(NLW_inst_bufgtcemask_out_UNCONNECTED[2:0]),
-        .bufgtdiv_out(NLW_inst_bufgtdiv_out_UNCONNECTED[8:0]),
-        .bufgtreset_out(NLW_inst_bufgtreset_out_UNCONNECTED[0]),
-        .bufgtrstmask_out(NLW_inst_bufgtrstmask_out_UNCONNECTED[2:0]),
-        .cdrstepdir_in(1'b0),
-        .cdrstepsq_in(1'b0),
-        .cdrstepsx_in(1'b0),
-        .cfgreset_in(1'b0),
-        .clkrsvd0_in(1'b0),
-        .clkrsvd1_in(1'b0),
-        .cpllfbclklost_out(NLW_inst_cpllfbclklost_out_UNCONNECTED[0]),
-        .cpllfreqlock_in(1'b0),
-        .cplllock_out(cplllock_out),
-        .cplllockdetclk_in(1'b0),
-        .cplllocken_in(1'b0),
-        .cpllpd_in(1'b1),
-        .cpllrefclklost_out(NLW_inst_cpllrefclklost_out_UNCONNECTED[0]),
-        .cpllrefclksel_in({1'b0,1'b0,1'b1}),
-        .cpllreset_in(1'b1),
-        .dmonfiforeset_in(1'b0),
-        .dmonitorclk_in(1'b0),
-        .dmonitorout_out(dmonitorout_out),
-        .dmonitoroutclk_out(NLW_inst_dmonitoroutclk_out_UNCONNECTED[0]),
-        .drpaddr_common_in(drpaddr_common_in),
-        .drpaddr_in(drpaddr_in),
-        .drpclk_common_in(drpclk_common_in),
-        .drpclk_in(drpclk_in),
-        .drpdi_common_in(drpdi_common_in),
-        .drpdi_in(drpdi_in),
-        .drpdo_common_out(drpdo_common_out),
-        .drpdo_out(drpdo_out),
-        .drpen_common_in(drpen_common_in),
-        .drpen_in(drpen_in),
-        .drprdy_common_out(drprdy_common_out),
-        .drprdy_out(drprdy_out),
-        .drprst_in(1'b0),
-        .drpwe_common_in(drpwe_common_in),
-        .drpwe_in(drpwe_in),
-        .elpcaldvorwren_in(1'b0),
-        .elpcalpaorwren_in(1'b0),
-        .evoddphicaldone_in(1'b0),
-        .evoddphicalstart_in(1'b0),
-        .evoddphidrden_in(1'b0),
-        .evoddphidwren_in(1'b0),
-        .evoddphixrden_in(1'b0),
-        .evoddphixwren_in(1'b0),
-        .eyescandataerror_out(eyescandataerror_out),
-        .eyescanmode_in(1'b0),
-        .eyescanreset_in(eyescanreset_in),
-        .eyescantrigger_in(eyescantrigger_in),
-        .freqos_in(1'b0),
-        .gtgrefclk0_in(1'b0),
-        .gtgrefclk1_in(1'b0),
-        .gtgrefclk_in(1'b0),
-        .gthrxn_in(1'b0),
-        .gthrxp_in(1'b0),
-        .gthtxn_out(NLW_inst_gthtxn_out_UNCONNECTED[0]),
-        .gthtxp_out(NLW_inst_gthtxp_out_UNCONNECTED[0]),
-        .gtnorthrefclk00_in(1'b0),
-        .gtnorthrefclk01_in(1'b0),
-        .gtnorthrefclk0_in(1'b0),
-        .gtnorthrefclk10_in(1'b0),
-        .gtnorthrefclk11_in(1'b0),
-        .gtnorthrefclk1_in(1'b0),
-        .gtpowergood_out(gtpowergood_out),
-        .gtrefclk00_in(gtrefclk00_in),
-        .gtrefclk01_in(1'b0),
-        .gtrefclk0_in(1'b0),
-        .gtrefclk10_in(1'b0),
-        .gtrefclk11_in(1'b0),
-        .gtrefclk1_in(1'b0),
-        .gtrefclkmonitor_out(NLW_inst_gtrefclkmonitor_out_UNCONNECTED[0]),
-        .gtresetsel_in(1'b0),
-        .gtrsvd_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtrxreset_in(1'b0),
-        .gtrxresetsel_in(1'b0),
-        .gtsouthrefclk00_in(1'b0),
-        .gtsouthrefclk01_in(1'b0),
-        .gtsouthrefclk0_in(1'b0),
-        .gtsouthrefclk10_in(1'b0),
-        .gtsouthrefclk11_in(1'b0),
-        .gtsouthrefclk1_in(1'b0),
-        .gttxreset_in(1'b0),
-        .gttxresetsel_in(1'b0),
-        .gtwiz_buffbypass_rx_done_out(NLW_inst_gtwiz_buffbypass_rx_done_out_UNCONNECTED[0]),
-        .gtwiz_buffbypass_rx_error_out(NLW_inst_gtwiz_buffbypass_rx_error_out_UNCONNECTED[0]),
-        .gtwiz_buffbypass_rx_reset_in(1'b0),
-        .gtwiz_buffbypass_rx_start_user_in(1'b0),
-        .gtwiz_buffbypass_tx_done_out(NLW_inst_gtwiz_buffbypass_tx_done_out_UNCONNECTED[0]),
-        .gtwiz_buffbypass_tx_error_out(NLW_inst_gtwiz_buffbypass_tx_error_out_UNCONNECTED[0]),
-        .gtwiz_buffbypass_tx_reset_in(1'b0),
-        .gtwiz_buffbypass_tx_start_user_in(1'b0),
-        .gtwiz_gthe3_cpll_cal_bufg_ce_in(1'b0),
-        .gtwiz_gthe3_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_gthe3_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_gthe4_cpll_cal_bufg_ce_in(1'b0),
-        .gtwiz_gthe4_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_gthe4_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_gtye4_cpll_cal_bufg_ce_in(1'b0),
-        .gtwiz_gtye4_cpll_cal_cnt_tol_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_gtye4_cpll_cal_txoutclk_period_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .gtwiz_reset_all_in(gtwiz_reset_all_in),
-        .gtwiz_reset_clk_freerun_in(gtwiz_reset_clk_freerun_in),
-        .gtwiz_reset_qpll0lock_in(1'b0),
-        .gtwiz_reset_qpll0reset_out(NLW_inst_gtwiz_reset_qpll0reset_out_UNCONNECTED[0]),
-        .gtwiz_reset_qpll1lock_in(1'b0),
-        .gtwiz_reset_qpll1reset_out(NLW_inst_gtwiz_reset_qpll1reset_out_UNCONNECTED[0]),
-        .gtwiz_reset_rx_cdr_stable_out(gtwiz_reset_rx_cdr_stable_out),
-        .gtwiz_reset_rx_datapath_in(gtwiz_reset_rx_datapath_in),
-        .gtwiz_reset_rx_done_in(1'b0),
-        .gtwiz_reset_rx_done_out(gtwiz_reset_rx_done_out),
-        .gtwiz_reset_rx_pll_and_datapath_in(gtwiz_reset_rx_pll_and_datapath_in),
-        .gtwiz_reset_tx_datapath_in(gtwiz_reset_tx_datapath_in),
-        .gtwiz_reset_tx_done_in(1'b0),
-        .gtwiz_reset_tx_done_out(gtwiz_reset_tx_done_out),
-        .gtwiz_reset_tx_pll_and_datapath_in(gtwiz_reset_tx_pll_and_datapath_in),
-        .gtwiz_userclk_rx_active_in(gtwiz_userclk_rx_active_in),
-        .gtwiz_userclk_rx_active_out(NLW_inst_gtwiz_userclk_rx_active_out_UNCONNECTED[0]),
-        .gtwiz_userclk_rx_reset_in(1'b0),
-        .gtwiz_userclk_rx_srcclk_out(NLW_inst_gtwiz_userclk_rx_srcclk_out_UNCONNECTED[0]),
-        .gtwiz_userclk_rx_usrclk2_out(NLW_inst_gtwiz_userclk_rx_usrclk2_out_UNCONNECTED[0]),
-        .gtwiz_userclk_rx_usrclk_out(NLW_inst_gtwiz_userclk_rx_usrclk_out_UNCONNECTED[0]),
-        .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),
-        .gtwiz_userclk_tx_active_out(NLW_inst_gtwiz_userclk_tx_active_out_UNCONNECTED[0]),
-        .gtwiz_userclk_tx_reset_in(1'b0),
-        .gtwiz_userclk_tx_srcclk_out(NLW_inst_gtwiz_userclk_tx_srcclk_out_UNCONNECTED[0]),
-        .gtwiz_userclk_tx_usrclk2_out(NLW_inst_gtwiz_userclk_tx_usrclk2_out_UNCONNECTED[0]),
-        .gtwiz_userclk_tx_usrclk_out(NLW_inst_gtwiz_userclk_tx_usrclk_out_UNCONNECTED[0]),
-        .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),
-        .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),
-        .gtyrxn_in(gtyrxn_in),
-        .gtyrxp_in(gtyrxp_in),
-        .gtytxn_out(gtytxn_out),
-        .gtytxp_out(gtytxp_out),
-        .incpctrl_in(1'b0),
-        .loopback_in(loopback_in),
-        .looprsvd_in(1'b0),
-        .lpbkrxtxseren_in(1'b0),
-        .lpbktxrxseren_in(1'b0),
-        .pcieeqrxeqadaptdone_in(1'b0),
-        .pcierategen3_out(NLW_inst_pcierategen3_out_UNCONNECTED[0]),
-        .pcierateidle_out(NLW_inst_pcierateidle_out_UNCONNECTED[0]),
-        .pcierateqpll0_in({1'b0,1'b0,1'b0}),
-        .pcierateqpll1_in({1'b0,1'b0,1'b0}),
-        .pcierateqpllpd_out(NLW_inst_pcierateqpllpd_out_UNCONNECTED[1:0]),
-        .pcierateqpllreset_out(NLW_inst_pcierateqpllreset_out_UNCONNECTED[1:0]),
-        .pcierstidle_in(1'b0),
-        .pciersttxsyncstart_in(1'b0),
-        .pciesynctxsyncdone_out(NLW_inst_pciesynctxsyncdone_out_UNCONNECTED[0]),
-        .pcieusergen3rdy_out(NLW_inst_pcieusergen3rdy_out_UNCONNECTED[0]),
-        .pcieuserphystatusrst_out(NLW_inst_pcieuserphystatusrst_out_UNCONNECTED[0]),
-        .pcieuserratedone_in(1'b0),
-        .pcieuserratestart_out(NLW_inst_pcieuserratestart_out_UNCONNECTED[0]),
-        .pcsrsvdin2_in(1'b0),
-        .pcsrsvdin_in(pcsrsvdin_in),
-        .pcsrsvdout_out(NLW_inst_pcsrsvdout_out_UNCONNECTED[15:0]),
-        .phystatus_out(NLW_inst_phystatus_out_UNCONNECTED[0]),
-        .pinrsrvdas_out(NLW_inst_pinrsrvdas_out_UNCONNECTED[15:0]),
-        .pmarsvd0_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .pmarsvd1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .pmarsvdin_in(1'b0),
-        .pmarsvdout0_out(NLW_inst_pmarsvdout0_out_UNCONNECTED[7:0]),
-        .pmarsvdout1_out(NLW_inst_pmarsvdout1_out_UNCONNECTED[7:0]),
-        .powerpresent_out(NLW_inst_powerpresent_out_UNCONNECTED[0]),
-        .qpll0clk_in(1'b0),
-        .qpll0clkrsvd0_in(1'b0),
-        .qpll0clkrsvd1_in(1'b0),
-        .qpll0fbclklost_out(NLW_inst_qpll0fbclklost_out_UNCONNECTED[0]),
-        .qpll0fbdiv_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .qpll0freqlock_in(1'b0),
-        .qpll0lock_out(qpll0lock_out),
-        .qpll0lockdetclk_in(1'b0),
-        .qpll0locken_in(1'b1),
-        .qpll0outclk_out(qpll0outclk_out),
-        .qpll0outrefclk_out(qpll0outrefclk_out),
-        .qpll0pd_in(1'b0),
-        .qpll0refclk_in(1'b0),
-        .qpll0refclklost_out(NLW_inst_qpll0refclklost_out_UNCONNECTED[0]),
-        .qpll0refclksel_in({1'b0,1'b0,1'b1}),
-        .qpll0reset_in(1'b0),
-        .qpll1clk_in(1'b0),
-        .qpll1clkrsvd0_in(1'b0),
-        .qpll1clkrsvd1_in(1'b0),
-        .qpll1fbclklost_out(NLW_inst_qpll1fbclklost_out_UNCONNECTED[0]),
-        .qpll1fbdiv_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .qpll1freqlock_in(1'b0),
-        .qpll1lock_out(qpll1lock_out),
-        .qpll1lockdetclk_in(1'b0),
-        .qpll1locken_in(1'b0),
-        .qpll1outclk_out(NLW_inst_qpll1outclk_out_UNCONNECTED[0]),
-        .qpll1outrefclk_out(NLW_inst_qpll1outrefclk_out_UNCONNECTED[0]),
-        .qpll1pd_in(1'b1),
-        .qpll1refclk_in(1'b0),
-        .qpll1refclklost_out(NLW_inst_qpll1refclklost_out_UNCONNECTED[0]),
-        .qpll1refclksel_in({1'b0,1'b0,1'b1}),
-        .qpll1reset_in(1'b1),
-        .qplldmonitor0_out(NLW_inst_qplldmonitor0_out_UNCONNECTED[7:0]),
-        .qplldmonitor1_out(NLW_inst_qplldmonitor1_out_UNCONNECTED[7:0]),
-        .qpllrsvd1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .qpllrsvd2_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .qpllrsvd3_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .qpllrsvd4_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rcalenb_in(1'b1),
-        .refclkoutmonitor0_out(NLW_inst_refclkoutmonitor0_out_UNCONNECTED[0]),
-        .refclkoutmonitor1_out(NLW_inst_refclkoutmonitor1_out_UNCONNECTED[0]),
-        .resetexception_out(NLW_inst_resetexception_out_UNCONNECTED[0]),
-        .resetovrd_in(1'b0),
-        .rstclkentx_in(1'b0),
-        .rx8b10ben_in(1'b0),
-        .rxafecfoken_in(1'b1),
-        .rxbufreset_in(rxbufreset_in),
-        .rxbufstatus_out(rxbufstatus_out),
-        .rxbyteisaligned_out(NLW_inst_rxbyteisaligned_out_UNCONNECTED[0]),
-        .rxbyterealign_out(NLW_inst_rxbyterealign_out_UNCONNECTED[0]),
-        .rxcdrfreqreset_in(1'b0),
-        .rxcdrhold_in(rxcdrhold_in),
-        .rxcdrlock_out(NLW_inst_rxcdrlock_out_UNCONNECTED[0]),
-        .rxcdrovrden_in(1'b0),
-        .rxcdrphdone_out(NLW_inst_rxcdrphdone_out_UNCONNECTED[0]),
-        .rxcdrreset_in(1'b0),
-        .rxcdrresetrsv_in(1'b0),
-        .rxchanbondseq_out(NLW_inst_rxchanbondseq_out_UNCONNECTED[0]),
-        .rxchanisaligned_out(NLW_inst_rxchanisaligned_out_UNCONNECTED[0]),
-        .rxchanrealign_out(NLW_inst_rxchanrealign_out_UNCONNECTED[0]),
-        .rxchbonden_in(1'b0),
-        .rxchbondi_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rxchbondlevel_in({1'b0,1'b0,1'b0}),
-        .rxchbondmaster_in(1'b0),
-        .rxchbondo_out(NLW_inst_rxchbondo_out_UNCONNECTED[4:0]),
-        .rxchbondslave_in(1'b0),
-        .rxckcaldone_out(NLW_inst_rxckcaldone_out_UNCONNECTED[0]),
-        .rxckcalreset_in(1'b0),
-        .rxckcalstart_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rxclkcorcnt_out(NLW_inst_rxclkcorcnt_out_UNCONNECTED[1:0]),
-        .rxcominitdet_out(NLW_inst_rxcominitdet_out_UNCONNECTED[0]),
-        .rxcommadet_out(rxcommadet_out),
-        .rxcommadeten_in(1'b0),
-        .rxcomsasdet_out(NLW_inst_rxcomsasdet_out_UNCONNECTED[0]),
-        .rxcomwakedet_out(NLW_inst_rxcomwakedet_out_UNCONNECTED[0]),
-        .rxctrl0_out(NLW_inst_rxctrl0_out_UNCONNECTED[15:0]),
-        .rxctrl1_out(rxctrl1_out),
-        .rxctrl2_out(NLW_inst_rxctrl2_out_UNCONNECTED[7:0]),
-        .rxctrl3_out(rxctrl3_out),
-        .rxdata_out(NLW_inst_rxdata_out_UNCONNECTED[127:0]),
-        .rxdataextendrsvd_out(NLW_inst_rxdataextendrsvd_out_UNCONNECTED[7:0]),
-        .rxdatavalid_out(NLW_inst_rxdatavalid_out_UNCONNECTED[1:0]),
-        .rxdccforcestart_in(1'b0),
-        .rxdfeagcctrl_in(1'b0),
-        .rxdfeagchold_in(1'b0),
-        .rxdfeagcovrden_in(1'b0),
-        .rxdfecfokfcnum_in({1'b1,1'b1,1'b0,1'b1}),
-        .rxdfecfokfen_in(1'b0),
-        .rxdfecfokfpulse_in(1'b0),
-        .rxdfecfokhold_in(1'b0),
-        .rxdfecfokovren_in(1'b0),
-        .rxdfekhhold_in(1'b0),
-        .rxdfekhovrden_in(1'b0),
-        .rxdfelfhold_in(1'b0),
-        .rxdfelfovrden_in(1'b0),
-        .rxdfelpmreset_in(rxdfelpmreset_in),
-        .rxdfetap10hold_in(1'b0),
-        .rxdfetap10ovrden_in(1'b0),
-        .rxdfetap11hold_in(1'b0),
-        .rxdfetap11ovrden_in(1'b0),
-        .rxdfetap12hold_in(1'b0),
-        .rxdfetap12ovrden_in(1'b0),
-        .rxdfetap13hold_in(1'b0),
-        .rxdfetap13ovrden_in(1'b0),
-        .rxdfetap14hold_in(1'b0),
-        .rxdfetap14ovrden_in(1'b0),
-        .rxdfetap15hold_in(1'b0),
-        .rxdfetap15ovrden_in(1'b0),
-        .rxdfetap2hold_in(1'b0),
-        .rxdfetap2ovrden_in(1'b0),
-        .rxdfetap3hold_in(1'b0),
-        .rxdfetap3ovrden_in(1'b0),
-        .rxdfetap4hold_in(1'b0),
-        .rxdfetap4ovrden_in(1'b0),
-        .rxdfetap5hold_in(1'b0),
-        .rxdfetap5ovrden_in(1'b0),
-        .rxdfetap6hold_in(1'b0),
-        .rxdfetap6ovrden_in(1'b0),
-        .rxdfetap7hold_in(1'b0),
-        .rxdfetap7ovrden_in(1'b0),
-        .rxdfetap8hold_in(1'b0),
-        .rxdfetap8ovrden_in(1'b0),
-        .rxdfetap9hold_in(1'b0),
-        .rxdfetap9ovrden_in(1'b0),
-        .rxdfeuthold_in(1'b0),
-        .rxdfeutovrden_in(1'b0),
-        .rxdfevphold_in(1'b0),
-        .rxdfevpovrden_in(1'b0),
-        .rxdfevsen_in(1'b0),
-        .rxdfexyden_in(1'b1),
-        .rxdlybypass_in(1'b1),
-        .rxdlyen_in(1'b0),
-        .rxdlyovrden_in(1'b0),
-        .rxdlysreset_in(1'b0),
-        .rxdlysresetdone_out(rxdlysresetdone_out),
-        .rxelecidle_out(NLW_inst_rxelecidle_out_UNCONNECTED[0]),
-        .rxelecidlemode_in({1'b1,1'b1}),
-        .rxeqtraining_in(1'b0),
-        .rxgearboxslip_in(1'b0),
-        .rxheader_out(NLW_inst_rxheader_out_UNCONNECTED[5:0]),
-        .rxheadervalid_out(NLW_inst_rxheadervalid_out_UNCONNECTED[1:0]),
-        .rxlatclk_in(1'b0),
-        .rxlfpstresetdet_out(NLW_inst_rxlfpstresetdet_out_UNCONNECTED[0]),
-        .rxlfpsu2lpexitdet_out(NLW_inst_rxlfpsu2lpexitdet_out_UNCONNECTED[0]),
-        .rxlfpsu3wakedet_out(NLW_inst_rxlfpsu3wakedet_out_UNCONNECTED[0]),
-        .rxlpmen_in(rxlpmen_in),
-        .rxlpmgchold_in(1'b0),
-        .rxlpmgcovrden_in(1'b0),
-        .rxlpmhfhold_in(1'b0),
-        .rxlpmhfovrden_in(1'b0),
-        .rxlpmlfhold_in(1'b0),
-        .rxlpmlfklovrden_in(1'b0),
-        .rxlpmoshold_in(1'b0),
-        .rxlpmosovrden_in(1'b0),
-        .rxmcommaalignen_in(1'b0),
-        .rxmonitorout_out(NLW_inst_rxmonitorout_out_UNCONNECTED[7:0]),
-        .rxmonitorsel_in({1'b0,1'b0}),
-        .rxoobreset_in(1'b0),
-        .rxoscalreset_in(1'b0),
-        .rxoshold_in(1'b0),
-        .rxosintcfg_in(1'b0),
-        .rxosintdone_out(NLW_inst_rxosintdone_out_UNCONNECTED[0]),
-        .rxosinten_in(1'b0),
-        .rxosinthold_in(1'b0),
-        .rxosintovrden_in(1'b0),
-        .rxosintstarted_out(NLW_inst_rxosintstarted_out_UNCONNECTED[0]),
-        .rxosintstrobe_in(1'b0),
-        .rxosintstrobedone_out(NLW_inst_rxosintstrobedone_out_UNCONNECTED[0]),
-        .rxosintstrobestarted_out(NLW_inst_rxosintstrobestarted_out_UNCONNECTED[0]),
-        .rxosinttestovrden_in(1'b0),
-        .rxosovrden_in(1'b0),
-        .rxoutclk_out(rxoutclk_out),
-        .rxoutclkfabric_out(NLW_inst_rxoutclkfabric_out_UNCONNECTED[0]),
-        .rxoutclkpcs_out(NLW_inst_rxoutclkpcs_out_UNCONNECTED[0]),
-        .rxoutclksel_in({1'b0,1'b1,1'b0}),
-        .rxpcommaalignen_in(1'b0),
-        .rxpcsreset_in(rxpcsreset_in),
-        .rxpd_in({1'b0,1'b0}),
-        .rxphalign_in(1'b0),
-        .rxphaligndone_out(rxphaligndone_out),
-        .rxphalignen_in(1'b0),
-        .rxphalignerr_out(NLW_inst_rxphalignerr_out_UNCONNECTED[0]),
-        .rxphdlypd_in(1'b1),
-        .rxphdlyreset_in(1'b0),
-        .rxphovrden_in(1'b0),
-        .rxpllclksel_in({1'b1,1'b1}),
-        .rxpmareset_in(rxpmareset_in),
-        .rxpmaresetdone_out(rxpmaresetdone_out),
-        .rxpolarity_in(rxpolarity_in),
-        .rxprbscntreset_in(rxprbscntreset_in),
-        .rxprbserr_out(rxprbserr_out),
-        .rxprbslocked_out(NLW_inst_rxprbslocked_out_UNCONNECTED[0]),
-        .rxprbssel_in(rxprbssel_in),
-        .rxprgdivresetdone_out(NLW_inst_rxprgdivresetdone_out_UNCONNECTED[0]),
-        .rxprogdivreset_in(1'b0),
-        .rxqpien_in(1'b0),
-        .rxqpisenn_out(NLW_inst_rxqpisenn_out_UNCONNECTED[0]),
-        .rxqpisenp_out(NLW_inst_rxqpisenp_out_UNCONNECTED[0]),
-        .rxrate_in(rxrate_in),
-        .rxratedone_out(NLW_inst_rxratedone_out_UNCONNECTED[0]),
-        .rxratemode_in(1'b0),
-        .rxrecclk0_sel_out(NLW_inst_rxrecclk0_sel_out_UNCONNECTED[0]),
-        .rxrecclk0sel_out(NLW_inst_rxrecclk0sel_out_UNCONNECTED[1:0]),
-        .rxrecclk1_sel_out(NLW_inst_rxrecclk1_sel_out_UNCONNECTED[0]),
-        .rxrecclk1sel_out(NLW_inst_rxrecclk1sel_out_UNCONNECTED[1:0]),
-        .rxrecclkout_out(NLW_inst_rxrecclkout_out_UNCONNECTED[0]),
-        .rxresetdone_out(rxresetdone_out),
-        .rxslide_in(1'b0),
-        .rxsliderdy_out(NLW_inst_rxsliderdy_out_UNCONNECTED[0]),
-        .rxslipdone_out(NLW_inst_rxslipdone_out_UNCONNECTED[0]),
-        .rxslipoutclk_in(1'b0),
-        .rxslipoutclkrdy_out(NLW_inst_rxslipoutclkrdy_out_UNCONNECTED[0]),
-        .rxslippma_in(1'b0),
-        .rxslippmardy_out(NLW_inst_rxslippmardy_out_UNCONNECTED[0]),
-        .rxstartofseq_out(NLW_inst_rxstartofseq_out_UNCONNECTED[1:0]),
-        .rxstatus_out(NLW_inst_rxstatus_out_UNCONNECTED[2:0]),
-        .rxsyncallin_in(1'b0),
-        .rxsyncdone_out(rxsyncdone_out),
-        .rxsyncin_in(1'b0),
-        .rxsyncmode_in(1'b0),
-        .rxsyncout_out(NLW_inst_rxsyncout_out_UNCONNECTED[0]),
-        .rxsysclksel_in({1'b1,1'b0}),
-        .rxtermination_in(1'b0),
-        .rxuserrdy_in(1'b1),
-        .rxusrclk2_in(rxusrclk2_in),
-        .rxusrclk_in(rxusrclk_in),
-        .rxvalid_out(NLW_inst_rxvalid_out_UNCONNECTED[0]),
-        .sdm0data_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .sdm0finalout_out(NLW_inst_sdm0finalout_out_UNCONNECTED[3:0]),
-        .sdm0reset_in(1'b0),
-        .sdm0testdata_out(NLW_inst_sdm0testdata_out_UNCONNECTED[14:0]),
-        .sdm0toggle_in(1'b0),
-        .sdm0width_in({1'b0,1'b0}),
-        .sdm1data_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .sdm1finalout_out(NLW_inst_sdm1finalout_out_UNCONNECTED[3:0]),
-        .sdm1reset_in(1'b0),
-        .sdm1testdata_out(NLW_inst_sdm1testdata_out_UNCONNECTED[14:0]),
-        .sdm1toggle_in(1'b0),
-        .sdm1width_in({1'b0,1'b0}),
-        .sigvalidclk_in(1'b0),
-        .tcongpi_in(1'b0),
-        .tcongpo_out(NLW_inst_tcongpo_out_UNCONNECTED[0]),
-        .tconpowerup_in(1'b0),
-        .tconreset_in(1'b0),
-        .tconrsvdin1_in(1'b0),
-        .tconrsvdout0_out(NLW_inst_tconrsvdout0_out_UNCONNECTED[0]),
-        .tstin_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .tx8b10bbypass_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .tx8b10ben_in(1'b0),
-        .txbufdiffctrl_in(1'b0),
-        .txbufstatus_out(txbufstatus_out),
-        .txcomfinish_out(NLW_inst_txcomfinish_out_UNCONNECTED[0]),
-        .txcominit_in(1'b0),
-        .txcomsas_in(1'b0),
-        .txcomwake_in(1'b0),
-        .txctrl0_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txctrl1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txctrl2_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txdata_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txdataextendrsvd_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txdccdone_out(NLW_inst_txdccdone_out_UNCONNECTED[0]),
-        .txdccforcestart_in(1'b0),
-        .txdccreset_in(1'b0),
-        .txdeemph_in({1'b0,1'b0}),
-        .txdetectrx_in(1'b0),
-        .txdiffctrl_in(txdiffctrl_in),
-        .txdiffpd_in(1'b0),
-        .txdlybypass_in(1'b1),
-        .txdlyen_in(1'b0),
-        .txdlyhold_in(1'b0),
-        .txdlyovrden_in(1'b0),
-        .txdlysreset_in(1'b0),
-        .txdlysresetdone_out(txdlysresetdone_out),
-        .txdlyupdown_in(1'b0),
-        .txelecidle_in(1'b0),
-        .txelforcestart_in(1'b0),
-        .txheader_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txinhibit_in(txinhibit_in),
-        .txlatclk_in(1'b0),
-        .txlfpstreset_in(1'b0),
-        .txlfpsu2lpexit_in(1'b0),
-        .txlfpsu3wake_in(1'b0),
-        .txmaincursor_in({1'b1,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0}),
-        .txmargin_in({1'b0,1'b0,1'b0}),
-        .txmuxdcdexhold_in(1'b0),
-        .txmuxdcdorwren_in(1'b0),
-        .txoneszeros_in(1'b0),
-        .txoutclk_out(txoutclk_out),
-        .txoutclkfabric_out(NLW_inst_txoutclkfabric_out_UNCONNECTED[0]),
-        .txoutclkpcs_out(NLW_inst_txoutclkpcs_out_UNCONNECTED[0]),
-        .txoutclksel_in(txoutclksel_in),
-        .txpcsreset_in(txpcsreset_in),
-        .txpd_in({1'b0,1'b0}),
-        .txpdelecidlemode_in(1'b0),
-        .txphalign_in(1'b0),
-        .txphaligndone_out(txphaligndone_out),
-        .txphalignen_in(1'b0),
-        .txphdlypd_in(1'b1),
-        .txphdlyreset_in(1'b0),
-        .txphdlytstclk_in(1'b0),
-        .txphinit_in(1'b0),
-        .txphinitdone_out(txphinitdone_out),
-        .txphovrden_in(1'b0),
-        .txpippmen_in(1'b0),
-        .txpippmovrden_in(1'b0),
-        .txpippmpd_in(1'b0),
-        .txpippmsel_in(1'b1),
-        .txpippmstepsize_in({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txpisopd_in(1'b0),
-        .txpllclksel_in({1'b1,1'b1}),
-        .txpmareset_in(txpmareset_in),
-        .txpmaresetdone_out(txpmaresetdone_out),
-        .txpolarity_in(txpolarity_in),
-        .txpostcursor_in(txpostcursor_in),
-        .txpostcursorinv_in(1'b0),
-        .txprbsforceerr_in(txprbsforceerr_in),
-        .txprbssel_in(txprbssel_in),
-        .txprecursor_in(txprecursor_in),
-        .txprecursorinv_in(1'b0),
-        .txprgdivresetdone_out(NLW_inst_txprgdivresetdone_out_UNCONNECTED[0]),
-        .txprogdivreset_in(1'b0),
-        .txqpibiasen_in(1'b0),
-        .txqpisenn_out(NLW_inst_txqpisenn_out_UNCONNECTED[0]),
-        .txqpisenp_out(NLW_inst_txqpisenp_out_UNCONNECTED[0]),
-        .txqpistrongpdown_in(1'b0),
-        .txqpiweakpup_in(1'b0),
-        .txrate_in({1'b0,1'b0,1'b0}),
-        .txratedone_out(NLW_inst_txratedone_out_UNCONNECTED[0]),
-        .txratemode_in(1'b0),
-        .txresetdone_out(txresetdone_out),
-        .txsequence_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .txswing_in(1'b0),
-        .txsyncallin_in(1'b0),
-        .txsyncdone_out(NLW_inst_txsyncdone_out_UNCONNECTED[0]),
-        .txsyncin_in(1'b0),
-        .txsyncmode_in(1'b0),
-        .txsyncout_out(NLW_inst_txsyncout_out_UNCONNECTED[0]),
-        .txsysclksel_in({1'b1,1'b0}),
-        .txuserrdy_in(1'b1),
-        .txusrclk2_in(txusrclk2_in),
-        .txusrclk_in(txusrclk_in),
-        .ubcfgstreamen_in(1'b0),
-        .ubdaddr_out(NLW_inst_ubdaddr_out_UNCONNECTED[15:0]),
-        .ubden_out(NLW_inst_ubden_out_UNCONNECTED[0]),
-        .ubdi_out(NLW_inst_ubdi_out_UNCONNECTED[15:0]),
-        .ubdo_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ubdrdy_in(1'b0),
-        .ubdwe_out(NLW_inst_ubdwe_out_UNCONNECTED[0]),
-        .ubenable_in(1'b0),
-        .ubgpi_in({1'b0,1'b0}),
-        .ubintr_in({1'b0,1'b0}),
-        .ubiolmbrst_in(1'b0),
-        .ubmbrst_in(1'b0),
-        .ubmdmcapture_in(1'b0),
-        .ubmdmdbgrst_in(1'b0),
-        .ubmdmdbgupdate_in(1'b0),
-        .ubmdmregen_in({1'b0,1'b0,1'b0,1'b0}),
-        .ubmdmshift_in(1'b0),
-        .ubmdmsysrst_in(1'b0),
-        .ubmdmtck_in(1'b0),
-        .ubmdmtdi_in(1'b0),
-        .ubmdmtdo_out(NLW_inst_ubmdmtdo_out_UNCONNECTED[0]),
-        .ubrsvdout_out(NLW_inst_ubrsvdout_out_UNCONNECTED[0]),
-        .ubtxuart_out(NLW_inst_ubtxuart_out_UNCONNECTED[0]));
-endmodule
-
-module gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4
+(* ORIG_REF_NAME = "gty_64_156_28G_gtwizard_gtye4" *) 
+module gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4
    (gtpowergood_out,
     qpll0lock_out,
     rxcdrlock_out,
@@ -8937,7 +8947,7 @@ module gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4
   wire [0:0]ubrsvdout_out;
   wire [0:0]ubtxuart_out;
 
-  gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper \gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst 
+  gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper \gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst 
        (.TXRATE({\gen_gtwizard_gtye4.txrate_ch_int ,\gen_gtwizard_gtye4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4 }),
         .bufgtce_out(bufgtce_out),
         .bufgtcemask_out(bufgtcemask_out),
@@ -9271,7 +9281,7 @@ module gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4
         .txsysclksel_in(txsysclksel_in),
         .txusrclk2_in(txusrclk2_in),
         .txusrclk_in(txusrclk_in));
-  gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper \gen_gtwizard_gtye4.gen_common.gen_common_container[2].gen_enabled_common.gtye4_common_wrapper_inst 
+  gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper \gen_gtwizard_gtye4.gen_common.gen_common_container[2].gen_enabled_common.gtye4_common_wrapper_inst 
        (.bgbypassb_in(bgbypassb_in),
         .bgmonitorenb_in(bgmonitorenb_in),
         .bgpdb_in(bgpdb_in),
@@ -9457,8 +9467,8 @@ endmodule
 (* C_TX_PLL_TYPE = "0" *) (* C_TX_REFCLK_FREQUENCY = "156.250000" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
 (* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "64" *) (* C_TX_USRCLK2_FREQUENCY = "439.453125" *) 
-(* C_TX_USRCLK_FREQUENCY = "439.453125" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) 
-module gty_64_156_28G_gty_64_156_28G_1_gtwizard_top
+(* C_TX_USRCLK_FREQUENCY = "439.453125" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) (* ORIG_REF_NAME = "gty_64_156_28G_gtwizard_top" *) 
+module gty_64_156_28G_gty_64_156_28G_gtwizard_top
    (gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in,
     gtwiz_userclk_tx_srcclk_out,
@@ -10993,7 +11003,7 @@ module gty_64_156_28G_gty_64_156_28G_1_gtwizard_top
   assign txqpisenp_out[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  gty_64_156_28G_gty_64_156_28G_1_gtwizard_gtye4 \gen_gtwizard_gtye4_top.gty_64_156_28G_1_gtwizard_gtye4_inst 
+  gty_64_156_28G_gty_64_156_28G_gtwizard_gtye4 \gen_gtwizard_gtye4_top.gty_64_156_28G_gtwizard_gtye4_inst 
        (.bgbypassb_in(bgbypassb_in),
         .bgmonitorenb_in(bgmonitorenb_in),
         .bgpdb_in(bgpdb_in),
@@ -11433,7 +11443,8 @@ module gty_64_156_28G_gty_64_156_28G_1_gtwizard_top
         .ubtxuart_out(ubtxuart_out));
 endmodule
 
-module gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper
+(* ORIG_REF_NAME = "gty_64_156_28G_gtye4_channel_wrapper" *) 
+module gty_64_156_28G_gty_64_156_28G_gtye4_channel_wrapper
    (bufgtce_out,
     bufgtreset_out,
     cpllfbclklost_out,
@@ -12771,7 +12782,8 @@ module gty_64_156_28G_gty_64_156_28G_1_gtye4_channel_wrapper
         .txusrclk_in(txusrclk_in));
 endmodule
 
-module gty_64_156_28G_gty_64_156_28G_1_gtye4_common_wrapper
+(* ORIG_REF_NAME = "gty_64_156_28G_gtye4_common_wrapper" *) 
+module gty_64_156_28G_gty_64_156_28G_gtye4_common_wrapper
    (drprdy_common_out,
     qpll0fbclklost_out,
     qpll0lock_out,

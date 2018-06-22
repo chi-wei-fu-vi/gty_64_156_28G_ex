@@ -132,6 +132,7 @@ gty_64_156_28G your_instance_name (
   .rxphaligndone_out(rxphaligndone_out),                                    // output wire [0 : 0] rxphaligndone_out
   .rxpmaresetdone_out(rxpmaresetdone_out),                                  // output wire [0 : 0] rxpmaresetdone_out
   .rxprbserr_out(rxprbserr_out),                                            // output wire [0 : 0] rxprbserr_out
+  .rxprbslocked_out(rxprbslocked_out),                                      // output wire [0 : 0] rxprbslocked_out
   .rxresetdone_out(rxresetdone_out),                                        // output wire [0 : 0] rxresetdone_out
   .rxsyncdone_out(rxsyncdone_out),                                          // output wire [0 : 0] rxsyncdone_out
   .txbufstatus_out(txbufstatus_out),                                        // output wire [1 : 0] txbufstatus_out
