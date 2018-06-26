@@ -128,16 +128,120 @@
     RXPRBSERR
     <field loc="[0:0]" name="rxprbserr">RXPRBSERR</field>
   </register>
-  <register default="2" name="txoutclksel" offset="10'h20" type="RW">
+  <register default="0" name="rxprbslocked" offset="10'h20" type="RO">
+    RXPRBSLOCKED
+    <field loc="[0:0]" name="rxprbslocked">RXPRBSLOCKED</field>
+  </register>
+  <register default="1'b0" name="eyescanreset" offset="10'h21" type="RW">
+    EYESCANRESET
+    <field loc="[0:0]" name="eyescanreset">EYESCANRESET</field>
+  </register>
+  <register default="1'b0" name="eyescantrigger" offset="10'h22" type="RW">
+    EYESCANTRIGGER
+    <field loc="[0:0]" name="eyescantrigger">EYESCANTRIGGER</field>
+  </register>
+  <register default="16'b0000000000000000" name="pcsrsvdin" offset="10'h23" type="RW">
+    PCSRSVDIN
+    <field loc="[15:0]" name="pcsrsvdin">PCSRSVDIN</field>
+  </register>
+  <register default="1'b0" name="rxbufreset" offset="10'h24" type="RW">
+    RXBUFRESET
+    <field loc="[0:0]" name="rxbufreset">RXBUFRESET</field>
+  </register>
+  <register default="1'b0" name="rxcdrhold" offset="10'h25" type="RW">
+    RXCDRHOLD
+    <field loc="[0:0]" name="rxcdrhold">RXCDRHOLD</field>
+  </register>
+  <register default="1'b1" name="rxlpmen" offset="10'h26" type="RW">
+    RXLPMEN
+    <field loc="[0:0]" name="rxlpmen">RXLPMEN</field>
+  </register>
+  <register default="3'b010" name="rxoutclksel" offset="10'h27" type="RW">
+    RXOUTCLKSEL
+    <field loc="[2:0]" name="rxoutclksel">RXOUTCLKSEL</field>
+  </register>
+  <register default="1'b0" name="rxpolarity" offset="10'h28" type="RW">
+    RXPOLARITY
+    <field loc="[0:0]" name="rxpolarity">RXPOLARITY</field>
+  </register>
+  <register default="3'b000" name="rxrate" offset="10'h29" type="RW">
+    RXRATE
+    <field loc="[2:0]" name="rxrate">RXRATE</field>
+  </register>
+  <register default="5'b11000" name="txdiffctrl" offset="10'h2a" type="RW">
+    TXDIFFCTRL
+    <field loc="[4:0]" name="txdiffctrl">TXDIFFCTRL</field>
+  </register>
+  <register default="1'b0" name="txinhibit" offset="10'h2b" type="RW">
+    TXINHIBIT
+    <field loc="[0:0]" name="txinhibit">TXINHIBIT</field>
+  </register>
+  <register default="3'b010" name="txoutclksel" offset="10'h2c" type="RW">
     TXOUTCLKSEL
     <field loc="[2:0]" name="txoutclksel">TXOUTCLKSEL</field>
   </register>
-  <register default="0" name="rxprbslocked" offset="10'h21" type="RO">
-    RXPRBSLOCKED
-    <field loc="[2:0]" name="rxprbslocked">RXPRBSLOCKED</field>
+  <register default="1'b0" name="txpolarity" offset="10'h2d" type="RW">
+    TXPOLARITY
+    <field loc="[0:0]" name="txpolarity">TXPOLARITY</field>
   </register>
-  <register default="2" name="rxoutclksel" offset="10'h22" type="RW">
-    RXOUTCLKSEL
-    <field loc="[2:0]" name="rxoutclksel">RXOUTCLKSEL</field>
+  <register default="0" name="reset_rx_cdr_stable" offset="10'h2e" type="RO">
+    RESET_RX_CDR_STABLE
+    <field loc="[0:0]" name="reset_rx_cdr_stable">RESET_RX_CDR_STABLE</field>
+  </register>
+  <register default="0" name="dmonitorout" offset="10'h2f" type="RO">
+    DMONITOROUT
+    <field loc="[15:0]" name="dmonitorout">DMONITOROUT</field>
+  </register>
+  <register default="0" name="eyescandataerror" offset="10'h30" type="RO">
+    EYESCANDATAERROR
+    <field loc="[0:0]" name="eyescandataerror">EYESCANDATAERROR</field>
+  </register>
+  <register default="0" name="rxcommadet" offset="10'h31" type="RO">
+    RXCOMMADET
+    <field loc="[0:0]" name="rxcommadet">RXCOMMADET</field>
+  </register>
+  <register default="0" name="rxctrl1" offset="10'h32" type="RO">
+    RXCTRL1
+    <field loc="[15:0]" name="rxctrl1">RXCTRL1</field>
+  </register>
+  <register default="0" name="rxctrl3" offset="10'h33" type="RO">
+    RXCTRL3
+    <field loc="[7:0]" name="rxctrl3">RXCTRL3</field>
+  </register>
+  <register default="0" name="rxdlysresetdone" offset="10'h34" type="RO">
+    RXDLYSRESETDONE
+    <field loc="[0:0]" name="rxdlysresetdone">RXDLYSRESETDONE</field>
+  </register>
+  <register default="0" name="rxphaligndone" offset="10'h35" type="RO">
+    RXPHALIGNDONE
+    <field loc="[0:0]" name="rxphaligndone">RXPHALIGNDONE</field>
+  </register>
+  <register default="0" name="rxresetdone" offset="10'h36" type="RO">
+    RXRESETDONE
+    <field loc="[0:0]" name="rxresetdone">RXRESETDONE</field>
+  </register>
+  <register default="0" name="rxsyncdone" offset="10'h37" type="RO">
+    RXSYNCDONE
+    <field loc="[0:0]" name="rxsyncdone">RXSYNCDONE</field>
+  </register>
+  <register default="0" name="txbufstatus" offset="10'h38" type="RO">
+    TXBUFSTATUS
+    <field loc="[1:0]" name="txbufstatus">TXBUFSTATUS</field>
+  </register>
+  <register default="0" name="txdlysresetdone" offset="10'h39" type="RO">
+    TXDLYSRESETDONE
+    <field loc="[0:0]" name="txdlysresetdone">TXDLYSRESETDONE</field>
+  </register>
+  <register default="0" name="txphaligndone" offset="10'h3a" type="RO">
+    TXPHALIGNDONE
+    <field loc="[0:0]" name="txphaligndone">TXPHALIGNDONE</field>
+  </register>
+  <register default="0" name="txphinitdone" offset="10'h3b" type="RO">
+    TXPHINITDONE
+    <field loc="[0:0]" name="txphinitdone">TXPHINITDONE</field>
+  </register>
+  <register default="0" name="txresetdone" offset="10'h3c" type="RO">
+    TXRESETDONE
+    <field loc="[0:0]" name="txresetdone">TXRESETDONE</field>
   </register>
 </decl_reg_list>

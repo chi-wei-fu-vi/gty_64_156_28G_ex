@@ -304,7 +304,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] gtwiz_reset_rx_cdr_stable_int;
   wire [0:0] hb0_gtwiz_reset_rx_cdr_stable_int;
-  assign hb0_gtwiz_reset_rx_cdr_stable_int = gtwiz_reset_rx_cdr_stable_int[0:0];
+  // assign hb0_gtwiz_reset_rx_cdr_stable_int = gtwiz_reset_rx_cdr_stable_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] gtwiz_reset_tx_done_int;
@@ -378,12 +378,12 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] eyescanreset_int;
   wire [0:0] ch0_eyescanreset_int = 1'b0;
-  assign eyescanreset_int[0:0] = ch0_eyescanreset_int;
+  // assign eyescanreset_int[0:0] = ch0_eyescanreset_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] eyescantrigger_int;
   wire [0:0] ch0_eyescantrigger_int = 1'b0;
-  assign eyescantrigger_int[0:0] = ch0_eyescantrigger_int;
+  // assign eyescantrigger_int[0:0] = ch0_eyescantrigger_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [2:0] loopback_int;
@@ -392,17 +392,17 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [15:0] pcsrsvdin_int;
   wire [15:0] ch0_pcsrsvdin_int = 16'b0000000000000000;
-  assign pcsrsvdin_int[15:0] = ch0_pcsrsvdin_int;
+  // assign pcsrsvdin_int[15:0] = ch0_pcsrsvdin_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxbufreset_int;
   wire [0:0] ch0_rxbufreset_int = 1'b0;
-  assign rxbufreset_int[0:0] = ch0_rxbufreset_int;
+  // assign rxbufreset_int[0:0] = ch0_rxbufreset_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxcdrhold_int;
   wire [0:0] ch0_rxcdrhold_int = 1'b0;
-  assign rxcdrhold_int[0:0] = ch0_rxcdrhold_int;
+  // assign rxcdrhold_int[0:0] = ch0_rxcdrhold_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxdfelpmreset_int;
@@ -411,7 +411,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxlpmen_int;
   wire [0:0] ch0_rxlpmen_int = 1'b1;
-  assign rxlpmen_int[0:0] = ch0_rxlpmen_int;
+  // assign rxlpmen_int[0:0] = ch0_rxlpmen_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxpcsreset_int;
@@ -424,7 +424,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxpolarity_int;
   wire [0:0] ch0_rxpolarity_int = 1'b0;
-  assign rxpolarity_int[0:0] = ch0_rxpolarity_int;
+  // assign rxpolarity_int[0:0] = ch0_rxpolarity_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxprbscntreset_int;
@@ -437,17 +437,17 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [2:0] rxrate_int;
   wire [2:0] ch0_rxrate_int = 3'b000;
-  assign rxrate_int[2:0] = ch0_rxrate_int;
+  // assign rxrate_int[2:0] = ch0_rxrate_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [4:0] txdiffctrl_int;
   wire [4:0] ch0_txdiffctrl_int = 5'b11000;
-  assign txdiffctrl_int[4:0] = ch0_txdiffctrl_int;
+  // assign txdiffctrl_int[4:0] = ch0_txdiffctrl_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txinhibit_int;
   wire [0:0] ch0_txinhibit_int = 1'b0;
-  assign txinhibit_int[0:0] = ch0_txinhibit_int;
+  // assign txinhibit_int[0:0] = ch0_txinhibit_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txpcsreset_int;
@@ -460,7 +460,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txpolarity_int;
   wire [0:0] ch0_txpolarity_int = 1'b0;
-  assign txpolarity_int[0:0] = ch0_txpolarity_int;
+  // assign txpolarity_int[0:0] = ch0_txpolarity_int;
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [4:0] txpostcursor_int;
@@ -486,7 +486,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [15:0] dmonitorout_int;
   wire [15:0] ch0_dmonitorout_int;
-  assign ch0_dmonitorout_int = dmonitorout_int[15:0];
+  // assign ch0_dmonitorout_int = dmonitorout_int[15:0];
 
   //--------------------------------------------------------------------------------------------------------------------
 
@@ -495,7 +495,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] eyescandataerror_int;
   wire [0:0] ch0_eyescandataerror_int;
-  assign ch0_eyescandataerror_int = eyescandataerror_int[0:0];
+  // assign ch0_eyescandataerror_int = eyescandataerror_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] gtpowergood_int;
@@ -510,27 +510,27 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxcommadet_int;
   wire [0:0] ch0_rxcommadet_int;
-  assign ch0_rxcommadet_int = rxcommadet_int[0:0];
+  // assign ch0_rxcommadet_int = rxcommadet_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [15:0] rxctrl1_int;
   wire [15:0] ch0_rxctrl1_int;
-  assign ch0_rxctrl1_int = rxctrl1_int[15:0];
+  // assign ch0_rxctrl1_int = rxctrl1_int[15:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [7:0] rxctrl3_int;
   wire [7:0] ch0_rxctrl3_int;
-  assign ch0_rxctrl3_int = rxctrl3_int[7:0];
+  // assign ch0_rxctrl3_int = rxctrl3_int[7:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxdlysresetdone_int;
   wire [0:0] ch0_rxdlysresetdone_int;
-  assign ch0_rxdlysresetdone_int = rxdlysresetdone_int[0:0];
+  // assign ch0_rxdlysresetdone_int = rxdlysresetdone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxphaligndone_int;
   wire [0:0] ch0_rxphaligndone_int;
-  assign ch0_rxphaligndone_int = rxphaligndone_int[0:0];
+  // assign ch0_rxphaligndone_int = rxphaligndone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxpmaresetdone_int;
@@ -545,32 +545,32 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxresetdone_int;
   wire [0:0] ch0_rxresetdone_int;
-  assign ch0_rxresetdone_int = rxresetdone_int[0:0];
+  // assign ch0_rxresetdone_int = rxresetdone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxsyncdone_int;
   wire [0:0] ch0_rxsyncdone_int;
-  assign ch0_rxsyncdone_int = rxsyncdone_int[0:0];
+  // assign ch0_rxsyncdone_int = rxsyncdone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [1:0] txbufstatus_int;
   wire [1:0] ch0_txbufstatus_int;
-  assign ch0_txbufstatus_int = txbufstatus_int[1:0];
+  // assign ch0_txbufstatus_int = txbufstatus_int[1:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txdlysresetdone_int;
   wire [0:0] ch0_txdlysresetdone_int;
-  assign ch0_txdlysresetdone_int = txdlysresetdone_int[0:0];
+  // assign ch0_txdlysresetdone_int = txdlysresetdone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txphaligndone_int;
   wire [0:0] ch0_txphaligndone_int;
-  assign ch0_txphaligndone_int = txphaligndone_int[0:0];
+  // assign ch0_txphaligndone_int = txphaligndone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txphinitdone_int;
   wire [0:0] ch0_txphinitdone_int;
-  assign ch0_txphinitdone_int = txphinitdone_int[0:0];
+  // assign ch0_txphinitdone_int = txphinitdone_int[0:0];
 
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txpmaresetdone_int;
@@ -580,7 +580,7 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] txresetdone_int;
   wire [0:0] ch0_txresetdone_int;
-  assign ch0_txresetdone_int = txresetdone_int[0:0];
+  // assign ch0_txresetdone_int = txresetdone_int[0:0];
 
 
   // ===================================================================================================================
@@ -1072,8 +1072,19 @@ vio_regs #(
   . oREG_RXPRBSSEL                                     ( rxprbssel_vio_async                                ), // output [3:0]
   . oREG_TXPRBSFORCEERR                                ( txprbsforceerr_vio_async                           ), // output
   . oREG_RXPRBSCNTRESET                                ( rxprbscntreset_vio_async                           ), // output
-  . oREG_TXOUTCLKSEL                                   ( txoutclksel_int                                    ), // output [2:0]
+  . oREG_EYESCANRESET                                  ( eyescanreset_int                                   ), // output
+  . oREG_EYESCANTRIGGER                                ( eyescantrigger_int                                 ), // output
+  . oREG_PCSRSVDIN                                     ( pcsrsvdin_int                                      ), // output [15:0]
+  . oREG_RXBUFRESET                                    ( rxbufreset_int                                     ), // output
+  . oREG_RXCDRHOLD                                     ( rxcdrhold_int                                      ), // output
+  . oREG_RXLPMEN                                       ( rxlpmen_int                                        ), // output
   . oREG_RXOUTCLKSEL                                   ( rxoutclksel_int                                    ), // output [2:0]
+  . oREG_RXPOLARITY                                    ( rxpolarity_int                                     ), // output
+  . oREG_RXRATE                                        ( rxrate_int                                         ), // output [2:0]
+  . oREG_TXDIFFCTRL                                    ( txdiffctrl_int                                     ), // output [4:0]
+  . oREG_TXINHIBIT                                     ( txinhibit_int                                      ), // output
+  . oREG_TXOUTCLKSEL                                   ( txoutclksel_int                                    ), // output [2:0]
+  . oREG_TXPOLARITY                                    ( txpolarity_int                                     ), // output
   . clk                                                ( clk                                                ), // input
   . rst_n                                              ( rst_n                                              ), // input
   . wr_en                                              ( wr_en                                              ), // input
@@ -1094,7 +1105,22 @@ vio_regs #(
   . iREG_RESET_RX_DONE                                 ( gtwiz_reset_rx_done_vio_sync                       ), // input
   . iREG_RXBUFSTATUS                                   ( rxbufstatus_vio_sync                               ), // input [2:0]
   . iREG_RXPRBSERR                                     ( rxprbserr_vio_sync                                 ), // input
-  . iREG_RXPRBSLOCKED                                  ( rxprbslocked_vio_sync                              )  // input
+  . iREG_RXPRBSLOCKED                                  ( rxprbslocked_vio_sync                              ), // input
+  . iREG_RESET_RX_CDR_STABLE                           ( gtwiz_reset_rx_cdr_stable_int                      ), // input
+  . iREG_DMONITOROUT                                   ( dmonitorout_int                                    ), // input [15:0]
+  . iREG_EYESCANDATAERROR                              ( eyescandataerror_int                               ), // input
+  . iREG_RXCOMMADET                                    ( rxcommadet_int                                     ), // input
+  . iREG_RXCTRL1                                       ( rxctrl1_int                                        ), // input [15:0]
+  . iREG_RXCTRL3                                       ( rxctrl3_int                                        ), // input [7:0]
+  . iREG_RXDLYSRESETDONE                               ( rxdlysresetdone_int                                ), // input
+  . iREG_RXPHALIGNDONE                                 ( rxphaligndone_int                                  ), // input
+  . iREG_RXRESETDONE                                   ( rxresetdone_int                                    ), // input
+  . iREG_RXSYNCDONE                                    ( rxsyncdone_int                                     ), // input
+  . iREG_TXBUFSTATUS                                   ( txbufstatus_int                                    ), // input [1:0]
+  . iREG_TXDLYSRESETDONE                               ( txdlysresetdone_int                                ), // input
+  . iREG_TXPHALIGNDONE                                 ( txphaligndone_int                                  ), // input
+  . iREG_TXPHINITDONE                                  ( txphinitdone_int                                   ), // input
+  . iREG_TXRESETDONE                                   ( txresetdone_int                                    )  // input
 );
 
   // ===================================================================================================================

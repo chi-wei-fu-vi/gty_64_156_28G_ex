@@ -35,8 +35,19 @@ module vio_regs #(
   output logic [3:0]           oREG_RXPRBSSEL,
   output logic                 oREG_TXPRBSFORCEERR,
   output logic                 oREG_RXPRBSCNTRESET,
-  output logic [2:0]           oREG_TXOUTCLKSEL,
+  output logic                 oREG_EYESCANRESET,
+  output logic                 oREG_EYESCANTRIGGER,
+  output logic [15:0]          oREG_PCSRSVDIN,
+  output logic                 oREG_RXBUFRESET,
+  output logic                 oREG_RXCDRHOLD,
+  output logic                 oREG_RXLPMEN,
   output logic [2:0]           oREG_RXOUTCLKSEL,
+  output logic                 oREG_RXPOLARITY,
+  output logic [2:0]           oREG_RXRATE,
+  output logic [4:0]           oREG_TXDIFFCTRL,
+  output logic                 oREG_TXINHIBIT,
+  output logic [2:0]           oREG_TXOUTCLKSEL,
+  output logic                 oREG_TXPOLARITY,
   input                        clk,
   input                        rst_n,
   input                        wr_en,
@@ -57,7 +68,22 @@ module vio_regs #(
   input                        iREG_RESET_RX_DONE,
   input        [2:0]           iREG_RXBUFSTATUS,
   input                        iREG_RXPRBSERR,
-  input        [2:0]           iREG_RXPRBSLOCKED
+  input                        iREG_RXPRBSLOCKED,
+  input                        iREG_RESET_RX_CDR_STABLE,
+  input        [15:0]          iREG_DMONITOROUT,
+  input                        iREG_EYESCANDATAERROR,
+  input                        iREG_RXCOMMADET,
+  input        [15:0]          iREG_RXCTRL1,
+  input        [7:0]           iREG_RXCTRL3,
+  input                        iREG_RXDLYSRESETDONE,
+  input                        iREG_RXPHALIGNDONE,
+  input                        iREG_RXRESETDONE,
+  input                        iREG_RXSYNCDONE,
+  input        [1:0]           iREG_TXBUFSTATUS,
+  input                        iREG_TXDLYSRESETDONE,
+  input                        iREG_TXPHALIGNDONE,
+  input                        iREG_TXPHINITDONE,
+  input                        iREG_TXRESETDONE
 );
 
 
@@ -125,12 +151,64 @@ module vio_regs #(
   wire   [2:0]                 RXBUFSTATUS;
   wire                         RXPRBSERR_rd_sel;
   wire                         RXPRBSERR;
-  wire                         TXOUTCLKSEL_wr_sel;
-  wire                         TXOUTCLKSEL_rd_sel;
   wire                         RXPRBSLOCKED_rd_sel;
-  wire   [2:0]                 RXPRBSLOCKED;
+  wire                         RXPRBSLOCKED;
+  wire                         EYESCANRESET_wr_sel;
+  wire                         EYESCANRESET_rd_sel;
+  wire                         EYESCANTRIGGER_wr_sel;
+  wire                         EYESCANTRIGGER_rd_sel;
+  wire                         PCSRSVDIN_wr_sel;
+  wire                         PCSRSVDIN_rd_sel;
+  wire                         RXBUFRESET_wr_sel;
+  wire                         RXBUFRESET_rd_sel;
+  wire                         RXCDRHOLD_wr_sel;
+  wire                         RXCDRHOLD_rd_sel;
+  wire                         RXLPMEN_wr_sel;
+  wire                         RXLPMEN_rd_sel;
   wire                         RXOUTCLKSEL_wr_sel;
   wire                         RXOUTCLKSEL_rd_sel;
+  wire                         RXPOLARITY_wr_sel;
+  wire                         RXPOLARITY_rd_sel;
+  wire                         RXRATE_wr_sel;
+  wire                         RXRATE_rd_sel;
+  wire                         TXDIFFCTRL_wr_sel;
+  wire                         TXDIFFCTRL_rd_sel;
+  wire                         TXINHIBIT_wr_sel;
+  wire                         TXINHIBIT_rd_sel;
+  wire                         TXOUTCLKSEL_wr_sel;
+  wire                         TXOUTCLKSEL_rd_sel;
+  wire                         TXPOLARITY_wr_sel;
+  wire                         TXPOLARITY_rd_sel;
+  wire                         RESET_RX_CDR_STABLE_rd_sel;
+  wire                         RESET_RX_CDR_STABLE;
+  wire                         DMONITOROUT_rd_sel;
+  wire   [15:0]                DMONITOROUT;
+  wire                         EYESCANDATAERROR_rd_sel;
+  wire                         EYESCANDATAERROR;
+  wire                         RXCOMMADET_rd_sel;
+  wire                         RXCOMMADET;
+  wire                         RXCTRL1_rd_sel;
+  wire   [15:0]                RXCTRL1;
+  wire                         RXCTRL3_rd_sel;
+  wire   [7:0]                 RXCTRL3;
+  wire                         RXDLYSRESETDONE_rd_sel;
+  wire                         RXDLYSRESETDONE;
+  wire                         RXPHALIGNDONE_rd_sel;
+  wire                         RXPHALIGNDONE;
+  wire                         RXRESETDONE_rd_sel;
+  wire                         RXRESETDONE;
+  wire                         RXSYNCDONE_rd_sel;
+  wire                         RXSYNCDONE;
+  wire                         TXBUFSTATUS_rd_sel;
+  wire   [1:0]                 TXBUFSTATUS;
+  wire                         TXDLYSRESETDONE_rd_sel;
+  wire                         TXDLYSRESETDONE;
+  wire                         TXPHALIGNDONE_rd_sel;
+  wire                         TXPHALIGNDONE;
+  wire                         TXPHINITDONE_rd_sel;
+  wire                         TXPHINITDONE;
+  wire                         TXRESETDONE_rd_sel;
+  wire                         TXRESETDONE;
   logic                        memrd_en_latch;
   logic                        lwr_en;
   logic  [63:0]                lwr_data;
@@ -155,8 +233,19 @@ module vio_regs #(
   logic  [3:0]                 WREG_RXPRBSSEL;
   logic                        WREG_TXPRBSFORCEERR;
   logic                        WREG_RXPRBSCNTRESET;
-  logic  [2:0]                 WREG_TXOUTCLKSEL;
+  logic                        WREG_EYESCANRESET;
+  logic                        WREG_EYESCANTRIGGER;
+  logic  [15:0]                WREG_PCSRSVDIN;
+  logic                        WREG_RXBUFRESET;
+  logic                        WREG_RXCDRHOLD;
+  logic                        WREG_RXLPMEN;
   logic  [2:0]                 WREG_RXOUTCLKSEL;
+  logic                        WREG_RXPOLARITY;
+  logic  [2:0]                 WREG_RXRATE;
+  logic  [4:0]                 WREG_TXDIFFCTRL;
+  logic                        WREG_TXINHIBIT;
+  logic  [2:0]                 WREG_TXOUTCLKSEL;
+  logic                        WREG_TXPOLARITY;
 
 // address decode
   assign RESET_ALL_wr_sel                         = (addr[9:0] == 10'h0     ) & (lwr_en == 1'b1);
@@ -209,11 +298,48 @@ module vio_regs #(
   assign RESET_RX_DONE_rd_sel                     = (addr[9:0] == 10'h1d    ) & (rd_en == 1'b1);
   assign RXBUFSTATUS_rd_sel                       = (addr[9:0] == 10'h1e    ) & (rd_en == 1'b1);
   assign RXPRBSERR_rd_sel                         = (addr[9:0] == 10'h1f    ) & (rd_en == 1'b1);
-  assign TXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h20    ) & (lwr_en == 1'b1);
-  assign TXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h20    ) & (rd_en == 1'b1);
-  assign RXPRBSLOCKED_rd_sel                      = (addr[9:0] == 10'h21    ) & (rd_en == 1'b1);
-  assign RXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h22    ) & (lwr_en == 1'b1);
-  assign RXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h22    ) & (rd_en == 1'b1);
+  assign RXPRBSLOCKED_rd_sel                      = (addr[9:0] == 10'h20    ) & (rd_en == 1'b1);
+  assign EYESCANRESET_wr_sel                      = (addr[9:0] == 10'h21    ) & (lwr_en == 1'b1);
+  assign EYESCANRESET_rd_sel                      = (addr[9:0] == 10'h21    ) & (rd_en == 1'b1);
+  assign EYESCANTRIGGER_wr_sel                    = (addr[9:0] == 10'h22    ) & (lwr_en == 1'b1);
+  assign EYESCANTRIGGER_rd_sel                    = (addr[9:0] == 10'h22    ) & (rd_en == 1'b1);
+  assign PCSRSVDIN_wr_sel                         = (addr[9:0] == 10'h23    ) & (lwr_en == 1'b1);
+  assign PCSRSVDIN_rd_sel                         = (addr[9:0] == 10'h23    ) & (rd_en == 1'b1);
+  assign RXBUFRESET_wr_sel                        = (addr[9:0] == 10'h24    ) & (lwr_en == 1'b1);
+  assign RXBUFRESET_rd_sel                        = (addr[9:0] == 10'h24    ) & (rd_en == 1'b1);
+  assign RXCDRHOLD_wr_sel                         = (addr[9:0] == 10'h25    ) & (lwr_en == 1'b1);
+  assign RXCDRHOLD_rd_sel                         = (addr[9:0] == 10'h25    ) & (rd_en == 1'b1);
+  assign RXLPMEN_wr_sel                           = (addr[9:0] == 10'h26    ) & (lwr_en == 1'b1);
+  assign RXLPMEN_rd_sel                           = (addr[9:0] == 10'h26    ) & (rd_en == 1'b1);
+  assign RXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h27    ) & (lwr_en == 1'b1);
+  assign RXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h27    ) & (rd_en == 1'b1);
+  assign RXPOLARITY_wr_sel                        = (addr[9:0] == 10'h28    ) & (lwr_en == 1'b1);
+  assign RXPOLARITY_rd_sel                        = (addr[9:0] == 10'h28    ) & (rd_en == 1'b1);
+  assign RXRATE_wr_sel                            = (addr[9:0] == 10'h29    ) & (lwr_en == 1'b1);
+  assign RXRATE_rd_sel                            = (addr[9:0] == 10'h29    ) & (rd_en == 1'b1);
+  assign TXDIFFCTRL_wr_sel                        = (addr[9:0] == 10'h2a    ) & (lwr_en == 1'b1);
+  assign TXDIFFCTRL_rd_sel                        = (addr[9:0] == 10'h2a    ) & (rd_en == 1'b1);
+  assign TXINHIBIT_wr_sel                         = (addr[9:0] == 10'h2b    ) & (lwr_en == 1'b1);
+  assign TXINHIBIT_rd_sel                         = (addr[9:0] == 10'h2b    ) & (rd_en == 1'b1);
+  assign TXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h2c    ) & (lwr_en == 1'b1);
+  assign TXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h2c    ) & (rd_en == 1'b1);
+  assign TXPOLARITY_wr_sel                        = (addr[9:0] == 10'h2d    ) & (lwr_en == 1'b1);
+  assign TXPOLARITY_rd_sel                        = (addr[9:0] == 10'h2d    ) & (rd_en == 1'b1);
+  assign RESET_RX_CDR_STABLE_rd_sel               = (addr[9:0] == 10'h2e    ) & (rd_en == 1'b1);
+  assign DMONITOROUT_rd_sel                       = (addr[9:0] == 10'h2f    ) & (rd_en == 1'b1);
+  assign EYESCANDATAERROR_rd_sel                  = (addr[9:0] == 10'h30    ) & (rd_en == 1'b1);
+  assign RXCOMMADET_rd_sel                        = (addr[9:0] == 10'h31    ) & (rd_en == 1'b1);
+  assign RXCTRL1_rd_sel                           = (addr[9:0] == 10'h32    ) & (rd_en == 1'b1);
+  assign RXCTRL3_rd_sel                           = (addr[9:0] == 10'h33    ) & (rd_en == 1'b1);
+  assign RXDLYSRESETDONE_rd_sel                   = (addr[9:0] == 10'h34    ) & (rd_en == 1'b1);
+  assign RXPHALIGNDONE_rd_sel                     = (addr[9:0] == 10'h35    ) & (rd_en == 1'b1);
+  assign RXRESETDONE_rd_sel                       = (addr[9:0] == 10'h36    ) & (rd_en == 1'b1);
+  assign RXSYNCDONE_rd_sel                        = (addr[9:0] == 10'h37    ) & (rd_en == 1'b1);
+  assign TXBUFSTATUS_rd_sel                       = (addr[9:0] == 10'h38    ) & (rd_en == 1'b1);
+  assign TXDLYSRESETDONE_rd_sel                   = (addr[9:0] == 10'h39    ) & (rd_en == 1'b1);
+  assign TXPHALIGNDONE_rd_sel                     = (addr[9:0] == 10'h3a    ) & (rd_en == 1'b1);
+  assign TXPHINITDONE_rd_sel                      = (addr[9:0] == 10'h3b    ) & (rd_en == 1'b1);
+  assign TXRESETDONE_rd_sel                       = (addr[9:0] == 10'h3c    ) & (rd_en == 1'b1);
   assign memrd_v = 1'b0;
 
   always_comb begin
@@ -250,9 +376,35 @@ module vio_regs #(
       RESET_RX_DONE_rd_sel                     : ldata = {63'b0,RESET_RX_DONE};
       RXBUFSTATUS_rd_sel                       : ldata = {61'b0,RXBUFSTATUS};
       RXPRBSERR_rd_sel                         : ldata = {63'b0,RXPRBSERR};
-      TXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_TXOUTCLKSEL};
-      RXPRBSLOCKED_rd_sel                      : ldata = {61'b0,RXPRBSLOCKED};
+      RXPRBSLOCKED_rd_sel                      : ldata = {63'b0,RXPRBSLOCKED};
+      EYESCANRESET_rd_sel                      : ldata = {63'b0,WREG_EYESCANRESET};
+      EYESCANTRIGGER_rd_sel                    : ldata = {63'b0,WREG_EYESCANTRIGGER};
+      PCSRSVDIN_rd_sel                         : ldata = {48'b0,WREG_PCSRSVDIN};
+      RXBUFRESET_rd_sel                        : ldata = {63'b0,WREG_RXBUFRESET};
+      RXCDRHOLD_rd_sel                         : ldata = {63'b0,WREG_RXCDRHOLD};
+      RXLPMEN_rd_sel                           : ldata = {63'b0,WREG_RXLPMEN};
       RXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_RXOUTCLKSEL};
+      RXPOLARITY_rd_sel                        : ldata = {63'b0,WREG_RXPOLARITY};
+      RXRATE_rd_sel                            : ldata = {61'b0,WREG_RXRATE};
+      TXDIFFCTRL_rd_sel                        : ldata = {59'b0,WREG_TXDIFFCTRL};
+      TXINHIBIT_rd_sel                         : ldata = {63'b0,WREG_TXINHIBIT};
+      TXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_TXOUTCLKSEL};
+      TXPOLARITY_rd_sel                        : ldata = {63'b0,WREG_TXPOLARITY};
+      RESET_RX_CDR_STABLE_rd_sel               : ldata = {63'b0,RESET_RX_CDR_STABLE};
+      DMONITOROUT_rd_sel                       : ldata = {48'b0,DMONITOROUT};
+      EYESCANDATAERROR_rd_sel                  : ldata = {63'b0,EYESCANDATAERROR};
+      RXCOMMADET_rd_sel                        : ldata = {63'b0,RXCOMMADET};
+      RXCTRL1_rd_sel                           : ldata = {48'b0,RXCTRL1};
+      RXCTRL3_rd_sel                           : ldata = {56'b0,RXCTRL3};
+      RXDLYSRESETDONE_rd_sel                   : ldata = {63'b0,RXDLYSRESETDONE};
+      RXPHALIGNDONE_rd_sel                     : ldata = {63'b0,RXPHALIGNDONE};
+      RXRESETDONE_rd_sel                       : ldata = {63'b0,RXRESETDONE};
+      RXSYNCDONE_rd_sel                        : ldata = {63'b0,RXSYNCDONE};
+      TXBUFSTATUS_rd_sel                       : ldata = {62'b0,TXBUFSTATUS};
+      TXDLYSRESETDONE_rd_sel                   : ldata = {63'b0,TXDLYSRESETDONE};
+      TXPHALIGNDONE_rd_sel                     : ldata = {63'b0,TXPHALIGNDONE};
+      TXPHINITDONE_rd_sel                      : ldata = {63'b0,TXPHINITDONE};
+      TXRESETDONE_rd_sel                       : ldata = {63'b0,TXRESETDONE};
       default : ldata = {32'h5555_AAAA,{22{1'b0}},addr[9:0]};
     endcase
   end
@@ -518,20 +670,75 @@ module vio_regs #(
  // ro: RXPRBSERR
   assign RXPRBSERR                                = iREG_RXPRBSERR;
 
- // rw: TXOUTCLKSEL
+ // ro: RXPRBSLOCKED
+  assign RXPRBSLOCKED                             = iREG_RXPRBSLOCKED;
+
+ // rw: EYESCANRESET
   always_ff @(posedge clk or negedge rst_n)
   begin
     if (~rst_n) begin
-       WREG_TXOUTCLKSEL                         <= 3'h2;
+       WREG_EYESCANRESET                        <= 1'h0;
     end else begin
-       WREG_TXOUTCLKSEL                         <= (TXOUTCLKSEL_wr_sel == 1'b1)? lwr_data[2:0] : WREG_TXOUTCLKSEL;
+       WREG_EYESCANRESET                        <= (EYESCANRESET_wr_sel == 1'b1)? lwr_data[0:0] : WREG_EYESCANRESET;
     end
   end
 
-  assign oREG_TXOUTCLKSEL                         = WREG_TXOUTCLKSEL[2:0];
- // ro: RXPRBSLOCKED
-  assign RXPRBSLOCKED                             = iREG_RXPRBSLOCKED[2:0];
+  assign oREG_EYESCANRESET                        = WREG_EYESCANRESET;
+ // rw: EYESCANTRIGGER
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_EYESCANTRIGGER                      <= 1'h0;
+    end else begin
+       WREG_EYESCANTRIGGER                      <= (EYESCANTRIGGER_wr_sel == 1'b1)? lwr_data[0:0] : WREG_EYESCANTRIGGER;
+    end
+  end
 
+  assign oREG_EYESCANTRIGGER                      = WREG_EYESCANTRIGGER;
+ // rw: PCSRSVDIN
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_PCSRSVDIN                           <= 16'h0;
+    end else begin
+       WREG_PCSRSVDIN                           <= (PCSRSVDIN_wr_sel == 1'b1)? lwr_data[15:0] : WREG_PCSRSVDIN;
+    end
+  end
+
+  assign oREG_PCSRSVDIN                           = WREG_PCSRSVDIN[15:0];
+ // rw: RXBUFRESET
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXBUFRESET                          <= 1'h0;
+    end else begin
+       WREG_RXBUFRESET                          <= (RXBUFRESET_wr_sel == 1'b1)? lwr_data[0:0] : WREG_RXBUFRESET;
+    end
+  end
+
+  assign oREG_RXBUFRESET                          = WREG_RXBUFRESET;
+ // rw: RXCDRHOLD
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXCDRHOLD                           <= 1'h0;
+    end else begin
+       WREG_RXCDRHOLD                           <= (RXCDRHOLD_wr_sel == 1'b1)? lwr_data[0:0] : WREG_RXCDRHOLD;
+    end
+  end
+
+  assign oREG_RXCDRHOLD                           = WREG_RXCDRHOLD;
+ // rw: RXLPMEN
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXLPMEN                             <= 1'h1;
+    end else begin
+       WREG_RXLPMEN                             <= (RXLPMEN_wr_sel == 1'b1)? lwr_data[0:0] : WREG_RXLPMEN;
+    end
+  end
+
+  assign oREG_RXLPMEN                             = WREG_RXLPMEN;
  // rw: RXOUTCLKSEL
   always_ff @(posedge clk or negedge rst_n)
   begin
@@ -543,4 +750,115 @@ module vio_regs #(
   end
 
   assign oREG_RXOUTCLKSEL                         = WREG_RXOUTCLKSEL[2:0];
+ // rw: RXPOLARITY
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXPOLARITY                          <= 1'h0;
+    end else begin
+       WREG_RXPOLARITY                          <= (RXPOLARITY_wr_sel == 1'b1)? lwr_data[0:0] : WREG_RXPOLARITY;
+    end
+  end
+
+  assign oREG_RXPOLARITY                          = WREG_RXPOLARITY;
+ // rw: RXRATE
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXRATE                              <= 3'h0;
+    end else begin
+       WREG_RXRATE                              <= (RXRATE_wr_sel == 1'b1)? lwr_data[2:0] : WREG_RXRATE;
+    end
+  end
+
+  assign oREG_RXRATE                              = WREG_RXRATE[2:0];
+ // rw: TXDIFFCTRL
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_TXDIFFCTRL                          <= 5'h18;
+    end else begin
+       WREG_TXDIFFCTRL                          <= (TXDIFFCTRL_wr_sel == 1'b1)? lwr_data[4:0] : WREG_TXDIFFCTRL;
+    end
+  end
+
+  assign oREG_TXDIFFCTRL                          = WREG_TXDIFFCTRL[4:0];
+ // rw: TXINHIBIT
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_TXINHIBIT                           <= 1'h0;
+    end else begin
+       WREG_TXINHIBIT                           <= (TXINHIBIT_wr_sel == 1'b1)? lwr_data[0:0] : WREG_TXINHIBIT;
+    end
+  end
+
+  assign oREG_TXINHIBIT                           = WREG_TXINHIBIT;
+ // rw: TXOUTCLKSEL
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_TXOUTCLKSEL                         <= 3'h2;
+    end else begin
+       WREG_TXOUTCLKSEL                         <= (TXOUTCLKSEL_wr_sel == 1'b1)? lwr_data[2:0] : WREG_TXOUTCLKSEL;
+    end
+  end
+
+  assign oREG_TXOUTCLKSEL                         = WREG_TXOUTCLKSEL[2:0];
+ // rw: TXPOLARITY
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_TXPOLARITY                          <= 1'h0;
+    end else begin
+       WREG_TXPOLARITY                          <= (TXPOLARITY_wr_sel == 1'b1)? lwr_data[0:0] : WREG_TXPOLARITY;
+    end
+  end
+
+  assign oREG_TXPOLARITY                          = WREG_TXPOLARITY;
+ // ro: RESET_RX_CDR_STABLE
+  assign RESET_RX_CDR_STABLE                      = iREG_RESET_RX_CDR_STABLE;
+
+ // ro: DMONITOROUT
+  assign DMONITOROUT                              = iREG_DMONITOROUT[15:0];
+
+ // ro: EYESCANDATAERROR
+  assign EYESCANDATAERROR                         = iREG_EYESCANDATAERROR;
+
+ // ro: RXCOMMADET
+  assign RXCOMMADET                               = iREG_RXCOMMADET;
+
+ // ro: RXCTRL1
+  assign RXCTRL1                                  = iREG_RXCTRL1[15:0];
+
+ // ro: RXCTRL3
+  assign RXCTRL3                                  = iREG_RXCTRL3[7:0];
+
+ // ro: RXDLYSRESETDONE
+  assign RXDLYSRESETDONE                          = iREG_RXDLYSRESETDONE;
+
+ // ro: RXPHALIGNDONE
+  assign RXPHALIGNDONE                            = iREG_RXPHALIGNDONE;
+
+ // ro: RXRESETDONE
+  assign RXRESETDONE                              = iREG_RXRESETDONE;
+
+ // ro: RXSYNCDONE
+  assign RXSYNCDONE                               = iREG_RXSYNCDONE;
+
+ // ro: TXBUFSTATUS
+  assign TXBUFSTATUS                              = iREG_TXBUFSTATUS[1:0];
+
+ // ro: TXDLYSRESETDONE
+  assign TXDLYSRESETDONE                          = iREG_TXDLYSRESETDONE;
+
+ // ro: TXPHALIGNDONE
+  assign TXPHALIGNDONE                            = iREG_TXPHALIGNDONE;
+
+ // ro: TXPHINITDONE
+  assign TXPHINITDONE                             = iREG_TXPHINITDONE;
+
+ // ro: TXRESETDONE
+  assign TXRESETDONE                              = iREG_TXRESETDONE;
+
 endmodule
