@@ -94,6 +94,7 @@ module gty_64_156_28G (
   rxcdrhold_in,
   rxdfelpmreset_in,
   rxlpmen_in,
+  rxoutclksel_in,
   rxpcsreset_in,
   rxpmareset_in,
   rxpolarity_in,
@@ -183,6 +184,7 @@ input wire [0 : 0] rxbufreset_in;
 input wire [0 : 0] rxcdrhold_in;
 input wire [0 : 0] rxdfelpmreset_in;
 input wire [0 : 0] rxlpmen_in;
+input wire [2 : 0] rxoutclksel_in;
 input wire [0 : 0] rxpcsreset_in;
 input wire [0 : 0] rxpmareset_in;
 input wire [0 : 0] rxpolarity_in;
@@ -645,7 +647,7 @@ output wire [0 : 0] txresetdone_out;
     .rxosintstrobe_in(1'B0),
     .rxosinttestovrden_in(1'B0),
     .rxosovrden_in(1'H0),
-    .rxoutclksel_in(3'H2),
+    .rxoutclksel_in(rxoutclksel_in),
     .rxpcommaalignen_in(1'H0),
     .rxpcsreset_in(rxpcsreset_in),
     .rxpd_in(2'H0),

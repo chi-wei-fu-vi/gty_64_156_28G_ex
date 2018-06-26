@@ -136,4 +136,8 @@
     RXPRBSLOCKED
     <field loc="[2:0]" name="rxprbslocked">RXPRBSLOCKED</field>
   </register>
+  <register default="2" name="rxoutclksel" offset="10'h22" type="RW">
+    RXOUTCLKSEL
+    <field loc="[2:0]" name="rxoutclksel">RXOUTCLKSEL</field>
+  </register>
 </decl_reg_list>

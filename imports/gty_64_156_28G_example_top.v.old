@@ -334,6 +334,11 @@ module gty_64_156_28G_example_top (
   assign rxlpmen_int[0:0] = ch0_rxlpmen_int;
 
   //--------------------------------------------------------------------------------------------------------------------
+  wire [2:0] rxoutclksel_int;
+  wire [2:0] ch0_rxoutclksel_int = 3'b010;
+  assign rxoutclksel_int[2:0] = ch0_rxoutclksel_int;
+
+  //--------------------------------------------------------------------------------------------------------------------
   wire [0:0] rxpcsreset_int;
   // This vector is not sliced because it is directly assigned in a debug core instance below
 
@@ -1043,6 +1048,7 @@ module gty_64_156_28G_example_top (
    ,.rxcdrhold_in                            (rxcdrhold_int)
    ,.rxdfelpmreset_in                        (rxdfelpmreset_int)
    ,.rxlpmen_in                              (rxlpmen_int)
+   ,.rxoutclksel_in                          (rxoutclksel_int)
    ,.rxpcsreset_in                           (rxpcsreset_int)
    ,.rxpmareset_in                           (rxpmareset_int)
    ,.rxpolarity_in                           (rxpolarity_int)

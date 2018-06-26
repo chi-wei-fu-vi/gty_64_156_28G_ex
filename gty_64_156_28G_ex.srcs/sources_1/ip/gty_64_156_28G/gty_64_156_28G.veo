@@ -95,6 +95,7 @@ gty_64_156_28G your_instance_name (
   .rxcdrhold_in(rxcdrhold_in),                                              // input wire [0 : 0] rxcdrhold_in
   .rxdfelpmreset_in(rxdfelpmreset_in),                                      // input wire [0 : 0] rxdfelpmreset_in
   .rxlpmen_in(rxlpmen_in),                                                  // input wire [0 : 0] rxlpmen_in
+  .rxoutclksel_in(rxoutclksel_in),                                          // input wire [2 : 0] rxoutclksel_in
   .rxpcsreset_in(rxpcsreset_in),                                            // input wire [0 : 0] rxpcsreset_in
   .rxpmareset_in(rxpmareset_in),                                            // input wire [0 : 0] rxpmareset_in
   .rxpolarity_in(rxpolarity_in),                                            // input wire [0 : 0] rxpolarity_in

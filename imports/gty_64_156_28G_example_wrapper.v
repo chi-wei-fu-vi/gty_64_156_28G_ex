@@ -105,6 +105,7 @@ module gty_64_156_28G_example_wrapper (
  ,input  wire [0:0] rxcdrhold_in
  ,input  wire [0:0] rxdfelpmreset_in
  ,input  wire [0:0] rxlpmen_in
+ ,input  wire [2:0] rxoutclksel_in
  ,input  wire [0:0] rxpcsreset_in
  ,input  wire [0:0] rxpmareset_in
  ,input  wire [0:0] rxpolarity_in
@@ -325,6 +326,7 @@ module gty_64_156_28G_example_wrapper (
    ,.rxcdrhold_in                            (rxcdrhold_in)
    ,.rxdfelpmreset_in                        (rxdfelpmreset_in)
    ,.rxlpmen_in                              (rxlpmen_in)
+   ,.rxoutclksel_in                          (rxoutclksel_in)
    ,.rxpcsreset_in                           (rxpcsreset_in)
    ,.rxpmareset_in                           (rxpmareset_in)
    ,.rxpolarity_in                           (rxpolarity_in)

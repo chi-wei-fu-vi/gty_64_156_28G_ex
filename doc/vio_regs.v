@@ -36,6 +36,7 @@ module vio_regs #(
   output logic                 oREG_TXPRBSFORCEERR,
   output logic                 oREG_RXPRBSCNTRESET,
   output logic [2:0]           oREG_TXOUTCLKSEL,
+  output logic [2:0]           oREG_RXOUTCLKSEL,
   input                        clk,
   input                        rst_n,
   input                        wr_en,
@@ -128,6 +129,8 @@ module vio_regs #(
   wire                         TXOUTCLKSEL_rd_sel;
   wire                         RXPRBSLOCKED_rd_sel;
   wire   [2:0]                 RXPRBSLOCKED;
+  wire                         RXOUTCLKSEL_wr_sel;
+  wire                         RXOUTCLKSEL_rd_sel;
   logic                        memrd_en_latch;
   logic                        lwr_en;
   logic  [63:0]                lwr_data;
@@ -153,6 +156,7 @@ module vio_regs #(
   logic                        WREG_TXPRBSFORCEERR;
   logic                        WREG_RXPRBSCNTRESET;
   logic  [2:0]                 WREG_TXOUTCLKSEL;
+  logic  [2:0]                 WREG_RXOUTCLKSEL;
 
 // address decode
   assign RESET_ALL_wr_sel                         = (addr[9:0] == 10'h0     ) & (lwr_en == 1'b1);
@@ -208,6 +212,8 @@ module vio_regs #(
   assign TXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h20    ) & (lwr_en == 1'b1);
   assign TXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h20    ) & (rd_en == 1'b1);
   assign RXPRBSLOCKED_rd_sel                      = (addr[9:0] == 10'h21    ) & (rd_en == 1'b1);
+  assign RXOUTCLKSEL_wr_sel                       = (addr[9:0] == 10'h22    ) & (lwr_en == 1'b1);
+  assign RXOUTCLKSEL_rd_sel                       = (addr[9:0] == 10'h22    ) & (rd_en == 1'b1);
   assign memrd_v = 1'b0;
 
   always_comb begin
@@ -246,6 +252,7 @@ module vio_regs #(
       RXPRBSERR_rd_sel                         : ldata = {63'b0,RXPRBSERR};
       TXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_TXOUTCLKSEL};
       RXPRBSLOCKED_rd_sel                      : ldata = {61'b0,RXPRBSLOCKED};
+      RXOUTCLKSEL_rd_sel                       : ldata = {61'b0,WREG_RXOUTCLKSEL};
       default : ldata = {32'h5555_AAAA,{22{1'b0}},addr[9:0]};
     endcase
   end
@@ -525,4 +532,15 @@ module vio_regs #(
  // ro: RXPRBSLOCKED
   assign RXPRBSLOCKED                             = iREG_RXPRBSLOCKED[2:0];
 
+ // rw: RXOUTCLKSEL
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_RXOUTCLKSEL                         <= 3'h2;
+    end else begin
+       WREG_RXOUTCLKSEL                         <= (RXOUTCLKSEL_wr_sel == 1'b1)? lwr_data[2:0] : WREG_RXOUTCLKSEL;
+    end
+  end
+
+  assign oREG_RXOUTCLKSEL                         = WREG_RXOUTCLKSEL[2:0];
 endmodule

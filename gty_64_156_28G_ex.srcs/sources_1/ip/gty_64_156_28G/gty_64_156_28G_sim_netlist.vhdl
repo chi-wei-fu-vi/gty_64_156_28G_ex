@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Fri Jun 22 10:00:26 2018
+-- Date        : Tue Jun 26 11:07:36 2018
 -- Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/chiwei/sandbox/vivado/gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G_sim_netlist.vhdl
@@ -10021,6 +10021,7 @@ entity gty_64_156_28G is
     rxcdrhold_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rxdfelpmreset_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rxlpmen_in : in STD_LOGIC_VECTOR ( 0 to 0 );
+    rxoutclksel_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
     rxpcsreset_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rxpmareset_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     rxpolarity_in : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -10733,7 +10734,7 @@ inst: entity work.gty_64_156_28G_gty_64_156_28G_gtwizard_top
       rxoutclk_out(0) => rxoutclk_out(0),
       rxoutclkfabric_out(0) => NLW_inst_rxoutclkfabric_out_UNCONNECTED(0),
       rxoutclkpcs_out(0) => NLW_inst_rxoutclkpcs_out_UNCONNECTED(0),
-      rxoutclksel_in(2 downto 0) => B"010",
+      rxoutclksel_in(2 downto 0) => rxoutclksel_in(2 downto 0),
       rxpcommaalignen_in(0) => '0',
       rxpcsreset_in(0) => rxpcsreset_in(0),
       rxpd_in(1 downto 0) => B"00",

@@ -94,6 +94,7 @@ COMPONENT gty_64_156_28G
     rxcdrhold_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxdfelpmreset_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxlpmen_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    rxoutclksel_in : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     rxpcsreset_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxpmareset_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     rxpolarity_in : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -191,6 +192,7 @@ your_instance_name : gty_64_156_28G
     rxcdrhold_in => rxcdrhold_in,
     rxdfelpmreset_in => rxdfelpmreset_in,
     rxlpmen_in => rxlpmen_in,
+    rxoutclksel_in => rxoutclksel_in,
     rxpcsreset_in => rxpcsreset_in,
     rxpmareset_in => rxpmareset_in,
     rxpolarity_in => rxpolarity_in,

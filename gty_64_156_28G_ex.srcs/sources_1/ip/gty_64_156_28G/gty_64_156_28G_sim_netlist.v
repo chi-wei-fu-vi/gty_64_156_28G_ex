@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Fri Jun 22 10:00:25 2018
+// Date        : Tue Jun 26 11:07:36 2018
 // Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/chiwei/sandbox/vivado/gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G_sim_netlist.v
@@ -55,6 +55,7 @@ module gty_64_156_28G
     rxcdrhold_in,
     rxdfelpmreset_in,
     rxlpmen_in,
+    rxoutclksel_in,
     rxpcsreset_in,
     rxpmareset_in,
     rxpolarity_in,
@@ -142,6 +143,7 @@ module gty_64_156_28G
   input [0:0]rxcdrhold_in;
   input [0:0]rxdfelpmreset_in;
   input [0:0]rxlpmen_in;
+  input [2:0]rxoutclksel_in;
   input [0:0]rxpcsreset_in;
   input [0:0]rxpmareset_in;
   input [0:0]rxpolarity_in;
@@ -244,6 +246,7 @@ module gty_64_156_28G
   wire [0:0]rxdlysresetdone_out;
   wire [0:0]rxlpmen_in;
   wire [0:0]rxoutclk_out;
+  wire [2:0]rxoutclksel_in;
   wire [0:0]rxpcsreset_in;
   wire [0:0]rxphaligndone_out;
   wire [0:0]rxpmareset_in;
@@ -837,7 +840,7 @@ module gty_64_156_28G
         .rxoutclk_out(rxoutclk_out),
         .rxoutclkfabric_out(NLW_inst_rxoutclkfabric_out_UNCONNECTED[0]),
         .rxoutclkpcs_out(NLW_inst_rxoutclkpcs_out_UNCONNECTED[0]),
-        .rxoutclksel_in({1'b0,1'b1,1'b0}),
+        .rxoutclksel_in(rxoutclksel_in),
         .rxpcommaalignen_in(1'b0),
         .rxpcsreset_in(rxpcsreset_in),
         .rxpd_in({1'b0,1'b0}),

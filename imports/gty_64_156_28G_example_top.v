@@ -78,6 +78,9 @@ module gty_64_156_28G_example_top (
   output reg  link_down_latched_out = 1'b1
 
 );
+   wire [2:0] rxoutclksel_int;
+   //wire [2:0] ch0_rxoutclksel_int = 3'b010;
+   //assign rxoutclksel_int[2:0] = ch0_rxoutclksel_int;
    wire [2:0] txoutclksel_int;
    //wire [2:0] ch0_txoutclksel_int = 3'b010;
    //assign txoutclksel_int[2:0] = ch0_txoutclksel_int;
@@ -1070,6 +1073,7 @@ vio_regs #(
   . oREG_TXPRBSFORCEERR                                ( txprbsforceerr_vio_async                           ), // output
   . oREG_RXPRBSCNTRESET                                ( rxprbscntreset_vio_async                           ), // output
   . oREG_TXOUTCLKSEL                                   ( txoutclksel_int                                    ), // output [2:0]
+  . oREG_RXOUTCLKSEL                                   ( rxoutclksel_int                                    ), // output [2:0]
   . clk                                                ( clk                                                ), // input
   . rst_n                                              ( rst_n                                              ), // input
   . wr_en                                              ( wr_en                                              ), // input
@@ -1190,6 +1194,7 @@ vio_regs #(
    ,.txresetdone_out                         (txresetdone_int)
    ,.txoutclksel_in                          (txoutclksel_int)
    ,.rxprbslocked_out                        (rxprbslocked_int)
+   ,.rxoutclksel_in                          (rxoutclksel_int)
 );
 
 
