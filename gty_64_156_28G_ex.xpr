@@ -6,7 +6,7 @@
 <Project Version="7" Minor="36" Path="/home/chiwei/sandbox/vivado/gty_64_156_28G_ex/gty_64_156_28G_ex.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="c1718bec088f4c3c91b99ec07d34507c"/>
+    <Option Name="Id" Val="4af3a4eb546347a4a1bb1b0552f547a0"/>
     <Option Name="Part" Val="xcku5p-ffvb676-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -59,7 +59,7 @@
       <File Path="$PSRCDIR/sources_1/ip/gty_64_156_28G/gty_64_156_28G.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G.xci"/>
-          <Attr Name="ImportTime" Val="1530036345"/>
+          <Attr Name="ImportTime" Val="1530800838"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

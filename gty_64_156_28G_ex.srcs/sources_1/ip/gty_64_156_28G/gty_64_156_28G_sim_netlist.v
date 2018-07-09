@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Tue Jun 26 11:07:36 2018
+// Date        : Thu Jul  5 07:29:04 2018
 // Host        : lzhou-dt2-vi-local running 64-bit CentOS Linux release 7.2.1511 (Core)
 // Command     : write_verilog -force -mode funcsim
 //               /home/chiwei/sandbox/vivado/gty_base/gty_base.srcs/sources_1/ip/gty_64_156_28G/gty_64_156_28G_sim_netlist.v

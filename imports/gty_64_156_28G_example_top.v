@@ -59,8 +59,8 @@ module gty_64_156_28G_example_top (
   mm_if.slave    sif,
 
   // Differential reference clock inputs
-  input  wire mgtrefclk0_x0y2_p,
-  input  wire mgtrefclk0_x0y2_n,
+  input  wire mgtrefclk1_x0y2_p,
+  input  wire mgtrefclk1_x0y2_n,
 
   // Serial data ports for transceiver channel 0
   input  wire ch0_gtyrxn_in,
@@ -611,22 +611,22 @@ assign drpwe_int = drp_addr[31:10]==0 && drp_we;
   // Instantiate a differential reference clock buffer for each reference clock differential pair in this configuration,
   // and assign the single-ended output of each differential reference clock buffer to the appropriate PLL input signal
 
-  // Differential reference clock buffer for MGTREFCLK0_X0Y2
-  wire mgtrefclk0_x0y2_int;
+  // Differential reference clock buffer for MGTREFCLK1_X0Y2
+  wire mgtrefclk1_x0y2_int;
 
   IBUFDS_GTE4 #(
     .REFCLK_EN_TX_PATH  (1'b0),
     .REFCLK_HROW_CK_SEL (2'b00),
     .REFCLK_ICNTL_RX    (2'b00)
-  ) IBUFDS_GTE4_MGTREFCLK0_X0Y2_INST (
-    .I     (mgtrefclk0_x0y2_p),
-    .IB    (mgtrefclk0_x0y2_n),
+  ) IBUFDS_GTE4_MGTREFCLK1_X0Y2_INST (
+    .I     (mgtrefclk1_x0y2_p),
+    .IB    (mgtrefclk1_x0y2_n),
     .CEB   (1'b0),
-    .O     (mgtrefclk0_x0y2_int),
+    .O     (mgtrefclk1_x0y2_int),
     .ODIV2 ()
   );
 
-  assign cm0_gtrefclk00_int = mgtrefclk0_x0y2_int;
+  assign cm0_gtrefclk00_int = mgtrefclk1_x0y2_int;
 
 
   // ===================================================================================================================

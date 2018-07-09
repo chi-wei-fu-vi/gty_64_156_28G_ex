@@ -54,7 +54,9 @@
 // while looping back transceiver data from transmit to receive, and utilizes the PRBS checker-based link status
 // indicator to demonstrate simple data integrity checking of the design. This module is for use in simulation only.
 // =====================================================================================================================
+
 module gty_64_156_28G_example_top_sim (mm_if.slave sif,mm_if.status statusif);
+
 
   // -------------------------------------------------------------------------------------------------------------------
   // Signal declarations and basic example design stimulus
@@ -64,16 +66,16 @@ module gty_64_156_28G_example_top_sim (mm_if.slave sif,mm_if.status statusif);
   wire ch0_gtyxn;
   wire ch0_gtyxp;
 
-  // Declare register to drive reference clock at location MGTREFCLK0_X0Y2
-  reg mgtrefclk0_x0y2 = 1'b0;
+  // Declare register to drive reference clock at location MGTREFCLK1_X0Y2
+  reg mgtrefclk1_x0y2 = 1'b0;
 
   // Drive that reference clock at the appropriate frequency
   // NOTE: the following simulation reference clock period may be up to +/- 2ps from its nominal value, due to rounding
   // within Verilog timescale granularity, especially when transmitter and receiver reference clock frequencies differ
   initial begin
-    mgtrefclk0_x0y2 = 1'b0;
+    mgtrefclk1_x0y2 = 1'b0;
     forever
-      mgtrefclk0_x0y2 = #3200 ~mgtrefclk0_x0y2;
+      mgtrefclk1_x0y2 = #3200 ~mgtrefclk1_x0y2;
   end
 
   // Declare registers to drive reset helper block(s)
@@ -185,8 +187,8 @@ module gty_64_156_28G_example_top_sim (mm_if.slave sif,mm_if.status statusif);
 
   gty_64_156_28G_example_top example_top_inst (
     .sif (sif),
-    .mgtrefclk0_x0y2_p (mgtrefclk0_x0y2),
-    .mgtrefclk0_x0y2_n (~mgtrefclk0_x0y2),
+    .mgtrefclk1_x0y2_p (mgtrefclk1_x0y2),
+    .mgtrefclk1_x0y2_n (~mgtrefclk1_x0y2),
     .ch0_gtyrxn_in (ch0_gtyxn),
     .ch0_gtyrxp_in (ch0_gtyxp),
     .ch0_gtytxn_out (ch0_gtyxn),

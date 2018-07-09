@@ -53,8 +53,8 @@
 # Location constraints for differential reference clock buffers
 # Note: the IP core-level XDC constrains the transceiver channel data pin locations
 # ----------------------------------------------------------------------------------------------------------------------
-set_property package_pin P6 [get_ports mgtrefclk0_x0y2_n]
-set_property package_pin P7 [get_ports mgtrefclk0_x0y2_p]
+set_property package_pin M6 [get_ports mgtrefclk1_x0y2_n]
+set_property package_pin M7 [get_ports mgtrefclk1_x0y2_p]
 
 # Location constraints for other example design top-level ports
 # Note: uncomment the following set_property constraints and replace "<>" with appropriate pin locations for your board
@@ -78,7 +78,7 @@ set_property package_pin P7 [get_ports mgtrefclk0_x0y2_p]
 # Note: the IP core-level XDC constrains clocks produced by the core, which drive user clocks via helper blocks
 # ----------------------------------------------------------------------------------------------------------------------
 create_clock -name clk_freerun -period 10.0 [get_ports hb_gtwiz_reset_clk_freerun_in]
-create_clock -name clk_mgtrefclk0_x0y2_p -period 6.4 [get_ports mgtrefclk0_x0y2_p]
+create_clock -name clk_mgtrefclk1_x0y2_p -period 6.4 [get_ports mgtrefclk1_x0y2_p]
 
 # False path constraints
 # ----------------------------------------------------------------------------------------------------------------------
