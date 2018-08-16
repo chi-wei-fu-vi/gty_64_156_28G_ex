@@ -48,6 +48,7 @@ module vio_regs #(
   output logic                 oREG_TXINHIBIT,
   output logic [2:0]           oREG_TXOUTCLKSEL,
   output logic                 oREG_TXPOLARITY,
+  output logic                 oREG_DISABLE_RESET,
   input                        clk,
   input                        rst_n,
   input                        wr_en,
@@ -209,6 +210,8 @@ module vio_regs #(
   wire                         TXPHINITDONE;
   wire                         TXRESETDONE_rd_sel;
   wire                         TXRESETDONE;
+  wire                         DISABLE_RESET_wr_sel;
+  wire                         DISABLE_RESET_rd_sel;
   logic                        memrd_en_latch;
   logic                        lwr_en;
   logic  [63:0]                lwr_data;
@@ -246,6 +249,7 @@ module vio_regs #(
   logic                        WREG_TXINHIBIT;
   logic  [2:0]                 WREG_TXOUTCLKSEL;
   logic                        WREG_TXPOLARITY;
+  logic                        WREG_DISABLE_RESET;
 
 // address decode
   assign RESET_ALL_wr_sel                         = (addr[9:0] == 10'h0     ) & (lwr_en == 1'b1);
@@ -340,6 +344,8 @@ module vio_regs #(
   assign TXPHALIGNDONE_rd_sel                     = (addr[9:0] == 10'h3a    ) & (rd_en == 1'b1);
   assign TXPHINITDONE_rd_sel                      = (addr[9:0] == 10'h3b    ) & (rd_en == 1'b1);
   assign TXRESETDONE_rd_sel                       = (addr[9:0] == 10'h3c    ) & (rd_en == 1'b1);
+  assign DISABLE_RESET_wr_sel                     = (addr[9:0] == 10'h3d    ) & (lwr_en == 1'b1);
+  assign DISABLE_RESET_rd_sel                     = (addr[9:0] == 10'h3d    ) & (rd_en == 1'b1);
   assign memrd_v = 1'b0;
 
   always_comb begin
@@ -405,6 +411,7 @@ module vio_regs #(
       TXPHALIGNDONE_rd_sel                     : ldata = {63'b0,TXPHALIGNDONE};
       TXPHINITDONE_rd_sel                      : ldata = {63'b0,TXPHINITDONE};
       TXRESETDONE_rd_sel                       : ldata = {63'b0,TXRESETDONE};
+      DISABLE_RESET_rd_sel                     : ldata = {63'b0,WREG_DISABLE_RESET};
       default : ldata = {32'h5555_AAAA,{22{1'b0}},addr[9:0]};
     endcase
   end
@@ -861,4 +868,15 @@ module vio_regs #(
  // ro: TXRESETDONE
   assign TXRESETDONE                              = iREG_TXRESETDONE;
 
+ // rw: DISABLE_RESET
+  always_ff @(posedge clk or negedge rst_n)
+  begin
+    if (~rst_n) begin
+       WREG_DISABLE_RESET                       <= 1'h0;
+    end else begin
+       WREG_DISABLE_RESET                       <= (DISABLE_RESET_wr_sel == 1'b1)? lwr_data[0:0] : WREG_DISABLE_RESET;
+    end
+  end
+
+  assign oREG_DISABLE_RESET                       = WREG_DISABLE_RESET;
 endmodule

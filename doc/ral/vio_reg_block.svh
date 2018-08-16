@@ -1462,6 +1462,30 @@ class vio_txresetdone_reg extends uvm_reg;
            .individually_accessible( 0 ) );
   endfunction : build
 endclass: vio_txresetdone_reg
+
+class vio_disable_reset_reg extends uvm_reg;
+  `uvm_object_utils( vio_disable_reset_reg )
+  rand uvm_reg_field disable_reset;
+
+  //---------------------------------------------------------------------------
+  // Function: new
+  //---------------------------------------------------------------------------
+
+  function new( string name = "vio_disable_reset_reg" );
+    super.new( .name( name ), .n_bits( 1 ), .has_coverage( UVM_CVR_ADDR_MAP /*UVM_NO_COVERAGE*/ ) );
+  endfunction : new
+
+  //---------------------------------------------------------------------------
+  // Function: build
+  //---------------------------------------------------------------------------
+
+  virtual function void build();
+    disable_reset = uvm_reg_field::type_id::create( "disable_reset" );
+    disable_reset.configure( .parent( this ), .size( 1 ), .lsb_pos( 0 ), .access( "RW" ),
+           .volatile( 1 ), .reset( 0 ), .has_reset( 0 ), .is_rand( 1 ),
+           .individually_accessible( 0 ) );
+  endfunction : build
+endclass: vio_disable_reset_reg
   
 class vio_reg_block extends uvm_reg_block;
   `uvm_object_utils( vio_reg_block )
@@ -1526,6 +1550,7 @@ class vio_reg_block extends uvm_reg_block;
   rand vio_txphaligndone_reg txphaligndone;
   rand vio_txphinitdone_reg txphinitdone;
   rand vio_txresetdone_reg txresetdone;
+  rand vio_disable_reset_reg disable_reset;
    
   uvm_reg_map reg_map;
 
@@ -1725,6 +1750,9 @@ class vio_reg_block extends uvm_reg_block;
     txresetdone = vio_txresetdone_reg::type_id::create( "txresetdone" );
     txresetdone.configure( .blk_parent( this ) );
     txresetdone.build();
+    disable_reset = vio_disable_reset_reg::type_id::create( "disable_reset" );
+    disable_reset.configure( .blk_parent( this ) );
+    disable_reset.build();
     reg_map = create_map( .name( "reg_map" ), .base_addr( 0 ), .n_bytes( 8 ),
                           .endian( UVM_LITTLE_ENDIAN ), .byte_addressing( 1 ) );
     reg_map.add_reg( .rg( reset_all ), .offset( 0 ), .rights( "RW" ) );
@@ -1788,6 +1816,7 @@ class vio_reg_block extends uvm_reg_block;
     reg_map.add_reg( .rg( txphaligndone ), .offset( 58 ), .rights( "RO" ) );
     reg_map.add_reg( .rg( txphinitdone ), .offset( 59 ), .rights( "RO" ) );
     reg_map.add_reg( .rg( txresetdone ), .offset( 60 ), .rights( "RO" ) );
+    reg_map.add_reg( .rg( disable_reset ), .offset( 61 ), .rights( "RW" ) );
   endfunction : build
 
 endclass: vio_reg_block

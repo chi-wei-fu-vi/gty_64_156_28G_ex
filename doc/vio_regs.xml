@@ -244,4 +244,8 @@
     TXRESETDONE
     <field loc="[0:0]" name="txresetdone">TXRESETDONE</field>
   </register>
+  <register default="0" name="disable_reset" offset="10'h3d" type="RW">
+    DISABLE_RESET
+    <field loc="[0:0]" name="disable_reset">DISABLE_RESET</field>
+  </register>
 </decl_reg_list>
